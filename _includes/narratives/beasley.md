@@ -1,0 +1,12 @@
+Bruce Beasley works in fragments. Prior to the advent of personal computers, he would typically begin work on poems by drafting words, lines, and phrases in notebooks, then typing large chunks of prose on a Selectric typewriter before printing them out on rolls of old-fashioned printer paper. In the early 1990s, Beasley transitioned from the Selectric to a computer (currently he uses a Toshiba Satellite laptop) and continued more or less the same process&#8212;including the addition of long walks, during which he mentally composes and jots down resonant words and lines. Upon returning to his office, Beasley transfers each stray line onto individual notecards. From there, he plays around with various arrangements, continually ordering and re-ordering the lines, until eventually the structure begins to cohere into a poem. 
+
+Simultaneously, Beasley drafts large prose blocks directly on the computer. These function as a kind of "talking through the poem," an interrogation and conversation with himself and the project at hand in which Beasley includes editorial suggestions and thematic objectives. Finally, Beasley types the poem draft on the computer as well, eventually transitioning into revision&#8212;a process that involves frequent and repetitive reading aloud, with a focus on rhythm and sound over obvious clarity. Once he reaches the point where, in his words, he has "exhausted his resources," Beasely shares drafts of his work with his wife, the poet Suzanne Paola, and several other fellow poets, via email. From there, he reviews the similarities and contradictions of their respective notes in order to create a final draft. 
+
+In terms of generative strategies, Beasely draws heavily on etymology and aleatory practices. More recently, he has experimented with plugging lines and scraps into Google Translate in order to estrange himself from the familiar ideas and language as it presents itself in early notes and drafts. 
+
+NEED SOMETHING ABOUT ORGANIZING/ARCHIVING and PUBLCICATION/Manuscript building.
+
+Ultimately, Beasely's current poetic is one of disjunction: as he puts it, "I became much more interested in fragmentation and disruption, and imitative disruptive states of mind and disruptive states of knowledge with disruptions in the poems themselves. Whereas before that, I had been very interested in a kind of well-made poem that was coherent and imagistic and lyrical. I got bored with that mode and wanted to allow the poems to become stranger and more broken&#8212;more intuitive and less logical, less linear. 
+
+
+

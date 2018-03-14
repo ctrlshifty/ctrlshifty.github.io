@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="center">
+   
+<div id="ytplayer" ></div>
+<h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
+<h3>{{page.location}} on {{page.date-interviewed}}</h3>
+<p>Interviewer: Devin Becker</p>
+</div>
+<script>
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '500',
+      width: '800',
+      cc_load_policy: 1,
+      videoId: '{{ page.youtube }}'
+    });
+  }
+</script>

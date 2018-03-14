@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+{% if page.object-id contains "question" %}
+<div class="question-body">
+<header class="intro question-header">
+	<h1>{{ page.question }} </h1></header>
+
+
+
+
+  <div class="question-answers">
+  {% for answer in page.answers %}
+<div class="answer">
+ <img src="/ctrl-shift/images/portraits/{{answer.author-id}}.png" style="height:150px;float:left;padding: 0 10px 10px 0;">
+  <p>
+  {{answer.text}}
+</p>
+ <a class="action-button" href="{{answer.author-id}}" >More from {{answer.author}}</a>
+</div>
+  {% endfor %}
+
+
+</div>
+</div>
+{% elsif page.type == "icon" %}
+<div class="question-body">
+    <header class="intro question-header">
+      <h1>
+          <img src="/ctrl-shift/images/icons/{{ page.icon-id}}.png" style="float:left;height:30px;" > {{page.title}} </h1>
+
+    </header>
+<div class="anal-listing">
+{% for item in site.data.icons %}
+{% if item.icon == page.icon-id %}
+<a href="/ctrl-shift/interviews/transcripts/{{ item.poet-id }}.html#{{item.line}}">
+  <img src="/ctrl-shift/images/small/{{ item.poet-id }}.jpg" class="question-pic" />
+  <h2>{{ item.poet }}</h2>
+  <p>{{item.excerpt}}</p>
+</a>
+{% endif %}
+{% endfor %}
+{% else %}
+<div class="question-body">
+     <img src="/ctrl-shift/images/portraits/{{ page.object-id }}.png" style="height:200px;float:left;padding: 0 10px 10px 0;"/>
+<h1>{{page.first-name}} {{page.last-name}}</h1>
+<div class="question-people">
+{% assign questions = site.questions  %}
+{% for question in questions %}
+{% if question.object-id contains "question" %}
+ {% for answer in question.answers %}
+ {% if answer.author-id == page.object-id %}
+<div class="answer">
+  
+	<h2>{{ question.question }} </h2>
+   <p>
+  {{answer.text}}
+</p>
+ <a class="action-button" href="../questions/{{question.object-id}}.html" >All answers to this question</a>
+</div>
+  {% else %}
+ {% endif %}
+ {% endfor %}
+ {% else %}
+  
+{% endif %}
+{% endfor %}
+{% endif %}
+  </div>
+  </div>

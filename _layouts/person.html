@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<!--<a class="interview-button" href="/ctrl-shift/interviews/{{ page.object-id }}.html">Oral History</a>-->
+<a class="interview-button" href="http://devinbecker.org/ctrl/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">Full Interview</a>
+  
+<header class="intro person-header">
+	<h1>{{ page.first-name }} {{ page.last-name }}</h1>
+	<h2>Interviewed on {{ page.date-interviewed }} in {{ page.location }}</h2>
+</header>
+
+<div class="person-body">
+	
+	{{ page.content }}
+	
+	
+</div>
+<div style="width:45%;float:left;">
+ {% capture narrative  %}{% include narratives/{{ page.object-id }}.md %}{% endcapture %}
+{{ narrative | markdownify }}</div>
+<div style="width:45%;float:right">
+	<br/><br/>
+<img src="/ctrl-shift/images/{{ page.object-id }}.jpg"/ class="main-pic">
+</div>
+
+	

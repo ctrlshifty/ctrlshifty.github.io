@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<style>
+    .sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    bottom: 50%;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+
+}
+  td{vertical-align: top;padding:15px;}
+  .line, .timestamp{font-size:10px;}
+  .grey{color:lightgrey; height:2px !important; width:50px; border-bottom: dotted 1px grey; display:none;}
+  .grey .words {display:none; }
+    .black{color:black !important;}
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div class="genpoem-portrait">
+    <img src="/ctrl-shift/images/portraits/{{ page.object-id}}.png">
+   <div class="sidenav">
+   <button class="io" id="between">between</button>
+<button class="io" id="early">early</button>
+<button class="io" id="paper">paper</button>
+<button class="io" id="files">files</button>
+<button class="io" id="prindig">prindig</button>
+<button class="io" id="change">change</button>
+<button class="io" id="prompt">prompt</button>
+<button class="io" id="revision">revision</button>
+<button class="io" id="mss">mss</button>
+<button class="io" id="career">career</button>
+<button class="io" id="future">future</button>
+<button class="io" id="highlight">highlight</button>
+
+  </div>
+
+</div>
+   <div class="transcript-content">
+        <h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
+    <h3>{{page.location}} on {{page.date-interviewed}}</h3>
+    <p>Interviewer: Devin Becker</p>
+          <table>
+    {% for item in site.data.transcripts.new[page.object-id] %}
+   <tr id="{{item.line}}" class="{{item.tags | replace: ";", " "}}"><td class="timestamp">{%if item.timestamp%}
+       <a href="https://youtu.be/{{ page.youtube }}?t={{item.youtubetime}}&cc_load_policy=1">{{item.timestamp}}</a>{% endif %}</td><td class="speaker">{{item.speaker}}</td><td class="words">{{item.words}}</td><td class="line">{{item.line}}</td></tr>
+{% endfor %}
+</table>
+
+<script type="text/javascript">
+   $("button.io").click(function() {
+   var myClass = this.id;
+   $("tr").addClass("grey"); 
+     $('tr.'+myClass).removeClass("grey"); 
+  
+});
+    </script>
+    </script>
+
+        </div>
+
+</div>
+</div>
+
+

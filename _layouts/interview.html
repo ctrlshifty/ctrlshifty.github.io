@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+<div id="{{ page.object-id }}" class="poet-feature {% cycle "odd", "even" %}" >
+ <p class="backtotop" ><a href="#top">Back to Top</a></p>
+    <div class="left-column column" >
+                <h2 class="poet-name">{{ page.first-name }} {{ page.last-name }}</h2>
+                <h3>Interviewed in {{page.location}} on {{page.date-interviewed}}</h3>
+ <img src="/ctrl-shift/images/{{page.object-id}}.jpg"/>
+  <p class="bio">{{page.content}}</p>
+  {% for item in site.data.bios %}
+  {% if item.poet-id == page.object-id %}
+  <p><a class="action-button" href="{{item.url}}">More on {{ page.first-name }} {{ page.last-name }}</a></p>
+  {%else%}
+    {% endif %}
+      {% endfor %}
+  
+ {% capture bibliography  %}{% include bibliographies/{{ page.object-id }}.md %}{% endcapture %}
+{{ bibliography | markdownify }}
+</div>
+    
+    
+
+<div class="right-column column" >
+    <br/>
+    <h2>Interview</h2>
+     {% for item in site.data[page.object-id] %}
+     <div class="variation" id="{{ page.object-id }}variation{{ forloop.index }}">
+  <p class="quote ">"{{item.excerpt}}"
+ </p>
+ <p class="attribution " >From <a href="http://devinbecker.org/ctrl/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview section {{ forloop.index }}, "{{item.section-title}}," at {{item.timestamp}}</a>
+ <br/> {{page.location}} | {{page.date-interviewed}}</p>
+ </div>
+   {% endfor %}
+<script>
+    function random_item(items)
+{return items[Math.floor(Math.random()*items.length)]; }
+var items = [{% for item in site.data[page.object-id] %}'{{ page.object-id }}variation{{ forloop.index }}',{% endfor %}'{{ page.object-id }}variation5'];
+var randomitem = (random_item(items)); 
+document.getElementById(randomitem).style.display = 'block';
+console.log(randomitem);
+    </script>
+
+      
+    
+    
+ <p class="center"><a class="action-button" href="http://devinbecker.org/ctrl/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full Audio Interview w/ Transcript</a></p>
+ {%if page.youtube %}<p class="center"><a class="action-button" href="/ctrl-shift/videos/{{ page.object-id }}.html">Interview Video</a></p>
+ {% else %} {% endif %}
+ <p class="center"><a class="action-button" href="/ctrl-shift/interviews/transcripts/{{ page.object-id }}.html">Interview Transcript</a></p>
+  <p class="center"><a class="action-button" href="/ctrl-shift/analyses/respondents/{{ page.object-id }}.html">Answers to Selected Questions</a></p>
+ 
+ 
+  
+<!--<p class="center"><a class="action-button" href="/ctrl-shift/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
+
+ <h2>Analyses and Visualizations</h2>
+ {% capture narrative  %}{% include narratives/{{ page.object-id }}.md  %}{% endcapture %}
+ <p >"{{ narrative |  truncatewords: 45 }}"</p>
+<p class="center"><a class="action-button" href="/ctrl-shift/processes/{{ page.object-id }}.html">Full Process Narrative and Visualization</a></p> 
+
+{%if page.youtube %}<p class="center"><a class="action-button" href="/ctrl-shift/flotsam/genpoems/{{ page.object-id }}.html">Generative Poem</a></p> {% else %} {% endif %}
+
+
+
+    <br/><br/>
+         
+
+
+
+
+</div>
+
+
+  </div>
+  <div class="clear:both"></div>
+	
