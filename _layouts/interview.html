@@ -7,7 +7,7 @@ layout: default
     <div class="left-column column" >
                 <h2 class="poet-name">{{ page.first-name }} {{ page.last-name }}</h2>
                 <h3>Interviewed in {{page.location}} on {{page.date-interviewed}}</h3>
- <img src="/ctrl-shift/images/{{page.object-id}}.jpg"/>
+ <img src="/images/{{page.object-id}}.jpg"/>
   <p class="bio">{{page.content}}</p>
   {% for item in site.data.bios %}
   {% if item.poet-id == page.object-id %}
@@ -46,21 +46,21 @@ console.log(randomitem);
     
     
  <p class="center"><a class="action-button" href="http://devinbecker.org/ctrl/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full Audio Interview w/ Transcript</a></p>
- {%if page.youtube %}<p class="center"><a class="action-button" href="/ctrl-shift/videos/{{ page.object-id }}.html">Interview Video</a></p>
+ {%if page.youtube %}<p class="center"><a class="action-button" href="/videos/{{ page.object-id }}.html">Interview Video</a></p>
  {% else %} {% endif %}
- <p class="center"><a class="action-button" href="/ctrl-shift/interviews/transcripts/{{ page.object-id }}.html">Interview Transcript</a></p>
-  <p class="center"><a class="action-button" href="/ctrl-shift/analyses/respondents/{{ page.object-id }}.html">Answers to Selected Questions</a></p>
+ <p class="center"><a class="action-button" href="/interviews/transcripts/{{ page.object-id }}.html">Interview Transcript</a></p>
+  <p class="center"><a class="action-button" href="/analyses/respondents/{{ page.object-id }}.html">Answers to Selected Questions</a></p>
  
  
   
-<!--<p class="center"><a class="action-button" href="/ctrl-shift/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
+<!--<p class="center"><a class="action-button" href="/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
 
  <h2>Analyses and Visualizations</h2>
  {% capture narrative  %}{% include narratives/{{ page.object-id }}.md  %}{% endcapture %}
  <p >"{{ narrative |  truncatewords: 45 }}"</p>
-<p class="center"><a class="action-button" href="/ctrl-shift/processes/{{ page.object-id }}.html">Full Process Narrative and Visualization</a></p> 
+<p class="center"><a class="action-button" href="/processes/{{ page.object-id }}.html">Full Process Narrative and Visualization</a></p> 
 
-{%if page.youtube %}<p class="center"><a class="action-button" href="/ctrl-shift/flotsam/genpoems/{{ page.object-id }}.html">Generative Poem</a></p> {% else %} {% endif %}
+{%if page.youtube %}<p class="center"><a class="action-button" href="/flotsam/genpoems/{{ page.object-id }}.html">Generative Poem</a></p> {% else %} {% endif %}
 
 
 

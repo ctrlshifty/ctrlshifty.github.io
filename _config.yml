@@ -10,7 +10,7 @@ title: CTRL+Shift
 email: dbecker@uidaho.edu
 description: > # this means to ignore newlines until "baseurl:"
  Writing practice at the dawn of the digital era.
-baseurl: "/ctrl-shift" # the subpath of your site, e.g. /blog
+baseurl: # the subpath of your site, e.g. /blog
 github_username: dcnb/ctrl-shift
 
 

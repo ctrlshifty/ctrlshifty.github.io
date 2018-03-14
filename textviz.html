@@ -17,9 +17,9 @@ permalink: /flotsam//textviz/
   <div class="listing">
     {% assign people = site.textviz | sort: 'random' %}
     {% for person in people %}
-    <a href="/ctrl-shift/flotsam/textviz/{{ person.object-id }}.html">
+    <a href="/flotsam/textviz/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
-      <img src="/ctrl-shift/images/small/{{person.object-id}}.jpg"/>
+      <img src="/images/small/{{person.object-id}}.jpg"/>
     </a>
     {% endfor %}
 

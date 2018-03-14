@@ -37,7 +37,7 @@
       <ul>
          {% assign people = site.people | sort: 'last-name' %}
     {% for person in people %}
-     <li><a href="/ctrl-shift/people/{{ person.object-id }}.html">
+     <li><a href="/people/{{ person.object-id }}.html">
      {{ person.first-name }} {{ person.last-name }}
        </a></li>
     {% endfor %}

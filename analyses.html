@@ -15,7 +15,7 @@ object-id: analyses
  {% for question in questions %}
 {% if question.object-id contains "question" %}
     
-    <a href="/ctrl-shift/analyses/questions/{{ question.object-id }}.html">
+    <a href="/analyses/questions/{{ question.object-id }}.html">
       <h2>{{ question.question }} </h2>
       
     </a>
@@ -34,8 +34,8 @@ object-id: analyses
         <div class="anal-listing">
     {% assign poets = site.interviews | sort: 'last-name' %}
    {% for poet in poets %}
-    <a href="/ctrl-shift/analyses/respondents/{{ poet.object-id }}.html">
-    <img src="/ctrl-shift/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
+    <a href="/analyses/respondents/{{ poet.object-id }}.html">
+    <img src="/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
       <h2>{{ poet.first-name }} {{poet.last-name}} </h2>
       
     </a>
@@ -52,8 +52,8 @@ object-id: analyses
             {% for icon in icons %}
           
                
-               <a href="/ctrl-shift/{{ icon.url}}.html">
-                <img src="/ctrl-shift/images/icons/{{ icon.icon-id}}.png">
+               <a href="/{{ icon.url}}.html">
+                <img src="/images/icons/{{ icon.icon-id}}.png">
                  <br/>
                  <h2 class="center">{{icon.title }}</h2>
                </a>

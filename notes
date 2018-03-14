@@ -1,6 +1,6 @@
-  <h2 class="poet-name"><a href="/ctrl-shift/people/{{ poet.object-id }}.html">{{ poet.first-name }} {{ poet.last-name }}</a></h2>
+  <h2 class="poet-name"><a href="/people/{{ poet.object-id }}.html">{{ poet.first-name }} {{ poet.last-name }}</a></h2>
 
-        <img src="/ctrl-shift/images/{{poet.object-id}}.jpg"/>
+        <img src="/images/{{poet.object-id}}.jpg"/>
    
   
 <p>{{poet.content}}</p>
