@@ -1,0 +1,11 @@
+  <h2 class="poet-name"><a href="/ctrl-shift/people/{{ poet.object-id }}.html">{{ poet.first-name }} {{ poet.last-name }}</a></h2>
+
+        <img src="/ctrl-shift/images/{{poet.object-id}}.jpg"/>
+   
+  
+<p>{{poet.content}}</p>
+<!--<h3> Bibliography</h3>
+
+ {% capture bib %}{% include bibliographies/{{ poet.object-id }}.md  %}{% endcapture %}
+
+<p> {{ bib | markdownify | truncatewords: 65 }}</p>-->

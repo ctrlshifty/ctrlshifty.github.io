@@ -1,0 +1,30 @@
+---
+layout: default
+title: Textual Analyses and Visualization
+object-id: textviz
+permalink: /flotsam//textviz/
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Textual Analyses and Visualizations</h1>
+
+
+<iframe style='width: 90%; height: 800px' src='//voyant-tools.org/?corpus=f37693dd21c644e9f38eb9efa9b51532&view=Summary'></iframe>
+
+
+  <div class="people-body">
+  <div class="listing">
+    {% assign people = site.textviz | sort: 'random' %}
+    {% for person in people %}
+    <a href="/ctrl-shift/flotsam/textviz/{{ person.object-id }}.html">
+      <h2>{{ person.first-name }} {{ person.last-name }}</h2>
+      <img src="/ctrl-shift/images/small/{{person.object-id}}.jpg"/>
+    </a>
+    {% endfor %}
+
+</div>
+
+</div>
+
+</div>

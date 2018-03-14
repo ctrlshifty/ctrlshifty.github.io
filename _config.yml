@@ -1,0 +1,103 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: CTRL+Shift
+email: dbecker@uidaho.edu
+description: > # this means to ignore newlines until "baseurl:"
+ Writing practice at the dawn of the digital era.
+baseurl: "/ctrl-shift" # the subpath of your site, e.g. /blog
+github_username: dcnb/ctrl-shift
+
+
+collections:
+  processes:
+    output: true
+  questions:
+      output: true
+      permalink: /analyses/:collection/:name
+  cachefiles:
+      output: true
+  interviews:
+      output: true
+  ohms:
+      output: true
+  videos:
+      output: true
+  respondents:
+      output: true
+      permalink: /analyses/:collection/:name
+  icons:
+      output: true
+      permalink: /analyses/:collection/:name
+  genpoems:
+      output: true
+      permalink: /flotsam/:collection/:name
+  textviz:
+      output: true
+      permalink: /flotsam/:collection/:name
+  transcripts:
+      output: true
+      permalink: /interviews/:collection/:name
+  transcripts-new:
+      output: true
+      permalink: /interviews/:collection/:name
+
+defaults:
+  - scope:
+      type: processes
+    values:
+      layout: process
+  - scope:
+      type: interviews
+    values:
+      layout: interview
+  - scope:
+      type: questions
+    values:
+      layout: question
+  - scope:
+      type: cachefiles
+    values:
+      layout: null
+  - scope:
+      type: genpoems
+    values:
+      layout: poems
+  - scope:
+      type: videos
+    values:
+      layout: video
+  - scope:
+      type: textviz
+    values:
+      layout: textviz
+  - scope:
+      type: ohms
+    values:
+      layout: ohms
+  - scope:
+      type: icons
+    values:
+      layout: question
+  - scope:
+      type: respondents
+    values:
+      layout: question
+  - scope:
+      type: transcripts
+    values:
+      layout: transcript
+  - scope:
+      type: transcripts-new
+    values:
+      layout: transcript-new
+      
+
+
+# Build settings
+markdown: kramdown

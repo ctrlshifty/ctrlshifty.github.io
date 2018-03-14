@@ -1,0 +1,73 @@
+---
+layout: default
+title: Processes
+order: 4
+object-id: processes
+---
+<link rel="stylesheet" href="/ctrl-shift/css/wenk.css">
+<div class="poet-menu" id="top"> 
+    <div class="graph wrapper">
+        <div class="process-viz" >
+            <div class="graph-row">
+    <div class="row-name">
+      <h2 class="center">Poet</h2>
+
+</div>
+    <div class="part">
+      <h2 class="center">Creation/Generation</h2>
+
+</div>
+<div class="part">
+      <h2 class="center">Composition</h2>
+
+</div>
+<div class="part">
+      <h2 class="center">Publication</h2>
+</div>
+<div class="part">
+      <h2 class="center">Organization/Archiving</h2>
+</div>
+</div>
+
+
+    {% assign people = site.interviews | sort: 'random' %}
+    {% for person in people %}
+    <div class="graph-row {% cycle 'odd', 'even' %}">
+          <div class="row-wrapper">
+ <div class="row-name">
+     <br/>
+   <h2 class="center "><a href="/ctrl-shift/processes/{{ person.object-id }}.html">{{ person.first-name }} {{ person.last-name }}</a></h2>
+</div>
+
+ <div class="part">
+      <h2 class="center hidden-lg">Creation/Generation</h2>
+       Current:  <br/>  <span class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="/ctrl-shift/images/processes/{{ person.object-id }}/Current_creation_generation.png"></span>
+       <br/>
+    Pre-CPU:  <br/>  <span class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.pre_creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="/ctrl-shift/images/processes/{{ person.object-id }}/Pre_CPU_creation_generation.png" title="visualized process"></span>
+   
+</div>
+<div class="part">
+      <br/>  
+       <h2 class="center hidden-lg">Composition</h2>
+       <span class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.composition_revision}}{%else%}{%endif%}{%endfor%}"><img  src="/ctrl-shift/images/processes/{{ person.object-id }}/Composition_Revision.png"></span>
+</div>
+<div class="part">
+   <br/>  
+   <h2 class="center hidden-lg">Publication</h2>
+   <span class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.publication}}{%else%}{%endif%}{%endfor%}"><img  src="/ctrl-shift/images/processes/{{ person.object-id }}/Publication.png"></span>
+</div>
+<div class="part">
+      <br/>
+      <h2 class="center hidden-lg">Organization/Archiving</h2>
+      <span class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.organizing_archiving}}{%else%}{%endif%}{%endfor%}"><img  src="/ctrl-shift/images/processes/{{ person.object-id }}/Organizing_Archiving.png"></span>
+</div>
+</div>
+</div>
+<div style="clear:both"></div>
+{% endfor %}
+
+</div>
+</div>
+
+
+  </div>

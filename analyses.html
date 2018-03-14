@@ -1,0 +1,72 @@
+---
+layout: default
+title: Analyses
+order: 3
+object-id: analyses
+---
+<h1 class="center page-title">Analyses</h1>
+
+<div  class="anal-div questions">
+      <h1 class="center">Questions</h1>
+      <!--<p class="center"><a href="#respondents">View by Respondent</a><p>-->
+       
+  <div class="anal-listing">
+   {% assign questions = site.questions  %}
+ {% for question in questions %}
+{% if question.object-id contains "question" %}
+    
+    <a href="/ctrl-shift/analyses/questions/{{ question.object-id }}.html">
+      <h2>{{ question.question }} </h2>
+      
+    </a>
+   {% else %}
+{% endif %}
+ {% endfor %}
+  
+</div>
+</div>
+
+
+
+<div  class="anal-div respondents">
+  <h1 class="center" id="respondents">Respondents</h1>
+ 
+        <div class="anal-listing">
+    {% assign poets = site.interviews | sort: 'last-name' %}
+   {% for poet in poets %}
+    <a href="/ctrl-shift/analyses/respondents/{{ poet.object-id }}.html">
+    <img src="/ctrl-shift/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
+      <h2>{{ poet.first-name }} {{poet.last-name}} </h2>
+      
+    </a>
+    {% endfor %}
+  
+</div>
+</div>
+
+<div  class="anal-div icons">
+  <h1 class="center" id="respondents">Icons</h1>
+ 
+        <div class="anal-listing">
+            {% assign icons = site.icons  %}
+            {% for icon in icons %}
+          
+               
+               <a href="/ctrl-shift/{{ icon.url}}.html">
+                <img src="/ctrl-shift/images/icons/{{ icon.icon-id}}.png">
+                 <br/>
+                 <h2 class="center">{{icon.title }}</h2>
+               </a>
+             
+            {% endfor %}
+             
+  
+</div>
+</div>
+
+
+
+
+
+
+</div>

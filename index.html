@@ -1,0 +1,241 @@
+---
+layout: homepage
+---
+
+<div class="home" id="homeback"  >
+    
+   <!--<h1 class="main-heading pink-neon">CTRL-Shift</h1>-->
+        {% include header.html %}
+    <div class="headline-wrapper">
+      <div class="white-space"> </div>
+<h1 class="site-headline"> Writing Practice at the Dawn of the Digital Era </h1>
+<h3 class="site-subline">11 Contemporary Poets on writing through the advent of the personal computer and into the arrival of the digital age.
+  <br/>  <br/>
+  <!--<a class="action-button" href="interviews.html">View Interviews</a>-->
+</h3>
+
+    </div>
+  
+  </div>
+
+
+
+  <br/><br/>
+
+
+<div class="home-section home-about">
+    <h1 class="center">About the Project </h1>
+<h3 >
+  CTRL-Shift is an online collection of audio recordings, transcripts, process visualizations, and data analyses broken out from interviews conducted with 11 prominent contemporary American poets from across the United States. 
+</h3>
+<br/>
+<p class="center">
+    <a href="about.html"><img src="/ctrl-shift/images/map.jpg" class="center"></a>
+    
+</p>
+<br/>
+<h3>The poets interviewed include: Rae Armantrout, Bruce Beasley, Amy Gerstler, Louise Glück, James McMichael, K. Silem Mohammad, Robert Pinsky, Michael Ryan, Stephanie Strickland, Nance Van Winckel, and Robert Wrigley (pictured below).</h3>
+<br/>
+<h3>
+The project examines recent changes in writing practices that occurred due to the advent of the computer and the arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview studies. <br/><br/><a class="action-button" href="about.html">More about the project ...</a>
+</h3>
+<br/>
+  </div>
+  <div class="divider" id="divider1"  ></div>
+  <div class="home-section home-int">
+<h1 class="center">The Interviews Themselves</h1>
+<h4  class="center" >We have interview material in a variety of formats for your listening/viewing/reading pleasure</h4>
+
+<br />
+<!--<h1 class="center" >I would like to 
+  <br/><form id="format"><select>
+  <option value="interviews">read and listen to</option> 
+  <option value="videos">view</option>
+  <option value="transcripts">read</option>
+</select></form><br/>
+ an interview by <br/>
+<form id="format"><select>
+    {% assign poets = site.interviews | sort: 'last-name' %}
+    {% for poet in poets %}
+    <option value="{{ poet.object-id }}.html">{{ poet.first-name }} {{poet.last-name}}</option>
+{% endfor%}
+</select></form>
+</h1>-->
+
+<div class="image-container" class="center">
+ 
+    {% for poet in poets %}
+   <div class="portraits center">
+  <a href="interviews/{{poet.object-id}}.html" >
+   
+<img src="images/portraits/{{poet.object-id}}.png">
+ <span class="name">{{ poet.first-name }} {{poet.last-name}}</span>
+  </a></div>
+
+  {% endfor%}
+</div>
+<br/><br/>
+<p>
+<a class="action-button" href="interviews.html">All Interviews</a></p>
+  </div>
+  <div class="divider" id="divider2"  ></div>
+  <div class="home-section home-anal">
+      <h1 class="center">We've also broken the interviews down</h1>
+      <h2  class="center" >by Question <br/> 
+        <form id="question" class="center"><select class="center" onchange="window.location.href=this.value">
+            <option>Select a Question</option>
+            {% assign questions = site.questions  %}
+            {% for question in questions %}
+           {% if question.object-id contains "question" %}
+              <option value="analyses/questions/{{question.object-id}}">
+                {{ question.question }} 
+                </option>
+              {% else %}
+           {% endif %}
+            {% endfor %}
+        </select></form>
+        <br/><br />
+        by Respondent, <br /> 
+        <form id="format"><select class="center" onchange="window.location.href=this.value">
+          <option>Select a Poet</option>
+          {% assign poets = site.interviews | sort: 'last-name' %}
+          {% for poet in poets %}
+          <option value="analyses/respondents/{{ poet.object-id }}.html">{{ poet.first-name }} {{poet.last-name}}</option>
+      {% endfor%}
+      </select></form>
+      <br /> <br />
+      and by Icon <br/>
+      <span style="font-size:smaller;">by which we mean medium/material/writing practice</span></h2>
+      <p class="image-container" class="center">
+         {% assign icons = site.icons  %}
+      {% for icon in icons %}
+      <a href="/ctrl-shift/{{ icon.url}}.html">
+          <img src="/ctrl-shift/images/icons/{{ icon.icon-id}}.png">
+        </a>
+      {% endfor %}<br/><br/>
+      <a class="action-button" href="analyses.html">More Analyses</a>
+      </p>
+    
+      </div>
+      <div class="divider" id="divider3"  ></div>
+<div class="home-section home-process">
+        <br/>
+
+
+
+  
+        <h1 class="center">
+          And pieced together  <br>
+          Process Narratives <br/>
+          &amp;  <br/>
+          Visualizations<br/>
+          from each poet's answers
+      </h1>
+        <br>
+        {% for poet in poets %}
+           <div class="container-proc" id="{{poet.object-id}}-viz">
+           
+   <img src="images/processes/{{poet.object-id}}/Current_creation_generation.png" class="image">
+        <img src="images/processes/{{poet.object-id}}/Composition_Revision.png" class="image">
+        <img src="images/processes/{{poet.object-id}}/Publication.png" class="image">
+        <img src="images/processes/{{poet.object-id}}/Organizing_Archiving.png" class="image">
+  <div class="overlay">
+    <a href="processes/{{poet.object-id}}.html" class="text">{{poet.first-name}} {{poet.last-name}}
+     <!--{% capture narrative  %}{% include narratives/{{ poet.object-id }}.md  %}{% endcapture %}
+          {{ narrative |  truncatewords: 20 }}--></a>
+  </div>
+</div>
+ <br>
+  {% endfor%}
+         
+          
+        <p ><a class="action-button" href="processes.html">More Processes</a></p>
+</div>
+<div class="divider" id="divider4"  ></div>
+ <div class="home-section home-findings">
+            <h1 class="center">So What Did We Find?</h1>
+            <h2 class="center">Well, we're not quite there, to be honest, 
+            but we intend to use all the analyses during the coming months
+          to compose a paper and provide updates over at our <a href="findings.html">Findings</a> page.  </h2>
+          <br/><br/><p><a class="action-button" href="findings.html">More on Findings</a></p>
+</div>
+<div class="divider" id="divider5"  ></div>
+<div class="home-section home-flotsam">
+                <h2 class="center">Our primary intent with this material, however, 
+                  was not to make some grand claim about what's changed
+                  (we'd need a bigger and better representative study for that).</h2>
+                  <br/> <br/>
+                  <h2>Rather, we wanted to open everything up
+
+                for you, <span class="pink-newon" style="font-size:25px;">random Internet citizen</span>,
+                for your own investigations and discoveries
+                and in order for those interested 
+                to learn more about these wonderful writers</h2>
+                <br/> <br/>
+              <H2 >(We also practice and encourage  
+                   messing around with all our data, 
+                   which is available on <a href="https://github.com/dcnb/ctrl-shift">GitHub</a>! 
+                  
+                  </h2> <br/> <br/>
+                  <H2 class="center">We've been messing around ourselves:
+                      <br/>
+                      <a class="action-button" href="flotsam.html">Here are some examples, aka our 'flotsam'</a>
+              <br/> <br/>
+              <h1 class="center">
+                Or go to the source: <br/>CTRL+SHIFT, Please generate a poem for me by<br/>
+                <form id="genpoem"><select onchange="window.location.href=this.value">
+                  <option >Select a Poet</option>
+                    {% assign poets = site.interviews | sort: 'last-name' %}
+                    {% for poet in poets %}
+                    {%if poet.youtube %}
+                    <option value="flotsam/genpoems/{{ poet.object-id }}.html">{{ poet.first-name }} {{poet.last-name}}</option>
+                    {% endif%} {% endfor%}
+                </select></form>
+              </h1>
+                
+                  </div>
+                  <div class="divider" id="divider6"  ></div>
+                  <script>
+    function random_item(items)
+{return items[Math.floor(Math.random()*items.length)]; }
+var arr = ['armantrout', 'beasley', 'gerstler', 'gluck', 'mcmichael', 'ryan', 'vanwinckel','wrigley'];
+var value = random_item(arr);
+document.getElementById('homeback').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+console.log(arr);
+var value = random_item(arr);
+document.getElementById('divider1').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+console.log(arr);
+var value = random_item(arr);
+document.getElementById('divider2').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+console.log(arr);
+var value = random_item(arr);
+document.getElementById('divider3').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+console.log(arr);
+var value = random_item(arr);
+document.getElementById('divider4').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+var value = random_item(arr);
+document.getElementById('divider5').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+var value = random_item(arr);
+document.getElementById('divider6').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+arr = arr.filter(function(item) { 
+    return item !== value
+})
+    </script>

@@ -1,0 +1,36 @@
+
+
+
+
+Look for: Revision reading out loud? 
+
+Could we create a book generator that does something like
+
+Choose Author(s) and topic(s), 
+
+then creates a page pulling everything out based on those selections and formats them in a specific way. 
+
+Might just print every topic based selection out on one page, then use css to make disappear/appear
+
+
+
+---
+object-id: question2   
+question: How does the notebook figure in your process?
+answers:
+- author: Stephanie Stickland
+  author-id: strickland
+  text: 
+- author: Stephanie Stickland
+  author-id: strickland
+  text: 
+- author: Stephanie Stickland
+  author-id: strickland
+  text: 
+- author: Stephanie Stickland
+  author-id: strickland
+  text: 
+- author: Stephanie Stickland
+  author-id: strickland
+  text: 
+---
