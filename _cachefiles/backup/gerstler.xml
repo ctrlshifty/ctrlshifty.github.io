@@ -1,0 +1,2035 @@
+---
+Path: gerstler
+---
+<ROOT> <record><version/>
+        <date format="yyyy-mm-dd">2014-03-20</date><date_nonpreferred_format/>
+        <cms_record_id/>
+        <title>Amy Gerstler interviewed by Devin Becker</title><partial_transcript/>
+        <synopsis/>
+        <keywords/>
+        <subjects/>
+        <gps>34.122658, -118.300959</gps><gps_text>Los Angeles, CA</gps_text><hyperlink/>
+        <hyperlink_text/>
+        <accession/>
+        <duration>01:40:26</duration><collection_id/>
+        <collection_name/>
+        <series_id/>
+        <series_name/>
+        <repository/>
+        <repository_url/>
+        <interviewee>Amy Gerstler</interviewee><birthyear>1956</birthyear>
+        <occupation>Professor, University of California, Irvine</occupation>
+        <residence>Los Angeles, California</residence><interviewer>Devin Becker</interviewer><file_name>gerstler.mp3</file_name><next>ryan</next><previous>mcmichael</previous><sync/>
+        <media_id/>
+        <media_url>http://www.devinbecker.org/mp3/gerstler.mp3</media_url><mediafile>
+        <host>Other</host>
+        <host_account_id/>
+        <host_player_id/>
+        <host_clip_id/>
+        <clip_format>audio</clip_format>
+    </mediafile><language>english</language><index>     
+         {% for item in site.data[page.Path] %}
+         <point>
+         <time>{{ item.seconds }}</time>
+       <title>{{ item.section-title}}</title>
+       <partial_transcript>{{ item.excerpt }}</partial_transcript><synopsis></synopsis><keywords></keywords><subjects></subjects><gps></gps><gps_text></gps_text><hyperlink></hyperlink><hyperlink_text></hyperlink_text>
+         </point>
+         {% endfor %}
+         </index>
+        <type>application/mp3</type><description/>
+        <rel/>
+        <transcript>
+
+        (0:00)
+
+DB:	Let's start this going.
+
+	This way will catch both of us better.
+
+AG:	OK
+
+DB:	Hi, guys! Hi! Do you want to get interviewed, too?
+
+AG:	I think they do
+
+DB:	What do you want ask you both?
+
+AG:	Digital bone recovery
+
+DB:	I did... Did you see&#8212;
+
+AG:	Virtual&#8212;
+
+DB:	--all the, like, new Fandangle pets. They can have like a plug in thing where you can like teleconference with your pet and give them a treat. It's like some new... called like Icy Cooch, and...
+
+AG:	I know they have some things for people who are gone a lot&#8212;
+
+DB:	Yeah
+
+AG:	--where you can... Like your baby or with your dog, you can watch them.
+
+DB:	Right, and this one apparently, it's like you put in on the ground level and it has kind of like a dispenser.
+
+AG:	Unbelievable!
+
+DB:	And so you can like say, "Come here"&#8212;
+
+AG:	A robot gives them a treat!
+
+DB:	--and it gives them a treat.
+
+AG 	OK
+
+DB:	It is something else, for sure. And there's like automatic&#8212;like the automatic fetch machines now and all sorts of stuffs. I guess they're kind of fascinating. 
+
+AG:	Wow!
+
+DB:	OK, so, this will take an hour, an hour and a half. If you feel... if you need to get a drink of water, you know, or go to the bathroom, it's fine.
+
+AG:	OK, same for you.
+
+DB:	Yeah, and I have... It's kind of in three sections.
+
+AG:	OK
+
+DB:	The first section is kind of a more quick, short-answer stuffs about what you're doing now.
+
+AG:	Oh, OK
+
+DB:	And it's based off the thing that... I don't know. Have you met Collier Nogus (1:24) who was in my year? She didn't actually... She wasn't in the&#8212;
+
+AG:	No, I don't think so.
+
+DB:	--in the class with us, but she has a book from Four Way. She's&#8212;
+
+AG:	Nice
+
+DB:	Anyway, we did an article earlier that interviewed kind of emerging poets about how they did this. So, these questions are from that.
+
+AG:	OK
+
+DB:	And then we'll talk more about kind of the span of your career and how the processes have changed, or not changed, with the computer.
+
+AG:	OK
+
+DB:	But it's more... I mean, it's not... You don't need to... like if you feel like you need to talk about it, or you don't. Just talk about how you work and&#8212;
+
+AG:	OK
+
+DB:	--how that goes. And then the third one will be kind of a series of questions more about, I guess, your feelings about the computer and I do have a blunt couple of questions, and that will be it.
+
+AG:	Alright!
+
+DB:	Ok, so this is the section where we talk about how you're working, currently. (It's working?) So, if you wouldn't mind stating your name, your date of birth, and where we are right now?
+
+AG:	OK, so, my name is Amy Gerstler. I was born on October 24th, 1956, and we're in the area of Los Angeles, California USA that's called Echo Park, which is close to downtown, close to Dodger's Stadium.
+
+DB:	OK. And also joining us is...
+
+AG:	Also joining us is guest stars, taking all the glory as is appropriate, is Tedd, the dog, and Guss, the dog. 
+
+DB:	Yeah, OK. So, what genres do you work in?
+
+AG:	I write poetry. I write... I do different kinds of journalism, more in the past than currently, but still some. I used to do a fair amount of art journalism like reviews and sometimes catalog pieces, and sometimes essays about visual art--
+
+DB:	OK
+
+AG:	--and I did other kinds, in general, of journalism.
+
+DB:	OK, and what would you say your&#8212;
+
+AG:	And I've written some...
+
+DB:	--primary genre is?
+
+AG:	Non-fiction
+
+DB:	OK
+
+AG 	And a teeny bit of fiction
+
+DB:	Sort of. Alright, so, all of them, essentially. Many&#8212;
+
+AG:	Many hybrid stuff
+
+DB:	Yeah, but your primary... So, your primary genre is?
+
+AG:	Poetry and a little bit of non-fiction sometimes is journalism.
+
+DB:	OK
+
+	What kinds of devices do you have, or own, have access to in your writing&#8212;computer devices?
+
+AG:	This laptop is my home computer.
+
+DB:	OK	
+
+AG:	And then I have two sort of travel ones. One is a MacBook Air, which is like this but much lighter and thinner. And then one is an iPad mini--
+
+DB:	OK
+
+AG:	--which I don't write on that much but I write on a little and it's like an iPad but it's a little smaller. It's like kind of purse size.
+
+DB:	Yeah, yeah
+
+	So, you have then... You have three devices on which you kind of write between?
+
+AG:	That's right
+
+DB:	How do you share the document? Do you share documents between the three? Is that... Are there... Is there a way that you... or do you just send them to yourself?
+
+AG:	I'm not... I like tech and I like computers, but I'm not as savvy as I should be. So, I send things to myself via email. That's usually the main way I do it. 
+
+(5:00)
+
+AG:	Sometimes I can plug them in to each other&#8212;
+
+DB:	Yeah
+
+AG:	--and have then share.
+
+DB:	Yeah, OK. And so, they're all Macs?
+
+AG:	Yes
+
+DB:	And this is your primary device, though, you would say?
+
+AG:	Yes
+
+DB:	OK
+
+AG:	There's also one at work, but I just use that for work. I don't...
+
+DB:	OK, you don't use that to actually write.
+
+AG:	It's for work.
+
+DB:	Yeah
+
+	Do you use... In addition to your own devices, are you using physical? Are you using handwriting, or notebooks, or anything?
+
+AG:	Sure
+
+DB:	OK
+
+	And so, how... What sort of ratio between the two?
+
+AG:	Ratio?
+
+DB:	I mean, how much are you working on kind of the physical formats versus digital formats, I guess? And we'll get back, so, this isn't... We can talk about it later, too.
+
+AG:	I think actual writing is almost all on computers now, but note-taking&#8212;
+
+DB:	Yeah
+
+AG:	--is probably 75% notebook and pen, and 25% take notes on the computer. 
+
+DB:	OK
+
+	At what point would your notes kind of lead in&#8212;like, say, like a physical note lead in to computer document? Well, do they usually lead to a poem like that, or is that a different...? Am I...?
+
+AG:	Yeah, I often... My sort of poetry practice involves weird, different kinds of research.
+
+DB:	Yeah
+
+AG:	And so that's digital because a lot of the research I do now was online&#8212;
+
+DB:	OK
+
+AG:	--and I often print these out, and then either highlight parts of them and use them or take notes out of book, or take notes off of websites on a&#8212;
+
+DB:	On paper?
+
+AG:	--on paper and then input it.
+
+DB:	OK
+
+AG:	Does that answer the question?
+
+DB:	Yeah, and some of these will be a little repetitive, and I hope that doesn't bother you, but it's just the way&#8212;
+
+AG:	No, not at all when you're trying to gather data.
+
+DB:	Yeah, so... But we'll talk more about that.
+
+AG:	Yeah, yeah. I, I get that.
+
+DB:	OK, cool.
+
+	In what format do you save your files?
+
+AG:	Word docx
+
+DB:	OK
+
+	And as you're creating drafts of your&#8212;
+
+AG:	Unless someone needs&#8212;
+
+DB:	A pdf?
+
+AG:	--a pdf or unless someone has an old computer, or has to have .doc
+
+DB:	Yeah, so you're... OK		
+
+	And as you're working on individual pieces on your computer, do you save over what you've written, or do you write...do you save new drafts for each one, or is it a combination?
+
+AG:	It's a combination.
+
+DB:	OK
+
+	What are your naming conventions for you files?
+
+AG:	I try to&#8212;and the names change because... (I was so happy when I realized that you could change the names)&#8212;
+
+DB:	Yeah
+
+AG:	Because I've started out&#8212;this is more to of poems that anything else, but sometimes I'll start calling something, you know, Ostrich Parade or something, and then by the time I get to the fifth draft there's no ostrich in it anymore&#8212;
+
+DB:	Yeah
+
+AG:	--and what I'm going to remember is something else--
+
+DB:	OK
+
+AG:	--in order to be able to find it quickly. So, I will change the name. 
+
+DB:	So, the title is like a prompt for you own memory intentions?
+
+AG:	See, the title is a prompt for find-ability.
+
+DB:	OK, so it's not&#8212;
+
+AG:	Quick find
+
+DB:	--it's not necessarily going to be the title. It's just maybe something that&#8212;
+
+AG:	That's right
+
+DB:	OK
+
+AG:	That's right. Sometimes it is, sometimes it isn't. And sometimes later on, down the line when I actually do title the thing--
+
+DB:	Yeah
+
+AG:	--I will change the name again. 
+
+DB:	Again?
+
+AG:	Yeah
+
+DB:	OK
+
+	And as you're going through drafts, do you add numbers to the title?
+
+AG 	I do--
+
+DB:	Right
+
+AG:	--if I'm saving drafts.
+
+DB:	OK
+
+AG:	And if I think... And what determines whether I saved drafts is if I, if I want to trash old drafts because I know I don't want to go back to them if I think I might want to go back to them for some reason. 
+
+DB:	Do you print out your writing to revise it?
+
+AG:	Sometimes, yeah
+
+DB:	Sometimes
+
+AG:	I'll do like a bunch of drafts, just revising on the computer
+
+DB:	Uh-huh
+
+AG:	And then at certain points, I'll print it out-- 
+
+DB:	OK
+
+AG:	--and mark it up by hand, and then input the changes.
+
+DB:	Do you save any copies? Like, do you save those copies?
+
+AG:	No
+
+DB:	No, they're just kind of means to the final product.
+
+AG:	Yeah
+
+DB:	OK
+
+	Do you often back-up your work, your Word document files?
+
+AG:	I have carbonite.
+
+DB:	OK, you do?
+
+AG:	Yeah
+
+DB:	So, it's backed-up in the Cloud and that's...
+
+(10:00)
+
+DB:	It's just a full... all on the computers?
+
+AG:	I've gone through all different kinds of back-up things. I've had all different kinds of viruses and crashes and, you know.
+
+DB:	Uh-huh
+
+	Yeah, and so do you find this to be&#8212;
+
+AG:	I got religion about backing up.
+
+DB:	OK, so you've got experiences where you've lost...
+
+AG:	I've had viruses and I've had bad computer crashes. 
+
+DB:	OK
+
+	Anything where you lost significant work?
+
+AG:	Not... not so much&#8212;
+
+DB:	OK
+
+AG:	--but the virus stuff destroyed the computer and was expensive and really time consuming, and really nerve wracking.
+
+DB:	I know. So, yeah
+
+AG:	So, it was like, "Oh!" Never again, if possible.
+
+DB:	So, you have a Carbonite and they're all safe. Do you connect that Carbonite folder to different devices, or you just have folder on this device?
+
+AG:	I just have it on this device because every...this is the central.
+
+DB:	That's the central kind of location.
+
+AG:	There's nothing on... When I do things on other devices, I make sure they come here, if I care about them.
+
+DB:	Yeah, OK. 
+
+	Do you... When you say you're finished with the poem, how do you... what's the... Is there a protocol for saving that in a certain place? Do you move it to a different place, or...?
+
+AG:	It goes in to a different folder&#8212;
+
+DB:	OK
+
+AG:	--and I usually print out a hard copy, and I have sort of one of these kind of notebooks--
+
+DB:	OK
+
+AG:	--that I put it in to. 
+
+DB:	Yeah, I have seen several. I think Bob Ridley (11:44) has that same one. 
+
+	OK, and then... So, you do keep print copies of your final drafts. And are they organized? Are they leading to the next manuscript essentially?
+
+AG:	Yeah, that's why because that's the form that it's going to be in and delivered in if I'm lucky enough to get something published.
+
+DB:	OK
+
+AG:	Right now, it's not... I'm not digital books, so I...
+
+DB:	Right
+
+AG:	I also want to be able to look at it in the form that it's going to exist in, and play with it. 
+
+DB:	Do you... Once they're in that folder, do you still end up going back and revising, or...?
+
+AG:	Sure
+
+DB:	OK
+
+AG:	Sure
+
+DB:	And are those usually smaller re-... I mean, do you ever go back and do large revisions in there, or do you usually kind of like moving lines or changing words, or...?
+
+AG:	It depends. I would say moderate revisions and also if you consider getting, you know, tossing poems off the team of&#8212;
+
+DB:	Oh, OK
+
+AG:	--of revisions, then yeah. Yeah, I do a lot of that.
+
+DB:	Yeah
+
+	Do you have any sort of standard ways that you... Once everything is done and finished, do you have like a standard archiving process, like where you have like a folder you never touch or place you keep all the like those from before?
+
+AG:	Well, yeah, I have those from before--
+
+DB:	OK
+
+AG:	--but also, if I'm lucky enough to publish a book, then there's a file here. That's what I send to the publisher. 
+
+DB:	And you keep that with all your other&#8212;in that Carbonite folder with everything else?
+
+AG:	Well, Carbonite just backs-up everything, right?
+
+DB:	Right, right. Yeah
+
+AG:	And then also allegedly, eventually, there's an actual book.
+
+DB:	Yeah, and so&#8212;
+
+AG:	So then it exists in at least three forms. 
+
+DB:	OK, and you consider... Do you consi-... Which one do you consider the kind of final product? Would it be the book, or...?
+
+AG:	Yeah
+
+DB:	OK
+
+AG:	Yeah, that's what I'm working towards.
+
+DB:	Yeah
+
+AG:	You know, the book with the cover and... At this point, you know, who know what the future will bring.
+
+DB:	Yeah, I know. 
+
+	Have you ever received or sort out information about methods for working with your digital files or digital archiving?
+
+AG:	No. I mean... You know, I've talked to friends about what the best back-up systems are and I've talked to people in the computer store about this because of aforementioned bad experiences.
+
+DB:	Yeah
+
+AG:	I wanted to have like five different systems and&#8212;
+
+DB:	Yeah
+
+AG:	--and really be safe. 
+
+DB:	OK, great!
+
+	OK, well, that's the sort of "where are you now digitally" part. (Just making sure everything is going. And, it is. That's great!)
+
+	(Sorry, I need to get up. You need to get up?)
+
+AG:	(Well he just needs to know what's going on. Don't you, Tedd?)
+
+DB:	(Yeah)
+
+AG:	(You do)
+
+DB:	(He's such a cool dog.)
+
+AG:	(He is a great guy.)
+
+DB:	Alright, so, this is more sort of, broadly speaking... And I have two to start and then I'll explain a few things, and then we'll go forward. 
+
+	So, how long have you been writing 
+
+(15:00)
+
+	professionally? And that's... I know that's a wishy-washy term, but in&#8212;
+
+AG:	No. I mean... I'm fifty-seven and I've been writing.... You know, started publishing, you know, small poems in school magazines, you know, back when I was in college&#8212;when I was, you know, 18, 19, 20. So&#8212;
+
+DB:	OK	
+
+AG:	--if you start it there, then that amount of years...
+
+DB:	Yeah
+
+AG:	If you start it when I had, you know, my first chapbook, then it would have been like after I finished college.
+
+DB:	OK
+
+	Well... And this is kind of, I mean, leading up to the next question which is kind of a broad question, but could you describe kind of the arc of your career&#8212;like where, you know, where it started, when you started to write the poems that you consider your poems, and then kind of how it moves through time up to now?
+
+AG:	Well, I published a small chapbook maybe a year or two after I finished college when I was 21. So...
+
+DB:	And where were you at college?
+
+AG 	I went to Pitzer College&#8212;
+
+DB:	Yeah, yeah
+
+AG:	--which is one of the Claremont colleges there in California.
+
+DB:	And then... And did you... I mean... So, you can talk about like who you studied with or anything like that. But I mean... So, you went from publishing a chapbook and then...? When did you...? And then your first book was like 1981, or...?
+
+AG:	I had that. I was lucky enough to have this guy, Dennis Cooper, who was kind of my mentor and friend. Had this wonderful press call&#8212;little Ceasar press&#8212;and he did this small chapbook of mine, and then David Trinidad, who's the&#8212;
+
+DB:	Yeah
+
+AG:	--terrific poet who teaches at Columbia College in Chicago but used to live here&#8212;
+
+DB:	OK
+
+AG:	--for a long time, had a small press call&#8212;DearWood Press&#8212;and he did another chapbook of mine. And then after that, actually someone who wasn't my friend who was actually almost a stranger, published an actual non-chapbook which is, you know, a book with some... thin spine but an actual spine rather than staples or stitching. 
+
+DB:	Yeah, yeah. And what book was that?
+
+AG:	That book was called Early Heaven
+
+DB:	OK	
+
+AG:	So, that was the first one that was a little bigger.
+
+DB:	Uh-hmm
+
+AG:	And then I went on to publish around thirteen books, some of them chapbooks, some of them actual single volumes of poetry 
+
+DB:	Yeah
+
+AG:	And then some little odd projects like collaborative book with artists, or collaborative book with a fiction writer.
+
+DB:	OK
+
+	And during these times, were you teaching? Were you working at other ...? I mean, I guess, how were you supporting your writing?
+
+AG:	Well, I was going to be a Speech Pathologist&#8212;
+
+DB:	Oh!
+
+AG:	--and work with autistic kids.
+
+DB:	Yeah
+
+AG:	I was a child psychology major. In college, I was always interested in poetry and loved it, and got to take a couple of classes at Pitzer from this amazing poet, who's not as well-known as he should be and isn't alive anymore, named Burt Myers. But I was kind of on the path to work with kids with speech problems.
+
+DB:	Yeah
+
+AG:	But I... When I graduated from college, I wanted to have some time to work on my poetry because I've just been&#8212;
+
+DB:	Yeah
+
+AG:	--in school wall-to-wall like many of us straight form high school to college. So, I took some time off and I moved to L.A. I was accepted to a speech pathology program at Ball State University, but I wanted to meet other writers and I wanted to try to make my writing better. And I started taking odd jobs. I worked for different doctors in the front office and in the back office, washing off instruments, answering phones. And I worked helping take care of a schizophrenic woman. I worked all kinds of funny, odd jobs. And that wanting to
+
+(20:00)
+
+	improve my writing, and read more, and write more, and learn more about poetry, and come in to contact with other writers kind of turned into my life. So, I'm still trying to make my poetry better and learn more and read more. 
+
+DB:	Yeah
+
+AG:	And somewhere along the way, I got some jobs at a non-profit literary arts center that's called Beyond Broke, which still exists in Venice. I worked there and in a bunch of different capacities, and the library&#8212;
+
+DB:	OK
+
+AG:	A little tiny library, non-official library
+
+DB:	Yeah
+
+AG:	Since you're&#8212;
+
+DB:	Yeah
+
+AG:	In one of those exalted breed, a librarian. And I helped in reading series and events and publicity, and did different jobs there. And then because I... My friend Dennis Cooper helped me get a little job writing art reviews for this magazine Art Forum.
+
+DB:	Yeah
+
+AG:	That... Suddenly I was very lucky and I was writing these monthly art reviews for Art Forum, which didn't pay very much but it made people think that I was an Art critic.
+
+DB:	Right
+
+AG:	So... I couldn't get any teaching jobs teaching writing initially, but I did get hired as a kind of Art critic. So, I started teaching in Art school.
+
+DB:	Oh, OK
+
+AG:	And then as I published more, wrote more, and did more different kinds of journalism, I was able to get teaching jobs teaching writing. 
+
+DB:	Uh-hmm
+
+AG:	So, I worked at a bunch of different colleges, and I had a job at a little residency program&#8212;wonderful program--, the writing seminars at Bennington College&#8212;
+
+DB:	Oh, yeah
+
+AG:	So, I'd go to Vermont twice a year, and I taught at USC and CalTech, and&#8212;
+
+DB:	Oh, OK
+
+AG:	--at my Alma Mater. I taught at the University of Utah, CalArts. A bunch of different places. 
+
+DB:	Great! And now, now you're at University of California- Irvine. 
+
+AG:	Well, I've had this job just for a year--
+
+DB:	OK
+
+AG:	--and I was super lucky. I can't believe it&#8212;to get that job. 
+
+DB:	Great! 
+
+	OK, so, that kind of gives us a framework to work in and then what I... I've sort of divided the sections in to kind of three, like we're talking about the process and like, the first part or sort of like the three-part process. The first part being kind of like compositional pre-writing, generative process. The second being revision-sort-of process, and the third, being an organizational or archival where the part where you're kind of finishing, putting things in book etcetera. And we can talk about it in different ways, but if it makes... if it works with your style&#8212;
+
+AG:	Yeah, yeah
+
+DB:	--we'll just... OK, so...
+
+AG:	I don't have a rubric I need to impose on this. 
+
+DB:	Good, good. I made one up.
+
+AG:	Yeah, well, and that structure is a good thing.
+
+DB:	OK	
+
+	And so, what I'm going to ask is sort of like how you work in those structures at the beginning of your careers and maybe how those have changed. So, when you first started writing your sort of more professional work, what were your kind of compositional, pre-writing, note-taking, generative practices at that point?
+
+AG:	Well, this now gets to era and what generation I am--
+
+DB:	Yeah
+
+AG:	--because I'm 57, so when I started writing it was typewriters, you know?
+
+DB:	Yeah
+
+AG:	I took a type a typewriter to college--
+
+DB:	Yeah
+
+AG:	--and it moved from... You know, I took typing in high school&#8212;
+
+DB:	Yeah
+
+AG:	--and it was, it went kind of quickly during the time&#8212;my little time capsule of when I was sort of coming up--
+
+DB:	Yeah
+
+AG:	--from portable typewriters and little cute cases that were sort of like a big lunch box with the little handle&#8212;
+
+DB:	Yeah
+
+AG:	--to increasingly kind of complicated electric typewriters--
+
+DB:	OK	
+
+AG:	--to...with all their weird accoutrements like&#8212;
+
+DB:	Yeah
+
+AG:	--carbon paper and white out&#8212;
+
+DB:	Right
+
+AG:	--or weird... Then they started making typewriters that actually had a correcting tape&#8212;
+
+DB:	Oh, OK
+
+AG:	--in them. It was like white and you would type over the letter that you wanted to correct, with this white, chalky strip that was in there as part of the typewriter. Before you had to like shove a weird little piece.
+
+DB:	Yeah
+
+AG:	So, all these kind of very low-tech&#8212;
+
+DB:	Yeah, solutions...
+
+AG:	--viewed and hindsight ways of dealing with making texts, correcting texts, revising texts, and also 
+
+(25:00)
+
+	copying--
+
+DB:	Yeah
+
+AG:	--texts. So, and then to the first sort of big... I remember when, you know, I first got a computer. 
+
+DB:	Yeah
+
+AG:	It was sort of like, you know, I was ZZ Top. I had a tall music system in here.
+
+DB:	Oh, yeah!
+
+AG:	It was a big, bulky thing and there were things that went under the desk.
+
+DB:	OK
+
+AG:	So then it... And the printer had like the... The print was really ugly looking and&#8212;
+
+DB:	Yeah
+
+AG:	--dot, dot&#8212;
+
+DB:	Dot matrix
+
+AG:	--matrix and it had these weird strips with holes that you tore,--
+
+DB:	Yeah
+
+AG:	--to, you know, this sleek, little improved several generations of smaller, better computers and printers. 
+
+DB:	Yeah, and so, I guess, when you were still working with typewriters and the early computers, how were you creating, let's say, the poems? I mean like were you starting in a notebook and then moving, typing them out? Were you handwriting them and moving to typewriter, or back, or did you start--?
+
+AG:	Well, I started writing poems when I was a kid before I had access to a typewriter or&#8212;
+
+DB:	Yeah
+
+AG:	--learn to type. It was, you know, spiral-bound, lined&#8212;
+
+DB:	Yeah
+
+AG:	--notebooks. 
+
+DB:	Uh-huh
+
+AG:	And then it kind of moved to typing things which you'd think would have made me revise a lot, and I did revise but I love computers. Every time you wanted to change a period, or move texts around, you had to retype everything, and you were sometimes dealing with these crappy kinds of paper like that onion skin.
+
+DB:	 Yeah
+
+AG:	It was erasable, but it was so like thin and fragile and weird looking, and intactfully bizarre, and kind of see-through-y made the poems seem like they were really not substantial.
+
+DB:	Oh, that's interesting!
+
+	So, do you&#8212;
+
+AG:	Smeared easily...
+
+DB:	And then... So like when you had an idea for a poem, you would go directly to your typewriter and start typing, usually?
+
+AG:	I think that I... I think I would write in notebooks and then at a certain point transfer what I had to the typewriter. 
+
+DB:	OK
+
+AG 	Because the typewriter was something... It isn't actually easy to revise on a manual typewriter. I mean, you have to roll the thing out&#8212;
+
+DB:	Yeah
+
+AG:	--and mark it up. There really isn't an efficient way of marking things out, or putting, inserting a list of possible words you might want to use instead of the word choice that you had. So, I think I would work on it up to a certain point and typing it was sort of like, "Oh, this is kind of an official draft. I really want to..."
+
+DB:	 OK, so, once you hit that point, and then you were&#8212;
+
+AG:	Yeah
+
+DB:	--starting to take shape to the real thing.
+
+AG:	Because typing something now, putting something on the computer makes it ultimately flexible--
+
+DB:	Yeah
+
+AG:	--but it was sort of the opposite with the manual typewriter. It wasn't set in stone, but it was sort of typing it up.
+
+DB:	And you're saying to that... once it was, you got to that typewriter state it didn't encourage that much revision because&#8212;
+
+AG:	I did and I have old things that are, you know, typescripts with lots of markings on them--
+
+DB:	Right
+
+AG:	--blah, blah, blah... But it's just revision on a computer is kind of a one-step process in the sense that it's stays within that medium.
+
+DB:	Yeah
+
+AG 	But in order to revise on a typewriter, you had to roll it out. You had to get a pen, you had to get white out, maybe you had to get an eraser.
+
+DB:	Right
+
+AG:	And then you had to put&#8212;
+
+DB:	And then input it again.
+
+AG:	 --changes on a new, clean...
+
+DB:	 So, you would try to make... I mean, would you... Once it got to where you're doing that, it was pretty far along. 
+
+AG:	Typing something up would be like a milestone every so often when you've been through a few drafts to see it typed up and to mark that up and then to...
+
+DB:	When did it start to...When did you start to work on computers, and those early computers, did they... was it ... did they feel like a drastic change?
+
+AG:	Oh, having this big machine, figuring out how to use it, and figuring out what it all meant, figuring out what a Word processor was.
+
+(30:00)
+
+	You know, and it would have problems and getting some dim concept of what an operating system was&#8212;DOS--, these different things. 
+
+DB:	Right
+
+AG:	Some people... And it really divided the sheep from the goats because there were writers I knew&#8212;they had the kinds of minds, or still do, that really worked well with computer interface, if that's even the right&#8212;
+
+DB:	Yeah
+
+AG:	--vocabulary. They just took to it. And there were other people who were always, it was always mysterious to them.
+
+DB:	Yeah
+
+AG:	It always felt foreign and robotic and bizarre, and they preferred other things. Or we're just always awkward with it, or always needed a lot of help with like needed an inter-needed and  intermediary helping them in their computer. 
+
+DB:	And they... some still have that?
+
+AG:	No, no. Computers are a particular thing and if you have the kind of mind&#8212;
+
+DB:	 Right
+
+AG:	--that works well with them, you can just zoom and you can device up. And kids now&#8212;younger people now&#8212;who are born in to various stages (31:18) the most natural thing in the world. 
+
+DB:	Yeah
+
+AG:	You know, you get your first iPhone when you're 4 months old.
+
+DB:	Oh, geez
+
+AG:	It's, you know... It's a language that they learn&#8212;
+
+DB:	Right
+
+AG:	--so, they're... It's a native language for them, but for some of us older people, it was... you were lucky if you were the kind of writer who... And I know people who... The wonderful poetry teacher that I had at Pitzer, Mike Harris, said that he liked the computer... the typewriter. The feel&#8212;
+
+DB:	Yeah, the physical
+
+AG:	--the pace, the sound of the keys. It's almost like a musical instrument for some writers.
+
+DB:	Yeah, yeah
+
+AG:	They kind of play it and&#8212;
+
+DB:	But for you, that was never... Were you coached--?
+
+AG:	What I like is I can take a chunk of text and move it up here and it doesn't take me 40 minutes to retype the whole damn thing.
+
+DB:	Yeah
+
+AG:	And if I don't like it, I can try it down here. 
+
+DB:	Right
+
+AG:	And if I want to print out a copy of something as a prose poem and a copy of it with some line breaks, and look at them next to each other, and do that in a flash.
+
+DB:	Right, right
+
+AG:	All that? I couldn't be happier. 
+
+DB:	So, at the time&#8212;
+
+AG:	Because then I'm spending my time reading and writing and revising, and not spending my time (makes typing sound), "Oh! Now I have to do the whole thing all over again!"
+
+DB:	Yeah, so, I guess then, when they did come along you were in that spectrum of people who took to it fairly easily?
+
+AG 	I can't say that I'm techno-grade but I like computers. I don't...
+
+DB:	You don't. You didn't employ... I guess, employ's the word... employ and intermediary between you and your computer. You&#8212;
+
+AG:	I, I have friends who are tech whizzes who I definitely&#8212;
+
+DB:	help
+
+AG:	--when I'm like, "How come all my email is now being spit back in to my box that I already downloaded, and I have 695 pieces of email they...," you know?
+
+DB:	Yeah
+
+AG:	I'm like, "Help!"
+
+DB:	Yeah
+
+AG:	I do that all the time
+
+DB:	Right
+
+AG:	Or, "How do you make Word, you know, not turn everything purple, or...?"
+
+DB:	Yeah
+
+AG:	But I'm probably in the middle, I think--
+
+DB:	OK 
+
+AG:	--spectrum. I wish I was one of those people who just understand everything at all levels about, and could set up a website, and knows about programming, and can fix my own computer, and speak the lingo. But... I'm attracted to that and I'm interested in it. I'd like to be more conversant, but I can't say that I'm great. 
+
+DB:	Yeah
+
+AG:	But I'm not the super scared, like, "I hate this thing."
+
+DB:	It's only going to do my work when&#8212;
+
+AG:	I have four manuals things in the closet because that's what I really prefer
+
+DB:	OK, I guess... So, when you... Do you... Can you pinpoint a timeframe when you started with computers? I mean...
+
+AG:	Well&#8212;
+
+DB:	Do you know where you were?
+
+AG:	--I remember when I was in college, a guy who I'm still friends with&#8212;this wonderful guy named Bryan Tucker who's a visual artist and also a very good art writer&#8212;he was one of those people who was like... The computer thing? It was like made on the shade for him, and he would like go... When we were in college, there was a computer there, but it took up a 
+
+(35:00)
+
+	whole room&#8212;
+
+DB:	Right
+
+AG:	--and he would like go in there and make things, and print things out, and... So, he... But that was... There was a while between when I graduated from college in the 70s and when computers were sort of starting to make their way in to writers' lives like in to their homes.
+
+DB:	Yeah, right
+
+AG:	So, I started probably... It would probably be the very beginning&#8212;
+
+DB:	Mid-80s, or beginning?
+
+AG:	--beginning of the 80s, maybe, would be my best guess
+
+DB:	Yeah, and I guess, when did you... How long did it take you to realize that you had these sort of capabilities that you, maybe, been wanting that you didn't even know, like the ability to move things around? I mean, was that initial or did that take a couple of generations to where it felt really easy to do all that sort of thing?
+
+AG:	Well, some things... There were certain perks that manifested pretty immediately like just having a copy of the thing and being able to print it out. 
+
+DB:	Yeah, that was pretty amazing.
+
+AG:	Right away? That was like way really better. 
+
+DB:	OK	
+
+AG:	And being able to correct things and move them and change them..
+
+DB:	And that was immediate, like that was...?
+
+AG:	Pret... I mean, those are things that rudimentary computers, if memory serves, were able to do.
+
+DB:	Yeah, copy and paste being the...
+
+AG:	Yeah, you didn't have to like, you know, be the best friend of the Xerox machines always anymore. 
+
+DB:	Yeah
+
+AG:	Right away, that's a life improvement.
+
+DB:	OK, and what were you using the Xerox machine for?
+
+AG:	 If you wanted to send work out... 
+
+DB:	Oh
+
+AG:	This is pre-email, right?
+
+DB:	Yeah
+
+AG:	I mean, this is... You're making me feel such a--
+
+DB:	No, no, no
+
+AG:	--dinosaur, antique... But that was inevitable. You know, so, if you wanted to apply for a grant, if you wanted to show somebody a copy of something, if you need to send somebody a copy of something, if you wanted to send out a manuscript, if you wanted to send work to a magazine. All of that involved either carbon paper&#8212;yuck&#8212;or Xeroxing, right?
+
+DB:	OK, so then, that was kind of really an organizational, some sort of work there. 
+
+	And then so... So, I guess, is there... Are there any other... You have this sort of beginning stage, you know, where the computers are just kind of revelation. Are there kind of stages between then and now that you could delineate, or is it just sort of a gradual...?
+
+AG:	Every... I mean, there are so many wonders as far as I'm concerned, and if I was more tech savvy than I am, I would be conversant with even more wonders, and it's just not for writing although that maybe your topic of interest in data collection here for teaching, too. 
+
+DB:	Right
+
+AG:	It's unbelievably helpful.
+
+	(I'm just going to make this--)
+
+DB:	(Sure)
+
+AG:	(So, this doesn't... We don't hear out loud, message from a telemarketer, which I'm so anxious to speak with... They'll just have to wait.)
+
+	So, fantast-... I mean, it's just changed teaching completely with PowerPoint, email as a way of distributing class materials or communicating with students, and blah, blah, blah, blah. And in terms of writing, every time there would be... The smallness of this, the portability of this, its different capabilities, visual stuff&#8212;being able to put visuals, being able to have access to all these typefaces. I mean, it just looks better and better.
+
+DB:	Right
+
+AG:	Now, it's wireless. I don't have to plug everything in to...
+
+DB:	Yeah
+
+AG:	 I mean, to me, the blessings and the bounty are just... Because it's... And I feel... I'm not... For me, I'm not sensing that there's a loss.
+
+DB:	Yeah
+
+AG:	It's like there might be a downside in terms of polluting the world with what these things are made out of. They're not recyclable.
+
+DB:	Yeah
+
+AG:	Things like that. And that is a&#8212;
+
+DB:	No
+
+AG:	--bad thing.
+
+DB:	Yes
+
+AG:	Capital B, capital T, but in terms of making it easier to store, send, revise, read
+
+(40:00)
+
+	research, communicate. You know, what's not to like--
+
+DB:	Right
+
+AG:	--in my view?
+
+DB:	I mean... And your poems have such a large, imaginative scope. I'm wondering was there a time... I mean like... So, in like, when you're first using computers, you know, it's not so much the internet. How were you generating all those ideas and material at that point?
+
+AG:	Dude, libraries
+
+DB:	Libraries, alright!
+
+AG:	Libraries, libraries, libraries, and you know, old used bookstores, weird old books that I would work at, or magazines, or... Stuff like that. 
+
+DB:	 And as the internet became more sort of part of one's daily life, did that change? I mean&#8212;
+
+AG:	Yes, I still use libraries.
+
+DB:	You still use libraries. OK
+
+AG:	And I still haunt the remaining dusty, old, funky, used bookstores
+
+DB:	Yeah, yeah
+
+AG:	But... Even with libraries now, if I'm looking for something specific, I can look online
+
+DB:	Right
+
+AG:	It just saves time. I don't... You know, I don't have to trudge around to all the local libraries looking to see if they have any books on Marie Curie, or if they have a particular title by so-and-so. I can see... I can see if it's in the library. I can find out what the library hours are. I can talk to a librarian if I need to. 
+
+DB:	So, I guess... Well, how is that.... I guess, how does the process... How do you go from, you know, browsing serendipitously to like having a draft of a poem? What's the process there? 
+
+AG:	Well, I get ideas for poems and sometimes they're phrases or sort of topics, or weird feelings, or vocabularies, or I want to write a poem based on the initial sort of generative impulses--"Oh, this has to do with hurricanes and my mother-in-law," you know what I mean?
+
+DB:	Yeah
+
+AG:	Or something like that, and I love research. Research is, to me, such a rich, poetic, amazing exploration and is full of the unexpected.
+
+DB:	Yeah
+
+AG:	Like in the... This is another thing that relates to sort of digital stuff. At least in my mind, the old... One of the only things I miss about pre-digital is card catalogs because they... Thumbing through a card catalog, I would be taken on many more weird tributaries than I get doing a computer search in a library on whatever. 
+
+DB:	Yeah
+
+AG:	You know, I'd be looking up for the history of ferns, or something, and I'd come across the history of shock treatment, and I'd be like, "Oh, that's way more interesting than ferns. What do we got here?"
+
+DB:	Yeah
+
+AG:	And then go find that book or something. 
+
+	So, that's... that I kind of regret&#8212;the way computer indexes are set up. It's actually a little harder to find things, I think, on topic. But anyway... So, I'm talking about going off on tangents and research, and I just went off on a tangent. 
+
+DB:	No, that's fine. 
+
+	I guess, one question I have is, you know, I mean, research for a poems seems to be like different from a research for a journalism piece. 
+
+AG:	It is. It's much more... It's imaginative research, in a way. And I think the research is done differently and also pres-... has different objective. So, you kind of pursue it differently, and you sort of gleam different things from it. In researching, like for journalism, you're usually looking for facts and sources, and different kinds of information, and where different kinds of information are, or what the scope of and issues are and subject is. In poems, it's sometimes really vocabulary, like a certain diction, or bit of color in a kind of structure that... 
+
+(45:00)
+
+	And sometimes it's facts that are going to get bent or distorted, or rubbed up against another set of facts or data or vocabularies or made-up stuff, if that makes sense.
+
+DB:	No, it does. It makes a lot of sense.
+
+	And so, I guess, in comparison then would you say that, like for your research&#8212;your journalism research&#8212;do the computers really... did that sort of aid that, I mean, sort of...? Because it has some more specificity, I guess, than it does but you're saying it miss the sort of broad&#8212;
+
+AG:	For poetic and literary kind of research, I did definitely miss the kind of strolling through the card catalog and all the different little blooming subjects that you would come across. Although, occasionally, in doing any kind of research&#8212;even the very sort of scholarly or fact-based project&#8212;you would come across something useful, but that wasn't something you were looking for specifically, something that you didn't know was going to be there. 
+
+DB:	So, that sort of&#8212;
+
+AG:	Whereas in... That would be serendipitous in a kind of journalistic- or factual-type research and it would be totally the point. 
+
+DB:	Yeah
+
+AG:	I mean, in more poetic or literary research may be.
+
+DB:	That's, I guess, something to think about. 
+
+AG:	Although they both partake, I think, of each other like sometimes in doing sort of "poetic" research. If you're really just like, "Yeah, but I need to know like five things that bears actually eat for this poem so I can pick one that sounds good fun." You can find that.
+
+DB:	Yeah
+
+	I guess, so... And the sort of final question about this sort of early stages, generative stages, is there any way that you're working now that is new, that is like not different, that you worked on in the past? I don't know... All these sort of ease of printing and revising, or just sort of generating, the internet, and everything kind of being with you at all times. Has that changed your ways of making poems, or...?
+
+AG:	Absolutely! It absolutely has. I mean, I definitely use... I direct-... I go to the library less because there's so many things I can access online and I can print them out at home, or parts of them. I can, depending on what their security and parameters are like, I can sometimes lift a phrase I want to use out of a website and put it right in to the poem--
+
+DB:	Right
+
+AG:	--which is very convenient, and then tinker with it, or whatever. Yeah, there's so many things. I can grab images. I can look at images. If I'm like, "Argh, I wanted to describe a crow's foot. What is a crow's foot look like?"
+
+DB:	Yeah
+
+AG:	I can look at an image of a... Yeah
+
+DB:	Yeah
+
+AG:	And then if I do that, if I'm google-ing that or looking at that, it'll also come up like, "Oh, yeah. Crow's foot also means, you know, the lines around your eyes," and then it'll show me images of that. I mean, that'll send me somewhere in the poem...
+
+DB:	So, there's a type of serendipity in that, I guess, a little bit, too.
+
+AG:	Sure
+
+DB:	Yeah, sort of pun
+
+AG:	But, I mean, in poems as you well know.
+
+DB:	Yeah
+
+AG:	The pun is often a welcome fellow, at least in my world. 
+
+DB:	Yeah, absolutely!
+
+	I guess I'm sort of interested, personally, in that middle period, like the period, let's say, before Google. Let's say like late 90s. I mean, like, do you remember like what the computer use was like then? I mean, do you feel like it was like a limited kind of expression of itself for you, or was that still like kind of what you would still use in the library primarily using it more as a composition tool?
+
+AG:	It was... It felt kind of a transitional time
+
+DB:	OK
+
+AG:	Like using both, getting comfortable with email... Because also with doing journalism now was a big thing, like turning in things that way.
+
+DB:	Yeah, so that must have changed. Yeah, that's got to be a big change.
+
+AG:	Big, big difference
+
+DB:	Yeah
+
+AG:	And doing edits that way
+
+DB:	Oh, yeah, like going back and forth so you didn't have to... Much quicker
+
+AG 	Yeah, like almost the whole time that I work at Art Forum, it was like... Well, at the beginning, it was like over the phone, you know, blah, blah, blah. And then it would be like somebody would mark 
+
+(50:00)
+
+	something up and send it to you over email, and then you'd go argue with them over the phone. But you wouldn't be sitting there over the phone going, "OK, in paragraph 3, about the middle, this sentence, the word..." You know what I mean?
+
+DB:	Yeah
+
+AG:	Again, making things much more efficient&#8212;speeding things up, making it so that you could...
+
+DB:	Do you know&#8212;
+
+AG:	And also, it was a lot about for me (and I don't think I was alone on this), a lot about learning curve. 
+
+DB:	Right
+
+AG 	Figuring out how to use the computer, what you could do with it graphically also poems because suddenly, you know, on a typewriter and on the early computers, you couldn't play with typeface, you couldn't play with type size, you couldn't really... People who wanted to make concrete poetry or poetry that uses, you know...?
+
+DB:	Yeah
+
+AG:	They really worked hard. You know, all those guys back in the day they worked hard to get that written and made that that it went in to print&#8212;as the artistic, graphic, on-the-page creation that they wanted to make. 
+
+DB:	I know they would've loved the internet. They would've loved like having capabilities so much...
+
+AG:	I'd like to think that those guys like (Indiscernible, 51:30)
+
+DB:	Yeah, and some of those&#8212;
+
+AG:	They'd be like, "Oh, why wasn't I born?"
+
+DB:	I know. I think Marjorie Pro said something about that, I think. Like why were you, you know...? I think everybody was there...
+
+	And I mean, it hasn't come back... I feel like it hasn't ex-... That ability hasn't, in some ways, sight up which hasn't expressed itself in ways that... I mean, there's definitely these poems and a lot of interesting stuff but it hasn't gone to where... maybe there's no movements, or anything, I think, that I can find.
+
+AG:	 I mean, there's some sort of graphically and there's all that, you know, Word, Cloud, you know, portal where you can input&#8212;
+
+DB:	Yeah, yeah, the text
+
+AG:	--things and... And then there's also people who are a lot using different internet or research functions as kind of theme, or structure, or kind of concept&#8212;like kind of conceptual poetry that&#8212;
+
+DB:	Like (Indiscernible, 52:30)
+
+AG:	Yes, and all its sort of grandchildren
+
+DB:	Yeah, right. Absolutely! I know, I know those are definitely fascinating. 
+
+	Would you... You said... You mentioned the typeface and using that... I mean, did that influence your work? 
+
+AG:	Well, a little because I liked to do, you know, what sometimes gets called, you know, multi-vocal stuffs. So... 
+
+DB:	Yeah
+
+AG:	I have a weird fondness for italics. I always have had. So, we... I, you can indicate different speakers, different voices, different... You know? Just with... You know, I didn't used to be able to use italics, make things bold, make things bigger. You know, make different columns...
+
+DB:	Yeah, definitely!
+
+AG:	Suddenly you have&#8212;
+
+DB:	Magical powers
+
+AG:	Yes, exactly!
+
+DB:	Did you ever have those sort of inclinations when you were working with typewriters or in the early days of computers? Were you like kind of, "Oh, I really like this to look like that"?
+
+AG:	A little bit, yeah, mostly because I wanted to use italics. I mean, I'm not one of those people who are like, "Yes, I want it all over the page. I like it, you know, coming down like rain. I want to look like an explosion of letters here." I'm not&#8212;
+
+DB:	No, yeah
+
+AG:	--super in to that but there's small things I wanted to do. And now, you know, not only can you do them but you can try ten different typefaces or sizes, or you can make it a color, you can...
+
+DB:	Right, and you find... What part of that process, for you... I mean, what sort of, in progression, what sort of using the different types of typefaces, or playing around happen? Does it happen more in the early stages, or like are you like maybe in a later revision stage, are you like, "Maybe if I move this here--"
+
+AG:	Mostly later because... I don't usually st-... The need for that, the poems alleged need for that kind of evolves as the poem evolves. I don't often start by saying, "Well, this is going to be about someone who has Alzheimer's. So there is her voice and here's the voice of the doctor, and then here's the voice of the daughters." It's like, "So, I'm going to need at least three different typefaces," or "going to need to spatially differentiated," or blah, blah, blah. But that might evolve as I'm writing the poem.
+
+DB:	As you're writing the piece.
+
+(55:00)	
+
+	So... I guess, so now we move on to kind of specifically to  revision, but... When you were first starting to write, what were your sort of typical revision practices, just like nitty-gritty? Like how did it work? You just... Sounds like you moved from notebook, usually, to a typewritten thing, made some changes, and then every sort of stage was another typed out piece.
+
+AG:	Kind of, and I actually... Specially after... Well, I did now... This is making me remember things...
+
+DB:	Yeah
+
+AG:	I did a lot of cutting with scissors and taping together with scotch tape. I did more and more and more of that. So, you can't believe how happy I was. You know, you lose pieces, or the wind would blow them over, or the dog would eat them. You know what I mean?
+
+DB:	Yeah, yeah
+
+AG:	And it was just like... And then if you tried to Xerox something that was all like that, they would have these big, gross lines on it and it would just look like, "Yeah, we're getting our ..."
+
+DB:	The original cut and paste, really.
+
+AG:	Well, no, cut-and-paste is called that for a reason. 
+
+DB:	Yeah, I know, I know
+
+AG:	So, I just couldn't have been... And I'm pretty clumsy anyway, I'm not a good visual artist that way. So, to not have to spend the time, to not have to look for the scissors, to not be screwing around with tape and glue, and to be able to flip it back if it didn't look good that way, or try it another way, make three versions and look in to it deeply. 
+
+DB:	So then, in terms of your revision, the sort of the cut and paste, the copy and paste, the rearranging has always been though pretty fundamental to your practice. 
+
+AG:	Once I started to realize that, as the late great David Foster Wallace said as many other people has said that writing is revision all the way through. 
+
+DB:	Yeah
+
+AG:	Yeah, you know, it... For me it is. I don't... Things change a lot and when you... I often, you know, first start working on something&#8212;not that I ever know what I'm doing, but it's really groping and trying things, and&#8212;
+
+DB:	Yeah
+
+AG:	--additive, and you get to parts of revision that are more subtractive. And then you kind of go back and forth, and then you get to a certain point where, "Oh, now it actually seems like it's turning in to something, so what are the new sort of requirements one needs for this new path that it's taking?"
+
+DB:	Uh-hmm
+
+	So, would you say between those sort of those types of revision, if you would say, additive, subtractive and maybe substitutive&#8212;
+
+AG:	And, yeah...
+
+DB:	Do you have a primary&#8212;
+
+AG:	And research definitely&#8212;pulling things, other elements, once it starts to take shape. You know, like, "Oh, this isn't autopsies. It's about, you know, my feet&#8212;my feet, dead or alive." Suddenly then, it's like, "Oh, OK." Then--"
+
+DB:	I should look at my feet.
+
+AG:	"--I'm suddenly looking at podiatrist magazines.
+
+DB:	OK, in terms of... Is there a sort of... Is there a primary mode you go to, or it seems like you use...it seem like it's all over.
+
+AG:	All over the place.
+
+DB:	OK
+
+AG:	My problem in life.
+
+DB:	I would say. And then, I guess, when did this kind of writing, this revision, realization start to really influence your own practice? Was it from the beginning, or did it sort of hit at some point?
+
+AG:	When I was, you know, a kid and when I was in junior high and high school, I was, you know, laboring under the misapprehension which is a common one&#8212;that, you know, "Oh, I wrote something. How sacred. I love (Indiscernible, 59:19)," you know.
+
+DB:	Right
+
+AG:	Touch it. It's just kind of like a shrine.
+
+DB:	Yeah
+
+AG:	But this is not the case, at least not with me. So, once I got in to college, I realized, "Oh." You work on this stuff and you think about it, and maybe you show it to people who you think are smart or interested in the topic, and they might have a suggestion. Or you work on it and then you read some more and you see, "Oh, look at what that person did. This could solve my problem here."
+
+DB:	Yeah
+
+AG:	And that is just layers and layer and layers and layers. Getting to what the thing might be and then trying to work on the thing
+
+(1:00:00)
+
+	and make it into something that could work.
+
+DB:	Right
+
+AG:	That is all just: writing is revision because you're constantly making decision. You know, sort of like perception is revision, and filtering, and choices, and...
+
+DB:	Yeah
+
+AG:	Otherwise&#8212;
+
+DB:	That's a good... That's a good analogy. I like that.
+
+AG:	-- it's a mess.
+
+DB:	Yeah, I know. 
+
+AG:	You're nuts and you can't attempt anything, and it's all... And also as you get older, I think, you realize that every poem doesn't have to contain every single thought, feeling, and reaction you've ever had in your life. 
+
+DB:	Yeah
+
+AG:	Actually, you can get to the universal through the specific.
+
+DB:	Right, right
+
+AG:	Maybe&#8212;if you're lucky.
+
+DB:	Do you... I mean, like, so when you go to a piece to revise it, do you have any intentions in mind? I mean, is there&#8212;
+
+AG:	Sure, sometimes some of them survive the process, and sometimes some of them were, you know, things that end up leading to other things but end up getting discarded. 
+
+DB:	Yeah
+
+AG:	And sometimes some of them are red herrings and the thing doesn't end up going anywhere. So, it either goes in the trash, or one line for me gets cannibalized out and goes to something else, and the rest of it goes in the trash.
+
+DB:	So... And then, like... And then, in terms of kind of what drives your revisions, are they usually... is it sort of like... do you have a... is it like sound or structure or meaning, or is it sort of like a combination?
+
+AG:	Hopefully... I hope and pray that's all those things.
+
+DB:	Yeah
+
+AG:	Sometimes, you're working on... Some people have a good head. You talked to Michael Ryan. He has such a good head for all those things. 
+
+DB:	Right
+
+AG:	For the kind of emotional content for form, for sound and music and beat. All of that. I'm not so wonderful. I... Sometimes a set of a period of revisions will be like, "This is just about trying to dig out the idea," and then after it feels like some of that maybe coming out that sometimes I will have to be like, "OK, you really have to be hearing this now and work on the sound because..."
+
+DB:	Yeah, so... So, it kind of goes instead...--
+
+AG:	Yes
+
+DB:	--sort of like compartmentalized sometimes. 
+
+AG:	And then hopefully, once it really gets going, you're able to kind of see, smell, hear, feel, taste what's going on, or sometimes it'll be like work on something for quite a while and be like, "You know, it might help shape this for it to be in quatrains."
+
+DB:	So, then&#8212;
+
+AG:	Or, "Is this really a prose poem?"
+
+DB:	Yeah, yeah, that's always an interesting question.
+
+AG:	Right, or  "Since this is about a couple who hates each other, how about couplets?"
+
+DB:	So, is there... Did you learn how to improvise, or did someone else teach you?
+
+AG:	Dennis Cooper taught me a lot, and being in some workshops. I mean, that's one of the things that workshops supposed to teach you. I mean, one of the things workshops usually teaches you is how to survive workshops--
+
+DB:	Right, right
+
+AG:	--and how to be in them. 
+
+DB:	Yeah
+
+AG:	But I think the things that have taught me about revision are showing work to other people, being in workshops, reading, and reading literature, and also sometimes reading craft stuff, and going to lectures, talking to people. And I feel like I learned a lot from teaching.
+
+DB:	OK
+
+AG:	 That's one of the real unbelievable benefits of teaching. I learned a lot from reading students work. I learned a lot from being in workshop with them, seeing how they do it&#8212;just being part of it--, seeing what they're reading. Incredibly helpful!
+
+	And then I've had  a few, you know... Dennis Cooper was an unbelievable mentor, and some other teachers I've had were, you know, that... When you have  a writing teacher, usually, that's when you get down to it, they can help you learn about your strengths. They can help you work on your process and maybe less scared. 
+
+DB:	Yeah
+
+AG:	And maybe they can help you figure out how to navigate the literary world and what kinds of 
+
+(1:05:00)
+
+	writers and stuff you might like. 
+
+DB:	Yeah
+
+AG:	Open up stuff like that for you. But I think they end up what... Maybe they most help you with often is revision, like a really good... Like Dennis Cooper was such a great mentor to me that I can still sometimes hear him in my head. 
+
+DB:	Do you... I mean, like, what do you hear?
+
+AG:	You know, "Why are you using this word? That's not tight enough," or just things that he would... I mean, he... One time he said to me, and lots of people have said this other ways I'm sure, but he was like, "You have to cultivate your obsessions." And I was always a little ashamed of my obsessions, but he was the opposite.
+
+DB:	Yeah
+
+AG:	His obsessions were like, he was like, "Artists are religion. You have to culti-," and he wasn't like preaching. He was just kind of calmly, quietly says what he thought. But these were new ideas to me--
+
+DB:	Right
+
+AG:	--and rocked my world.
+
+DB:	Yeah
+
+AG:	In a big way. I was like, "Oh, I'm obsessed with drowning. I could like..." Instead of thinking that I should just go to the doctor, I can actually read things about it, and write things about it, and pursue it. Or I'm obsessed with like ancient Egyptian tombs, or something. You know what I mean?
+
+DB:	Yeah
+
+	No, it's kind of a freedom, right? I mean...
+
+AG:	Freedom and (I hate this word but) Permission
+
+DB:	Yeah
+
+AG:	Like, "No, that's what artists do."
+
+DB:	Right. Well, you don't know until...
+
+AG:	No, no. Well, some people seem to know it instinctually. 
+
+DB:	Yeah
+
+AG:	Some people really do, and there are other more timid ones of us that need somebody to kind of light a fire under them. And he kind of did that&#8212;and a few other people did that for me. 
+
+DB:	And so, I guess, what do... Did... Throughout your writing, have other people played roles? Like, I mean, Heath seems to play a role of teaching you how to revise. Have other people played kind of more specific roles in the revision process for you?
+
+AG:	Well, I mean, I didn't study writing, unfortunately. You know, I was a Psych major- undergrad. And then when I was much older, I went in to a low residency writing program in non-fiction. And all the teachers I had there were really great at, you know, taking your copy and going over it, and showing you, you know, "Ah, this is... You're avoiding something here," or, you know, "This is..." Because it wasn't always just like out, out, out, out. It would be like, "I want to know more about this," or, "I'm so curious about this," or, you know, things that under currents&#8212;things that haven't been mined out of it yet. Or that because it's you... And you're kind of, you know, deep sea fishing in your unconscious&#8212;subconscious&#8212;in a way that you might need another person to either say, "This is excessive," or, "This isn't the most interesting thing," or "You think this is about, you know, Abraham Lincoln but it's really about you wanting to have a baby. So, get real to yourself!"  You know what I mean?
+
+DB:	Yeah, yeah
+
+AG:	And sometimes people are wrong, but sometimes you're like, "Oh, gosh--"
+
+DB:	Right
+
+AG:	"&#8212;that, that... Oh, o, you're right."
+
+DB:	Yeah, and do you still... I mean, do you have that... Do you have those relationships now with your poetry, or...?
+
+AG:	I try to do it for myself, and there are people I show things to now and again, but, you know, I don't sound like grandmas or anything. I think, for me, it seems like it gets a little harder when you get older because everyone is so busy. 
+
+DB:	Yeah
+
+AG:	And, you know, I can't ask my students to look at my work because it's supposed to be going the other way around! Although I'd like to but... I mean, a lot of them, or most of them, are really kind of smart and brilliant and, you know... It would be great but that is not&#8212;that is not fair. And that's---
+
+DB:	Maybe in some different workshop
+
+AG:	Yeah. It's all about me today, you know. 
+
+	So, I have a few people I try not to tap very often and much later in the process. And I try really hard to do it myself and to come back to things multiple times from multiple angles because, you know... When you're younger, you have a lot. Usually, more
+
+(1:10:00)
+
+	friends, and you're all young, and you have a little bit more time, and maybe people aren't locked in to jobs or families&#8212;
+
+DB:	Right
+
+AG:	--and you're all artists and writers together coming up. And then there's some winnowing.
+
+DB:	Yeah
+
+AG:	At least this has been my experience. Probably other people have a different experience. 
+
+	And so, some people stop doing it and do something else, which is cool. Some people get very busy or you lose touch with them. And then a lot of people have jobs and lives that... You know, they're already reading their students work and trying to make a living, and trying to&#8212;
+
+DB:	Right
+
+AG:	--keep their life together and do their own work. So, you know, you're like, "Hey, here's sixty pages of my poem on top of your busy, multi-tasking life. Have fun&#8212;"
+
+DB:	"Enjoy!"
+
+AG:	"--and try to get back to me within the next two days."
+
+DB:	Right, right
+
+AG:	It's harder to...
+
+DB:	Right, right. No, that is... that's definitely one of the things. 
+
+	And then, I guess, in terms of when they get&#8212;when you get to the process where you're putting together a book and (well, this is kind of the third stage, I guess)... I mean, how do you go about... I mean, I guess, it's revision process there, too&#8212;putting the collections together. What are your sort of drives, intentions? And has that changed over the course of your career, too?
+
+AG:	Well, it's different with different books.
+
+DB:	OK
+
+AG:	Because they're different animals, right?
+
+DB:	Right, yeah
+
+AG:	More or less
+
+DB:	Yeah
+
+AG:	For me, if it's a book of poems... Some book of poems are sort of like a scrapbook, or a portfolio, or something, and some of them are more thematic, or the book itself has some kind of looser type&#8212;in my case, it's usually loose&#8212;structure, or trajectory. And even the ones that are kind of a sampler, I spend a fair amount of time trying to figure out: what's the first poem, what's the last poem, what's the movement, how do they work together, how do some of the last lines of ones feed in to the title of the first line? 
+
+DB:	Yeah
+
+AG:	The next one looks good, next... In a way, it's sort of like--it's not exactly like interior decoration, but you want it to flow, have ups and downs. With me, it's like I... what's the mixture of dark and funny ones? I mean, you do many versions of that when you're reading even. 
+
+DB:	Yeah
+
+AG:	And then sometimes it's like, "Oh, this is going to be in sections," and, "Are these sections going to be numbered?" It's basically manuscript construction, right?
+
+DB:	Yeah, I mean&#8212;
+
+AG:	And if you're dealing with...  I mean, I've been really lucky in being able to pick a verse because, you know, it's a funny thing with poems. It's like hardly anybody publishes poems anymore, and if you're lucky enough to get a book of poems published, it's usually&#8212;they're not treating it like it's, you know---
+
+DB 	Yeah, that's not good.
+
+AG:	--the next big best-seller. They don't have a big investment in it, but... So, that&#8212;the fact that it's much less a big deal to them has its pros and its cons, but one of the pros is I've usually... they're not going to impose a cover on me because it's not like, "Well, this is going to be a Blockbuster, and therefore, we need to have this kind of cover."
+
+DB:	Right, right
+
+AG:	So, I get to pick covers by artists that I like usually. So, thinking about that and how the title&#8212;the overall title of the book--where that's going to come from, and...
+
+DB:	Yeah, how... Getting back to kind of the computer&#8212;the computer thing&#8212;how did that... I mean, how did you learn like without the computer and then did it change once you got?
+
+AG:	Well, this is where I need to be more... This is one of many places where I would love to be tech savvy because I keep asking friends of mine who are graphic artists like, "Isn't there a program, or piece of software, where you can lay out a book? Like in a grid?" Because I end up spreading the book out like on the floor, and then putting it together&#8212;paging through it, you know?
+
+DB:	Yeah
+
+AG:	Because... Like what we're talking about at the beginning, I want to be looking at it in a way that's analogous to the final product. It would be very convenient if I could look at something that showed where each page was and what are the double-page spreads were etcetera.
+
+DB:	Yeah
+
+AG:	And I haven't found something
+
+(1:15:00)
+
+	that works like that, so, I'm sitting here getting dog hair all over the pages, and either putting it on the floor or trying to do it on a long table, or...
+
+DB:	And is that how you've been doing it for the whole time? So, this has made it easier to move things around and stuff within the document, but in terms of constructing the document, you're still on the floor&#8212;
+
+AG:	In the dark ages with, you know, lints and dog hair, and crumbs. But that's... I'm sure there is... I'm sure at this point there are multiple programs that... There must be... If I knew how to use them, I could pull the thing together and look at it on a grid, or two grids. Something like that, or scan things in&#8212;
+
+DB:	You would think Word can just do that. I'm sure it's not that difficult, but they don't&#8212;
+
+AG:	But they&#8212;
+
+DB:	--do a whole lot.
+
+AG:	Yeah, I've not found –
+
+DB:	It doesn't know. Yeah
+
+AG:	--something that's easy to use I can ship and available to me that I know of where I can just do that. 
+
+DB:	Right, I think, yeah. I think most people is InDesign and that's... but that's a $200, $300 program and it takes learning. It's a learning curve.
+
+AG:	Yeah, and I'm always like, "Oh, I could be writing instead of reading this piece of software that I'm only going to use once every three years, when I'm like (Indiscernible, 1:16:15).
+
+DB:	Right
+
+AG:	But that, I should still do it. 
+
+DB:	I don't know. I mean, it seems to work for you.
+
+AG:	(What do you... What was that?)
+
+DB:	So, how do you... I guess, in the process of making this, how do you track the pieces? Do you just keep them in this? You print them out and you put them in the sort of folders? Is that how it's been consistently done?
+
+AG:	I do that and I have folder things that I'm currently working on, and I keep sort of looking at that and seeing if I'm reaching critical mass. And then there's ones that are sort of sinked to the bottom that I know I'm not going to&#8212;
+
+DB:	Yeah
+
+AG:	--use, unless I get some revelation, I can really clean them up. There were others that are contenders and...
+
+DB:	OK, and then in terms of when... So, when you're all done with this&#8212;like you're done with the manuscript and stuff&#8212;what are your sort of archival (the physical and digital) practices there? I mean, are you... Do you put that in a certain box, and put that somewhere?
+
+AG:	Well, I make... I make the folder that is the book that I'm going to submit, to see if I can get it published. 
+
+DB:	Yeah
+
+AG:	And I... In order to have arrived at that, I printed things out and done my gungy little no-tech, on-the-floor, dogs-walking-over-it, leaves-falling-on-it kind of procedure that I was patiently describing to you moments ago. And so, I end up with a paper copy in a file&#8212;at least one. And also if I'm su--... At that point, I'm usually trying to bribe a couple of friends in to reading it before I send it off.
+
+DB:	OK
+
+AG:	So, I'm either emailing them, or handing them&#8212;
+
+DB:	A copy
+
+AG:	--a copy. I've got a copy. There's a copy of the computer, there's a copy in whatever virtual world my back-up system backs it up into, and eventually there's a copy that I send to the publisher.
+
+DB:	And then... So, say like a few years on, you still have like those archival copies somewhere on your computer, of those manuscripts?
+
+AG:	You know, I... I mean, now, I will because of... The way I used to back-up was just on external...
+
+DB:	External hard drive
+
+AG:	Yeah, just plugged in.
+
+DB:	Right
+
+AG:	But I have problems with those and also with the house burning down, that would burn down, too.
+
+DB:	Yeah
+
+AG:	But now, with things being backed in to Cloud or other people's systems or stuff like that, it's just going to&#8212;
+
+DB:	Stay there
+
+AG:	--exist there. But when I have a book come out, I don't... I think, "OK, that's it. The book came out."
+
+DB:	The book is the thing.
+
+AG:	And the book is the thing, and then in the floating galaxy of Carbonite, there's also a copy of it and that's sort of enough. 
+
+DB:	Right, so, I mean, do you have like a different feeling, say about like the printed out manuscript that you worked on and like the document file on the thing? I mean, does this one feel more dear to you?
+
+AG:	 I'm not precious about that sort of stuff.
+
+DB:	OK, yeah
+
+AG:	People yell at me once in a while like, "What? You don't keep your draft?" or, "You don't keep copies?" or, "You don't--"
+
+DB:	Yeah
+
+AG:	And I'm like, "My office is this big. I don't have&#8212;I get rid of things so that I have, you know... And two writers live in this house, and books are coming in like every moment.
+
+(1:20:00)
+
+	It's just a constant battle with the rising swell of paper outrage. So, no, I don't keep a lot of the stuff like that."
+
+DB:	OK
+
+AG:	Because I'd have room for&#8212;
+
+DB:	For new stuff
+
+AG:	Yeah
+
+DB:	Yeah, OK. So, I have some sort of some general questions about computers, and I'd like to talk a little bit about correspondence and teaching, and that's the...
+
+AG:	OK
+
+DB:	And these maybe a little repetitive, but I think we can get at them really quickly.
+
+	So, do you think then that the kind of adding personal computing, did it affect greatly your writing practices or your writing style?
+
+AG:	Writing practices, for sure.
+
+DB:	Yeah
+
+AG:	And I think productivity. 
+
+DB:	And productivity?
+
+	OK
+
+	In terms of style though, do you think that there were definite changes, or...?
+
+AG:	Well, it certainly aided and abetted my tendencies towards research, and it quickened and made more efficient, and broadened the range of my research reach, if that makes sense.
+
+DB:	Yeah! No, it does. 
+
+	Are there any sort of styles, techniques, or formats that you think you lost from moving to the computers?
+
+AG:	Not for me, no.
+
+DB:	No?
+
+AG:	Just gained time because you just had to retype&#8212;
+
+DB:	Yeah
+
+AG:	--everything.
+
+DB:	I think we've covered a lot of these. I mean, one of the questions is: does the internet play a role in practices?
+
+AG:	Yeah
+
+DB:	I'm pretty sure it does. 
+
+	And your connect-... Do you ever disconnect when you're working? Is it ever too much of a distraction for you, or is it...?
+
+AG:	 You know, that's not... The thing I do is I just close email. 
+
+DB:	Oh, OK. So, email is the kind of...
+
+AG:	You know, the way this computer... You know, the way things are set up, it's like, if you're doing any task on the computer (whether it's for school, or if you're working on a poem, or if you're doing research, or whatever), you know, the email thing is like... I always have the sound turned off.
+
+DB:	Yeah
+
+AG:	My tech friend makes fun of me, but I... I don't... I'm very weird and I don't like the noises the computer makes. I find them distracting. But even if you turn off the sound, there's a little box&#8212;
+
+DB:	Box
+
+AG:	--that comes up that's like, that not only tells you you have email, but is like.... You know, "The medical quadrant at the University of California-Irvine wants to know if you want to participate in the study of people who have bad skin diseases." You know, this is like flashing in the corner of the thing every... Not like I'm so popular or anything, half of it is spam. But still&#8212;
+
+DB:	But still, coming up...
+
+AG:	That is interruptive and distracting, and so, I just turn email off. But I know... For me, I like to do ris-... Even my use of a dictionary, or use of a thesaurus, or use of a synonym dictionary&#8212;all those things are&#8212;
+
+DB:	Are online
+
+AG:	-- on the internet, so I don't have to like go in another room, then run and come back. I can just... With the internet on and the email off.
+
+DB:	Right
+
+	(OK, just going to... Usually, this is what happens when you cover most of the... I just want to catch a few more things)
+
+	Do you... Well, we sort of talked about this really briefly, but do you... Are you able to find the files that you're looking for on your computer like if you're thinking about something?
+
+AG:	Usually, because not only... because the naming and the capacity to easily update or change names as much as you want. But also sometimes I can't find a file but I remember I used the word artichoke in that poem. So, you can search for that. 
+
+DB:	Yeah, yeah
+
+AG:	Like I tried to think, "Oh, OK. Well, if I can't... God damn it, I can't remember what I named the thing!" I changed the name five times, but then I'll think, "Well, I used the word 'toothache' in there," so, I can search for that. 
+
+DB:	So, you're trying to look for "toothache"?
+
+	How did... Like before those capabilities were available like in the 90s etcetera, what... Did you... Were you more specific titling? I mean, were there other things that you did then that--?
+
+AG:	I still, occasionally, takes me a while to find some things.
+
+DB:	OK
+
+AG:	But mostly, between those two things, I can. And before... I had more stuff on
+
+(1:25:00)
+
+	my computer now, I think. Back when it was just titling and I couldn't search for a specific terms or names, that would... there were less things on my computer.
+
+DB:	So, mostly for writing?
+
+	Yeah, and do you feel... How do you kind of feel about the security and fixity of your files? Do you worry about them, or are...? Do you feel pretty confident in your situation? You've said you had some issues before, so I'm assuming that's really kind of influenced your practice.
+
+AG:	Well, if  you mean security of the computer in general, I think everyone is pretty freaked out about that.
+
+DB:	Yeah, yeah
+
+AG:	I don't get scared about people stealing my little poems. 
+
+DB:	Right. I guess&#8212;
+
+AG:	Because I don't think anyone cares. But in terms of invading bank account or my personal information&#8212;
+
+DB:	Oh, yeah
+
+AG:	--or my passwords, or other computer things... You know, contemporary life is a nightmare of losing privacy and being surveiled.
+
+DB:	I know
+
+AG:	The computer is a major source of that.
+
+DB:	(Support privacy)
+
+AG:	So, I'm just as scared as anyone else. 
+
+DB:	Yeah, I guess, I'm sort of thinking more mundanely about: are you just worried that your documents will all sort of... You know, Carbonite drops and we lose them. I mean, like, is that something... Or do you feel pretty secure at this point and were there different stages in the writing that you were like much more careful about them than you are now?
+
+AG:	 Now that you've said, "Oh, Carbonite drops. Maybe I'll get another one, too"&#8212;
+
+DB:	No, no, no. I mean, they're got several different servers.
+
+AG 	I mean... I think between my printing stuff out, my computer, my multiple devices, and Carbonite&#8212;
+
+DB:	Yeah! No, you're really well set up. As a digital archivist, I can tell you that.
+
+AG:	I'm... OK, happy to hear. I'm probably more or less OK, and if I'm not OK (because&#8212;
+
+DB:	No one's OK
+
+AG:	Yeah, the meteor comes and we're a firing inferno of a planet. Well, nothing I can do about it.
+
+DB:	Yeah. But you came to the... You came to this practice because of&#8212;
+
+AG:	Bad experience
+
+DB:	Bad experiences, yeah
+
+AG:	Both my own and hearing about other people's.
+
+DB:	Yeah, so, I guess, in term of like and in sort of corresponding with other writers about your writing, did you do a lot of that by like typewriting in paper in the beginning? And then how does that sort of changed over the course?
+
+AG:	It's&#8212;
+
+DB:	Utterly different, or...
+
+AG:	I mean, I had a postal scale. I, you know... Everything was like weighing stuff, going to the post office, and stamps, and, you know, printing&#8212;you know, which was fine. But now, I mean, email is a dream. The only thing that bugs me about... Well, there's two things, but one is security and&#8212;
+
+DB:	Yeah
+
+DB/AG:	Like a privacy
+
+AG:	And the other is that it's not as reliable as... You know, I always think that the next technology is flawless, you know? It's god, it's perfect. 
+
+DB:	Right
+
+AG:	But yesterday, it turns out that I .... My server seems to have a problem with Gmail and not send. You know, 2/3 of people I know or do business have Gmail, and so now, "Oh, 10% of things I send to Gmail are not getting there? How fantastic! That's really great!"
+
+DB:	Oh, yeah, yeah. I know.
+
+AG:	 So, what's that? 
+
+	But, no, email's, I think, great for writer correspondence, for sending people.... I mean, going back and forth with revisions&#8212;all that.
+
+DB:	And do you feel like there's a difference in feel between the ways of communicating? That's sort of regular mail versus email.
+
+AG:	Well, these are all mediums, right?
+
+DB:	Yeah, yeah
+
+AG:	I mean, yeah, they all... They're mediums, or technologies, or both and they have their own characteristics.
+
+DB:	Right
+
+AG:	They're almost... It's not as... It's not the same as a genre but... Now, they require different things of us as producers and consumers, and they have different effects.
+
+DB:	Yeah
+
+AG:	I don't... I find it difficult to believe that anyone would argue with that.
+
+DB:	No, no
+
+AG:	So&#8212;
+
+DB:	But, yeah
+
+AG:	 Yeah, email has many of the same characteristics but is different from a written letter and... Letter written on a manual typewriter is different from, you know, Charles Dickens dipping his pen, if that's indeed what he did, you know.
+
+DB:	I'm sure he did. Yeah, yeah, no.
+
+	So, OK, then how do you... Are there ways in which you save your certain digital correspondence?
+
+(1:30:00)
+
+AG:	Oh, yeah. I... Some emails I print out, and many I save by leaving them on the computer.
+
+DB:	And is that... And then I'm assuming&#8212;
+
+AG:	 And again, since the gods of Carbonites are supposedly looking out for me, it's saved there, too. 
+
+DB:	Saved there, too.
+
+	And then... But you do do specific things to save specific correspondence sometimes?
+
+AG:	Yes
+
+DB:	Yes, and the with the physical correspondence, is that... Do you save specific things there, too?
+
+AG:	Sure, once&#8212;not bragging but once I got a little letter from Johnny Ashbury, a tiny one, about something, and bet your bottom dollar I saved that.
+
+DB:	Yeah
+
+AG:	I was like&#8212;
+
+DB:	It's been like a&#8212;
+
+AG:	 Once I grow the review of a biography of Frank O'hara and his brother like wrote me something. So&#8212;
+
+DB:	Oh, really!
+
+AG:	A little card thing. I totally save things like that! Because they're meaningful, not because I think I'm going to sell them on Ebay or something.
+
+DB:	Right, no, absolutely.
+
+	And then, I guess... So, as computers came in to your work like to do your teaching, did this... I mean, I know that changed dramatically. What do you feel are like the differences between, you know, having the sort of immediate access that we have now versus where you were before?  I mean, I guess, corresponding more with mailboxes than in person?
+
+AG:	For teaching?
+
+DB:	For teaching, yeah
+
+AG:	Gosh, I'm not... I mean, I want to take classes and be able to take better advantage of this, but&#8212;
+
+DB:	Yeah
+
+AG:	I mean, I have taken in to bringing an iPad to class because... Like we were looking at a, I think it was a Frank O'hara poem and it brought up Betty Grable. None of the undergraduates in class, understandably, who Betty Grable was.
+
+DB:	Right
+
+AG:	So, I was able to (makes sounds). Here's Betty Grable, you know?
+
+DB:	Right
+
+AG:	Pin-up girl. Here's who she was and here's some biographical information. Or we can look up a word, or... Because there are not books in the classroom.
+
+DB:	Yeah
+
+AG:	In the old days, I used to sometimes bring a dictionary to class.
+
+DB:	Yeah
+
+AG:	And I was like, "I can't carry all these stuff!"
+
+DB:	So, it's always been important to you, though, to give kind of outside context in your teaching.
+
+AG:	I'm teaching writing, and books, and literature, and English. We need to be able to look stuff up. I mean...
+
+DB:	Yeah, right.
+
+AG:	You know, that's kind of a given. So, the fact that we can have a dictionary, or people can be arguing about whether, you know, negative capability was something that Keith's thought of, or&#8212;
+
+DB:	Yeah, you can&#8212;
+
+AG:	Britney Spears.  I can now look it up and say, "Hey." 
+
+DB:	Do you think then that... So, is this the first year you brought the iPad in to the class?
+
+AG:	No, I started doing that a few&#8212;
+
+DB:	A few years ago
+
+AG:	--years ago. It... Or somebody's written a poem based on a painting.
+
+DB:	Yeah, you can look it up anyway.
+
+AG:	Things like these are really good, and if I was more tech savvy, when I'm lucky enough to be booked in a smart classroom&#8212;
+
+DB:	Right
+
+AG:	You could actually project that stuff or material. I want to get to that point where I can do PowerPoint things, or I can project the poem, and... You know what I mean? 
+
+DB:	Yeah
+
+AG:	Different things like that.
+
+DB:	Absolutely, yeah
+
+AG:	So, every aspect of teaching the kinds of things that I teach, you know?
+
+DB:	And I guess, you know, this entrance of&#8212;
+
+AG:	You know, workshop... You know? Everyone sends their poem&#8212;
+
+DB:	Yeah, by email. I think when I was there, we still had to go drop it in the mailbox.
+
+AG:	Right
+
+DB:	So, did this... I mean, has this sort of... Well, has the entrance of this in to the classroom had an effect on your own writing at all?
+
+AG:	Entrance of something in the classroom like...?
+
+DB:	Like entrance of techno-... I mean like the kind of like... You know, I mean, like all of a sudden you have a device small enough that you can bring in and use in a very powerful way whereas before, it would have been, you know, huffing in that. Like has that affected you, I mean, in your relationships with your students and your writing?
+
+	Sort of a bad question, but...
+
+AG:	Well, I think, it just... You know, you want the classroom to be a vivid, lively, energetic, productive place. And when I was a little kid, there was a lot of stuff
+
+(1:35:00)
+
+	in the classroom. And now, there isn't. The classroom is sort of like a white cube, in a way.
+
+DB:	Yeah
+
+AG:	So actually, digital stuff, to me, substitutes or contains the idea of having a lot of books, or a lot of pictures, a lot of reference things. In the classroom again, which is really actually important&#8212;
+
+DB:	No, absolutely
+
+AG:	--to make something... It's not exactly hands-on in the way that a Chemistry class would be if you're working with beakers and petri dishes and stuff like that, but it helps connect the things that you're talking about in classroom to the concrete via the digital, I think. And make it real, and make it vivid, and make it connected, and for you to be able to follow ideas and reach out to the connected ideas and see where things are coming from.
+
+DB:	And then, I guess in line with that then, do you feel  like the students you have now have a different&#8212;maybe cultural&#8212;
+
+AG:	Completely
+
+DB:	--technical understanding than they used to do?
+
+AG:	No, no. Every generation of them does and then I do... I mean, I try to fake it and act like I'm all... And I bring my iPad to class even partly to be like, "OK, I'm a bunch older than you but don't write me off. I'm actually..." Yeah, exactly. So, "Don't kick me out of the world quite yet."
+
+DB:	Yeah, yeah
+
+	Is there anything... I mean, I guess the students you're teaching in this, at this time, in this year are probably more connected than any students ever, right? I mean.... But is there... Do you... Are you seeing like a difference in their proclivities, or anything like that?
+
+AG:	No, I mean, this is... They have grown up, you know, completely differently. I mean, when I talk to other teachers, you know.... This is "Duh, everyone knows this..." but... One of the only downsides is: everybody has a computer or a device&#8212;
+
+DB:	Right
+
+AG:	I'm very lucky on where I get to teach and where I get to teach. I'm not usually having this problem, but a lot people are having the problem. You know, people are there shopping for shoes, or looking at watches, or talking to their friends, or looking at porn. You know what I mean? And they're like, "Yay, I'm taking notes." And I'm like, "No, you're not!  You're not. You're buying electronic cigarettes while we're supposed to be talking about something else."
+
+DB:	Yeah
+
+AG:	So, there's that thing about computers in the classroom, but...
+
+DB:	Yeah, and then so... I mean, like finally (and thank you for your patience in answering all of these)&#8212;
+
+AG:	(Oh, sure)
+
+DB:	And this is kind of the last sort of. Do you have like any sort of broad thoughts about how.... You know, the advent of personal computer has affected writing in this periods of time&#8212;in the period of time that is your kind of writing career.
+
+AG:	Well, I kind of think everything (with this whole conversation) is that, and I'm... Sadly, I'm not a good synthesizer or summer-upper, but I'm grea---
+
+	My overwhelming reaction is gratitude. I'm super grateful that it makes it so much quicker, easier, more efficient to research, to connect to libraries, to connect to students and other writers, to correspond&#8212;to exchange texts&#8212;to get hold of texts . You know, Project Gutenberg, blah, blah, blah, blah, libraries online. Everything. And I'm so incredibly grateful that it makes it easier to keep track of and store documents and images, and exchange them, and to work on things. 
+
+	Do not miss screwing around with white out. Having this electric typewriter that I can't even lift, having to cut physically with scissors and Elmer's glue to try to move text around in a poem or a piece of journalism. I'm writing, "Don't miss it" Wouldn't want to have to go back there unless it was (Indiscernible, 1:39:57) or from being so polluted that
+
+(1:40:00)
+
+	we can't live on it anymore.
+
+	So, I'm grateful. And I find these things exciting. I don't keep up as much as I should mostly because of time.
+
+DB:	Yeah
+
+AG:	 But I feel incredibly fortunate to live now because of that. 
+
+DB:	Well, thank you very much
+
+	Alright, that is it.
+
+
+
+
+
+END OF TRANSCRIPT
+
+
+
+    </transcript><rights>Copyright Devin Becker, all rights reserved.
+    </rights><fmt/>
+        <usage/>
+        <userestrict>0</userestrict><xmllocation/>
+        <xmlfilename>gerstler.xml</xmlfilename><collection_link> http://www.devinbecker.org/ctrl-shift/</collection_link><series_link/>
+        </record>
+</ROOT>
