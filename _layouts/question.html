@@ -13,7 +13,7 @@ layout: default
   <div class="question-answers">
   {% for answer in page.answers %}
 <div class="answer">
- <img src="/images/portraits/{{answer.author-id}}.png" style="height:150px;float:left;padding: 0 10px 10px 0;">
+ <img src="{{site.baseurl}}/images/portraits/{{answer.author-id}}.png" style="height:150px;float:left;padding: 0 10px 10px 0;">
   <p>
   {{answer.text}}
 </p>
@@ -24,18 +24,18 @@ layout: default
 
 </div>
 </div>
-{% elsif page.type == "icon" %}
+{% elsif page.type == "tool" %}
 <div class="question-body">
     <header class="intro question-header">
       <h1>
-          <img src="/images/icons/{{ page.icon-id}}.png" style="float:left;height:30px;" > {{page.title}} </h1>
+          <img src="{{site.baseurl}}/images/icons/{{ page.icon-id}}.png" style="float:left;height:30px;" > {{page.title}} </h1>
 
     </header>
 <div class="anal-listing">
 {% for item in site.data.icons %}
 {% if item.icon == page.icon-id %}
-<a href="/interviews/transcripts/{{ item.poet-id }}.html#{{item.line}}">
-  <img src="/images/small/{{ item.poet-id }}.jpg" class="question-pic" />
+<a href="{{site.baseurl}}/interviews/transcripts/{{ item.poet-id }}.html#{{item.excerpt | truncatewords: 5,""}}">
+  <img src="{{site.baseurl}}/images/small/{{ item.poet-id }}.jpg" class="question-pic" />
   <h2>{{ item.poet }}</h2>
   <p>{{item.excerpt}}</p>
 </a>
@@ -43,7 +43,7 @@ layout: default
 {% endfor %}
 {% else %}
 <div class="question-body">
-     <img src="/images/portraits/{{ page.object-id }}.png" style="height:200px;float:left;padding: 0 10px 10px 0;"/>
+     <img src="{{site.baseurl}}/images/portraits/{{ page.object-id }}.png" style="height:200px;float:left;padding: 0 10px 10px 0;"/>
 <h1>{{page.first-name}} {{page.last-name}}</h1>
 <div class="question-people">
 {% assign questions = site.questions  %}

@@ -4,8 +4,6 @@ Simultaneously, Beasley drafts large prose blocks directly on the computer. Thes
 
 In terms of generative strategies, Beasely draws heavily on etymology and aleatory practices. More recently, he has experimented with plugging lines and scraps into Google Translate in order to estrange himself from the familiar ideas and language as it presents itself in early notes and drafts. 
 
-NEED SOMETHING ABOUT ORGANIZING/ARCHIVING and PUBLCICATION/Manuscript building.
-
 Ultimately, Beasely's current poetic is one of disjunction: as he puts it, "I became much more interested in fragmentation and disruption, and imitative disruptive states of mind and disruptive states of knowledge with disruptions in the poems themselves. Whereas before that, I had been very interested in a kind of well-made poem that was coherent and imagistic and lyrical. I got bored with that mode and wanted to allow the poems to become stranger and more broken&#8212;more intuitive and less logical, less linear. 
 
 

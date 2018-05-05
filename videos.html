@@ -14,9 +14,9 @@ permalink: /videos/
   <div class="listing">
     {% assign people = site.videos | sort: 'random' %}
     {% for person in people %}
-    <a href="/videos/{{ person.object-id }}.html">
+    <a href="{{site.baseurl}}/videos/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
-      <img src="/images/small/{{person.object-id}}.jpg"/>
+      <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
     </a>
     {% endfor %}
 

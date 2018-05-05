@@ -1,6 +1,6 @@
-  <h2 class="poet-name"><a href="/people/{{ poet.object-id }}.html">{{ poet.first-name }} {{ poet.last-name }}</a></h2>
+  <h2 class="poet-name"><a href="{{site.baseurl}}/people/{{ poet.object-id }}.html">{{ poet.first-name }} {{ poet.last-name }}</a></h2>
 
-        <img src="/images/{{poet.object-id}}.jpg"/>
+        <img src="{{site.baseurl}}/images/{{poet.object-id}}.jpg"/>
    
   
 <p>{{poet.content}}</p>
@@ -9,3 +9,11 @@
  {% capture bib %}{% include bibliographies/{{ poet.object-id }}.md  %}{% endcapture %}
 
 <p> {{ bib | markdownify | truncatewords: 65 }}</p>-->
+
+
+TRANSCRIPTS
+Beasley: NEED SOMETHING ABOUT ORGANIZING/ARCHIVING and PUBLCICATION/Manuscript building.
+
+Gluck: NEED PUBLICATION AND ARCHIVING
+
+Strickland:  NEED PUBLICATION AND ARCHIVING

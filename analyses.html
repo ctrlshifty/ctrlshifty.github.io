@@ -15,7 +15,7 @@ object-id: analyses
  {% for question in questions %}
 {% if question.object-id contains "question" %}
     
-    <a href="/analyses/questions/{{ question.object-id }}.html">
+    <a href="{{site.baseurl}}/analyses/questions/{{ question.object-id }}.html">
       <h2>{{ question.question }} </h2>
       
     </a>
@@ -34,8 +34,8 @@ object-id: analyses
         <div class="anal-listing">
     {% assign poets = site.interviews | sort: 'last-name' %}
    {% for poet in poets %}
-    <a href="/analyses/respondents/{{ poet.object-id }}.html">
-    <img src="/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
+    <a href="{{site.baseurl}}/analyses/respondents/{{ poet.object-id }}.html">
+    <img src="{{site.baseurl}}/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
       <h2>{{ poet.first-name }} {{poet.last-name}} </h2>
       
     </a>
@@ -45,17 +45,17 @@ object-id: analyses
 </div>
 
 <div  class="anal-div icons">
-  <h1 class="center" id="respondents">Icons</h1>
+  <h1 class="center" id="respondents">Tools</h1>
  
         <div class="anal-listing">
-            {% assign icons = site.icons  %}
-            {% for icon in icons %}
+            {% assign tools = site.tools  %}
+            {% for tool in tools %}
           
                
-               <a href="/{{ icon.url}}.html">
-                <img src="/images/icons/{{ icon.icon-id}}.png">
+               <a href="{{ tool.url}}.html">
+                <img src="{{site.baseurl}}/images/icons/{{ tool.icon-id}}.png">
                  <br/>
-                 <h2 class="center">{{icon.title }}</h2>
+                 <h2 class="center">{{tool.title }}</h2>
                </a>
              
             {% endfor %}

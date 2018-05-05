@@ -31,7 +31,7 @@ collections:
   respondents:
       output: true
       permalink: /analyses/:collection/:name
-  icons:
+  tools:
       output: true
       permalink: /analyses/:collection/:name
   genpoems:
@@ -41,9 +41,6 @@ collections:
       output: true
       permalink: /flotsam/:collection/:name
   transcripts:
-      output: true
-      permalink: /interviews/:collection/:name
-  transcripts-new:
       output: true
       permalink: /interviews/:collection/:name
 
@@ -81,7 +78,7 @@ defaults:
     values:
       layout: ohms
   - scope:
-      type: icons
+      type: tools
     values:
       layout: question
   - scope:
@@ -92,10 +89,6 @@ defaults:
       type: transcripts
     values:
       layout: transcript
-  - scope:
-      type: transcripts-new
-    values:
-      layout: transcript-new
       
 
 

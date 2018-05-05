@@ -2,4 +2,4 @@ Louise Glück does not use a computer. For her, the transition between physical 
 
 In terms of revision, Glück seeks out the inherent parallels and connections that emerge within a working collection of poems--those that don't necessarily make themselves readily apparent during the writing process itself. Her driving priority in revising individual poems has evolved from seeking something more honed and perfect to capturing a quotidian, 'human sounding,'voice--a sound akin to daily speech. Glück achieves this sonic revision without reading her poems aloud. Rather, she 'hears with her eyes' and picks up on rhythmic structures in her head. 
 
-NEED PUBLICATION AND ARCHIVING
+

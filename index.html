@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-<div class="home" id="homeback"  >
+<div class="home" id="homeback" >
     
    <!--<h1 class="main-heading pink-neon">CTRL-Shift</h1>-->
         {% include header.html %}
@@ -30,7 +30,7 @@ layout: homepage
 </h3>
 <br/>
 <p class="center">
-    <a href="about.html"><img src="/images/map.jpg" class="center"></a>
+    <a href="about.html"><img src="{{site.baseurl}}/images/map.jpg" class="center"></a>
     
 </p>
 <br/>
@@ -109,8 +109,8 @@ The project examines recent changes in writing practices that occurred due to th
       <p class="image-container" class="center">
          {% assign icons = site.icons  %}
       {% for icon in icons %}
-      <a href="/{{ icon.url}}.html">
-          <img src="/images/icons/{{ icon.icon-id}}.png">
+      <a href="{{site.baseurl}}/{{ icon.url}}.html">
+          <img src="{{site.baseurl}}/images/icons/{{ icon.icon-id}}.png">
         </a>
       {% endfor %}<br/><br/>
       <a class="action-button" href="analyses.html">More Analyses</a>
@@ -195,6 +195,18 @@ The project examines recent changes in writing practices that occurred due to th
                 
                   </div>
                   <div class="divider" id="divider6"  ></div>
+                  <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+    <script>
+    $("body").on("scroll", function () {
+    //set scroll position in session storage
+    sessionStorage.scrollPos = $("body").scrollTop();
+});
+var init = function () {
+    //get scroll position in session storage
+    $("body").scrollTop(sessionStorage.scrollPos || 0)
+};
+window.onload = init;
+        </script>
                   <script>
     function random_item(items)
 {return items[Math.floor(Math.random()*items.length)]; }
@@ -239,3 +251,4 @@ arr = arr.filter(function(item) {
     return item !== value
 })
     </script>
+

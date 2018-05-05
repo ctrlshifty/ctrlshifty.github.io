@@ -35,6 +35,13 @@
          }
          }
 
+#homeback{background-image: url('/ctrl-shift/images/splash/mcmichael.jpg');}
+#divider1{background-image: url('/ctrl-shift/images/splash/gluck.jpg');}
+#divider2{background-image: url('/ctrl-shift/images/splash/beasley.jpg');}
+#divider3{background-image: url('/ctrl-shift/images/splash/gerstler.jpg');}
+#divider4{background-image: url('/ctrl-shift/images/splash/wrigley.jpg');}
+#divider5{background-image: url('/ctrl-shift/images/splash/vanwinckel.jpg');}
+#divider6{background-image: url('/ctrl-shift/images/splash/ryan.jpg');}
    .site-headline{  color: white;
     font-size: 90px;
     
@@ -81,14 +88,17 @@ letter-spacing: -1px;
     color: inherit;
     display: inline-block;
     font-family: "Montserrat",sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     height: auto;
     letter-spacing: 0.03em;
     line-height: 1;
     padding: 10px 20px;
     text-transform: uppercase;
-    border: 1px black solid;
-    &:hover{background:#666; color:white !important;text-decoration:none;}
+    color: #ffcbcb !important;
+    border: 1px #ffcbcb solid;
+    border-radius:6px;
+    background: #4c525f;
+    &:hover{background: #3a3f49;text-decoration:none;}
 }
 
 .home-section{
@@ -225,6 +235,29 @@ img:hover{ background:white;}
     width: 100%;
     z-index: 12;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: white;
+    border-bottom: 1px gray solid;
+    padding: 15px 40px;
+    .site-title {
+        font-size: 19px;
+    line-height: 25px;}
+    .site-nav {
+ 
+    line-height: 15px;
+    margin-top: 0px;
+}
+    .site-nav .page-link {
+
+    line-height: 1;
+    padding: 5px;
+    font-size: 12px;
+}
+}
 
 
  /**
@@ -260,18 +293,17 @@ line-height: 60px;
 padding: 10px 3%;
  margin:0% auto;  
     .backtotop{font-size:10px; text-align:right; margin:0px;display:none;}
-    a{color:#3e69a0 !important;}
+//    a{color:#3e69a0 !important;}
     .column{float:left; background: transparent; padding:5px; width:46%;padding: 5px 1%; margin-right:10px;
     img{max-height:400px; max-width: 90%;}
     p{max-width:90%;}
     .bio{font-size:13px;}
     }
-  
 .portrait{width:100%; height:auto;}
 
    @include media-query($on-palm) {
 .column{padding: 20px; float:none;width:100%}
-
+.right-column{float:none;}
 border-top: 4px #333 solid; 
 height: auto; 
 padding:10px 0px;
@@ -522,8 +554,12 @@ width:100%;
     padding: 5px;
     width: 41%;
     border-radius: 0px;
-    float:left;
-    margin:5px;
+    float: left;
+    margin: 5px;
+    background: #4c525fcc;
+    color: #fff !important;
+    border-radius: 6px;
+    &:hover{color: #8c6470 !important;}
 img{max-height:100px;}}
 
 
@@ -772,7 +808,7 @@ a:hover{background:none;}
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
-    background:#5b616f;
+    background:#444852;
     color:white; 
     a{ color:#ffcbcb !important; }
 }
@@ -854,4 +890,77 @@ a:hover{background:none;}
           display:block;
       }
     
+    }
+
+    td{vertical-align: top;padding:15px;}
+
+  .timestamp{font-size:10px;}
+  .grey {
+    color: grey;
+    height: 3px;
+    width: 80%;
+    line-height: 2px;
+    float:left;
+}
+  .featured{display:block;float:none; clear:both;}
+ .line{display: block; font-size:8px; float:left;}
+ .grey .words, .grey .timestamp, .grey .speaker, .grey .line {
+    display: inline;
+    font-size: 3px;
+    padding: 0px 5px;
+}
+
+.filteroptions, .searchinput{font-size:24px; 
+    @include media-query($on-palm) { font-size:18px;}}
+    
+    .youtube {
+        background-color: #000;
+        margin-bottom: 30px;
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .youtube img {
+        width: 100%;
+        top: -16.84%;
+        left: 0;
+        opacity: 0.7;
+    }
+    .youtube .play-button {
+        width: 90px;
+        height: 60px;
+        background-color: #333;
+        box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+        z-index: 1;
+        opacity: 0.8;
+        border-radius: 6px;
+    }
+    .youtube .play-button:before {
+        content: "";
+        border-style: solid;
+        border-width: 15px 0 15px 26.0px;
+        border-color: transparent transparent transparent #fff;
+    }
+    .youtube img,
+    .youtube .play-button {
+        cursor: pointer;
+    }
+    .youtube img,
+    .youtube iframe,
+    .youtube .play-button,
+    .youtube .play-button:before {
+        position: absolute;
+    }
+    .youtube .play-button,
+    .youtube .play-button:before {
+        top: 50%;
+        left: 50%;
+        transform: translate3d( -50%, -50%, 0 );
+    }
+    .youtube iframe {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
     }

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+    <div class="genpoem-portrait">
+	<img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
+  </div>
+   <div class="transcript-content">
+        <h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
+    <h3>{{page.location}} on {{page.date-interviewed}}</h3>
+    <p>Interviewer: Devin Becker</p>
+    <p>
+    {% for item in site.data.transcripts[page.object-id] %}
+   
+  <span id="{{ forloop.index }}">{{item.words}}</span><br />
+{% endfor %}
+    </p>
+
+
+
+        </div>
+
+</div>
+</div>
+
+
+	

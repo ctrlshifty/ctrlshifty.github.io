@@ -1,26 +1,157 @@
 ---
 layout: default
 ---
+{% assign items = site.data.transcripts[page.object-id] %}
+{%- comment -%} find all words used in the subject metadata {%- endcomment -%}
+{%- assign min-count = 1 -%}
+{%- assign raw-subjects = items | map: "tags" | compact | join: ";" | split: ";" -%}
+{%- capture subjects -%}{% for s in raw-subjects %}{% if s != "" %}{{- s | strip | downcase -}};{% endif %}{%- endfor -%}{%- endcapture -%}
+{%- assign subjects = subjects | split: ";" -%}
+{%- assign uniqueSubjects = subjects | uniq | sort -%}
+
+  <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
     <div class="genpoem-portrait">
-	<img src="/images/portraits/{{ page.object-id}}.png">
+    <img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
+   <div class="sidenav" style="display:none;">
+     <h3> Limit: </h3>
+   <button class="io" id="between">between</button> <br/>
+<button class="io" id="early">early</button><br/>
+<button class="io" id="paper">paper</button><br/>
+<button class="io" id="files">files</button><br/>
+<button class="io" id="prindig">prindig</button><br/>
+<button class="io" id="change">change</button><br/>
+<button class="io" id="prompt">prompt</button><br/>
+<button class="io" id="revision">revision</button><br/>
+<button class="io" id="mss">mss</button><br/>
+<button class="io" id="career">career</button><br/>
+<button class="io" id="future">future</button><br/>
+<button class="io" id="highlight">highlight</button><br/>
+<br/><hr /><br/>
+<button class="reset" id="">reset</button>
+
   </div>
+
+</div>
    <div class="transcript-content">
         <h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
-    <h3>{{page.location}} on {{page.date-interviewed}}</h3>
-    <p>Interviewer: Devin Becker</p>
-    <p>
-    {% for item in site.data.transcripts[page.object-id] %}
+    <p>{{page.location}} on {{page.date-interviewed}} | Interviewer: Devin Becker</p>
    
-  <span id="{{item.line}}">{{item.words}}</span><br />
+   <h2><select id="filters" title="Jump to a year" class="filteroptions" style="max-width: 100%;">
+      <option value="#" selected="selected">On All Topics</option>
+             {% assign filters = site.data.filters %}
+             {% for filter in filters %}
+     {%if uniqueSubjects contains filter.shortfilter %}<option value="{{ filter.shortfilter }}" >On {{filter.text}}</option>{%endif%}
+               {% endfor %}
+              <br/> <hr/><br/>
+     <option value="highlight">Interview Highlights</option>
+               </select></h2>
+<h3 class="text-center">
+  <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput" > 
+  <input class="searchinput" title="Search" type="submit" value="Go" alt="Search" id="goButton" onclick="filterItems()"> 
+<button class="reset" href="#" data-filter="" class="filter">Reset Filters</button>
+   
+<h4><span class="info2"><span id="numberof">{{ items | size }}</span> of {{ items | size }} rows</span> (click a missing row to make it appear)</h4>
+          <table id="contents-container">
+    {% for item in items %}
+   <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}"><td class="line">{{ forloop.index }}</td><td class="words"><div>{{item.speaker}} {{item.words}}</div></td><td class="timestamp">{%if item.timestamp%}
+      <a target="_blank" href="https://youtu.be/{{ page.youtube }}?t={{item.timelink}}&cc_load_policy=1">{{item.timestamp}}</a>{% endif %}</td></tr>
 {% endfor %}
-    </p>
+</table>
 
+<script type="text/javascript">
+   $("select#filters").on('change', function() {
+   var myClass = this.value;
+    $("tr").removeClass("featured"); 
+   $("tr").addClass("grey"); 
+     $('tr.'+myClass).removeClass("grey").addClass("featured"); 
+     console.log("filter");
+     $("input#quicksearch").val(""); 
+     var numberofint = $('tr.featured').length;
+    $("#numberof").html(numberofint);
+  });
+    $("button.reset").click(function() {
+   $("tr").removeClass("grey"); 
+     $("tr").removeClass("featured"); 
+     $("input#quicksearch").val(""); 
+     $("#filters").val($("#filters option:first").val());
+     var numberofint = $('tr').length;
+    $("#numberof").html(numberofint);
+  });
 
+$("tr").click(function() {
+  if ($(this).hasClass('grey')) {
+    $(this).removeClass("grey"); 
+   $(this).addClass("featured"); 
+     console.log("show");}
+     else{}
+  });
+
+    </script>
+  <script>
+    function filterItems() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("quicksearch");
+      filter = input.value.toUpperCase();
+      itemcontainer = document.getElementById("contents-container");
+      item = itemcontainer.getElementsByTagName("tr");
+      for (i = 0; i < item.length; i++) {
+        itemcontents = item[i].getElementsByTagName("div")[0];
+        if (itemcontents) {
+          if (itemcontents.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            item[i].classList.add("featured");
+            item[i].classList.remove("grey");
+          } else {
+            item[i].classList.remove("featured");
+            item[i].classList.add("grey");
+          }
+        }       
+      }
+      var numberofint = $('tr.featured').length;
+    $("#numberof").html(numberofint);
+    $("#filters").val($("#filters option:first").val("search filtering"));
+    }
+    </script>
+<script>
+// fiter items by entering value of button or link pushed into quicksearch box
+var filterit = function() {
+ $('#quicksearch').val('');
+$(this).addClass('active');
+$('a.filter').not(this).removeClass('active');
+  var filterValue = $(this).attr('data-filter');
+  var filterClass = $(this).attr('data-filter').replace(" ","-").replace(" ","-");
+ $('#quicksearch').val($('#quicksearch').val() + filterValue);
+  $('#goButton').click();
+    window.location.hash = filterValue; 
+   var filterValueclass = "." + filterClass;
+$(filterValueclass).addClass('active');
+};
+// run filterit function when link/button with class filter clicked
+ $('a.filter').click(filterit);
+
+   // click goButton to search if return pressed in search box
+   $('#quicksearch').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('#goButton').click();
+            //Trigger search button click event
+         }
+    });
+// get hash from url
+var hashfilter = location.hash.substr(1).replace(/%20/g, " ");
+var hashfilterclass = "." + location.hash.substr(1).replace("%20","-").replace("%20","-").replace("%20","-").replace(" ","-").replace(" ","-").replace(" ","-");
+
+$(document).ready(function() {
+$("#quicksearch").focus();
+if(window.location.hash) {
+	// code to be executed if a hash is contained in the url
+ $('#quicksearch').val($('#quicksearch').val() + hashfilter);
+$('#goButton').click();
+$(hashfilterclass).addClass('active');
+}
+else{
+}});
+</script>
 
         </div>
 
 </div>
 </div>
-
-
-	
