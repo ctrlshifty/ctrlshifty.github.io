@@ -2,7 +2,7 @@
 object-id: all
 transcript: transcript-all  
 first-name: all
-last-name: people
+last-name: people   
 date-interviewed: March 27, 2014
 location: San Diego, CA
 options: video genpoem
