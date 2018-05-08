@@ -14,11 +14,16 @@ layout: default
   <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
     <div class="genpoem-portrait">
     <img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
-<ul>
+<ul id="notes-container">
     {% for note in notes %}
-<li class="{{note.tag | replace: ";"," "}}"><a href="#{{note.quote | truncatewords: 5}}">{{note.detail}}</a></li>
+<li class="hidden-all {{note.tag | replace: ";"," "}}"><a class="filter" href="#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}">{{note.detail}}</a></li>
    {% endfor %}
   </ul>
+<style>
+  .hilite {
+    background-color: yellow;
+  }
+</style>
    <div class="sidenav" style="display:none;">
      <h3> Limit: </h3>
    <button class="io" id="between">between</button> <br/>
@@ -60,7 +65,7 @@ layout: default
 <h4><span class="info2"><span id="numberof">{{ items | size }}</span> of {{ items | size }} rows</span> (click a missing row to make it appear)</h4>
           <table id="contents-container">
     {% for item in items %}
-   <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}"><td class="line">{{ forloop.index }}</td><td class="words"><div>{{item.speaker | remove: ":"}}: {{item.words}}</div></td><td class="timestamp">{%if item.timestamp%}
+   <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}"><td class="line">{{ forloop.index }}</td><td class="words"><div id="spoken">{{item.speaker | remove: ":"}}: {{item.words}}</div></td><td class="timestamp">{%if item.timestamp%}
       <a target="_blank" href="https://youtu.be/{{ page.youtube }}?t={{item.timelink}}&cc_load_policy=1">{{item.timestamp}}</a>{% endif %}</td></tr>
 {% endfor %}
 </table>
@@ -69,8 +74,11 @@ layout: default
    $("select#filters").on('change', function() {
    var myClass = this.value;
     $("tr").removeClass("featured"); 
+
    $("tr").addClass("grey"); 
+   $("li").addClass("hidden-all"); 
      $('tr.'+myClass).removeClass("grey").addClass("featured"); 
+     $('li.'+myClass).removeClass("hidden-all").addClass("featured"); 
      console.log("filter");
      $("input#quicksearch").val(""); 
      var numberofint = $('tr.featured').length;
@@ -78,6 +86,7 @@ layout: default
   });
     $("button.reset").click(function() {
    $("tr").removeClass("grey"); 
+   $("li").addClass("hidden-all"); 
      $("tr").removeClass("featured"); 
      $("input#quicksearch").val(""); 
      $("#filters").val($("#filters option:first").val());
@@ -107,6 +116,7 @@ $("tr").click(function() {
           if (itemcontents.innerHTML.toUpperCase().indexOf(filter) > -1) {
             item[i].classList.add("featured");
             item[i].classList.remove("grey");
+
           } else {
             item[i].classList.remove("featured");
             item[i].classList.add("grey");
@@ -117,13 +127,28 @@ $("tr").click(function() {
     $("#numberof").html(numberofint);
     $("#filters").val($("#filters option:first").val("search filtering"));
     }
+    function filterNotes() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("quicksearch");
+      filter = input.value.toUpperCase();
+      notecontainer = document.getElementById("notes-container");
+      note = notecontainer.getElementsByTagName("li");
+      for (i = 0; i < item.length; i++) {
+        notecontents = note[i].getElementsByTagName("a")[0];
+        if (itemcontents) {
+          if (itemcontents.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            item[i].classList.remove("hidden-all");
+          } else {
+            item[i].classList.add("hidden-all");
+          }
+        }       
+      }
+    }
     </script>
 <script>
 // fiter items by entering value of button or link pushed into quicksearch box
 var filterit = function() {
  $('#quicksearch').val('');
-$(this).addClass('active');
-$('a.filter').not(this).removeClass('active');
   var filterValue = $(this).attr('data-filter');
   var filterClass = $(this).attr('data-filter').replace(" ","-").replace(" ","-");
  $('#quicksearch').val($('#quicksearch').val() + filterValue);
@@ -156,6 +181,16 @@ $(hashfilterclass).addClass('active');
 }
 else{
 }});
+
+function highlight(text) {
+  var inputText = document.getElementById("spoken");
+  var innerHTML = inputText.innerHTML;
+  var index = innerHTML.indexOf(text);
+  if (index >= 0) { 
+   innerHTML = innerHTML.substring(0,index) + "<span class='hilite'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+   inputText.innerHTML = innerHTML;
+  }
+}
 </script>
 
         </div>
