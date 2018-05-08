@@ -41,25 +41,25 @@ object-id: processes
 
  <div class="part">
       <h2 class="center hidden-lg">Creation/Generation</h2>
-       Current:  <br/>  <span class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Current_creation_generation.png"></span>
+       Current:  <br/>  <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Current_creation_generation.png"></a>
        <br/>
-    Pre-CPU:  <br/>  <span class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.pre_creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Pre_CPU_creation_generation.png" title="visualized process"></span>
+    Pre-CPU:  <br/>  <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.pre_creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Pre_CPU_creation_generation.png" title="visualized process"></a>
    
 </div>
 <div class="part">
       <br/>  
        <h2 class="center hidden-lg">Composition</h2>
-       <span class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.composition_revision}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Composition_Revision.png"></span>
+       <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.composition_revision}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Composition_Revision.png"></a>
 </div>
 <div class="part">
    <br/>  
    <h2 class="center hidden-lg">Publication</h2>
-   <span class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.publication}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Publication.png"></span>
+   <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.publication}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Publication.png"></a>
 </div>
 <div class="part">
       <br/>
       <h2 class="center hidden-lg">Organization/Archiving</h2>
-      <span class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.organizing_archiving}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Organizing_Archiving.png"></span>
+      <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.organizing_archiving}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/processes/{{ person.object-id }}/Organizing_Archiving.png"></a>
 </div>
 </div>
 </div>
