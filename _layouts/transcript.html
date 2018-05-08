@@ -2,6 +2,8 @@
 layout: default
 ---
 {% assign items = site.data.transcripts[page.object-id] %}
+{% assign notes = site.data.notes[page.object-id] %}
+
 {%- comment -%} find all words used in the subject metadata {%- endcomment -%}
 {%- assign min-count = 1 -%}
 {%- assign raw-subjects = items | map: "tags" | compact | join: ";" | split: ";" -%}
@@ -12,6 +14,11 @@ layout: default
   <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
     <div class="genpoem-portrait">
     <img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
+<ul>
+    {% for note in notes %}
+<li class="{{note.tag | replace: ";"," "}}"><a href="#{{note.quote | truncatewords: 5}}">{{note.detail}}</a></li>
+   {% endfor %}
+  </ul>
    <div class="sidenav" style="display:none;">
      <h3> Limit: </h3>
    <button class="io" id="between">between</button> <br/>

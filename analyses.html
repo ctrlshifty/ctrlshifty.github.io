@@ -50,14 +50,11 @@ object-id: analyses
         <div class="anal-listing">
             {% assign tools = site.tools  %}
             {% for tool in tools %}
-          
-               
                <a href="{{ tool.url}}.html">
                 <img src="{{site.baseurl}}/images/icons/{{ tool.icon-id}}.png">
                  <br/>
                  <h2 class="center">{{tool.title }}</h2>
                </a>
-             
             {% endfor %}
              
   
