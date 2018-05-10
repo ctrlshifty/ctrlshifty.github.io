@@ -913,6 +913,12 @@ a:hover{background:none;}
 .filteroptions, .searchinput{font-size:24px; 
     @include media-query($on-palm) { font-size:18px;}}
     
+.notes-container{
+list-style:disc;
+    li{margin:10px 0px;}
+}
+
+
     .youtube {
         background-color: #000;
         margin-bottom: 30px;
