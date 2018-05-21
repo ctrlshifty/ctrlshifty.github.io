@@ -41,25 +41,25 @@ object-id: processes
 
  <div class="part">
       <h2 class="center hidden-lg">Creation/Generation</h2>
-       Current:  <br/>  <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process/{{ person.object-id | capitalize }}/curgen.png"></a>
+       Current:  <br/>  <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/curgen.png"></a>
        <br/>
-    Pre-CPU:  <br/>  <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.pre_creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process/{{ person.object-id | capitalize }}/pregen.png" title="visualized process"></a>
+    Pre-CPU:  <br/>  <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.pre_creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/pregen.png" title="visualized process"></a>
    
 </div>
 <div class="part">
       <br/>  
        <h2 class="center hidden-lg">Composition</h2>
-       <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.composition_revision}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process/{{ person.object-id | capitalize }}/comprev.png"></a>
+       <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.composition_revision}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/comprev.png"></a>
 </div>
 <div class="part">
    <br/>  
    <h2 class="center hidden-lg">Publication</h2>
-   <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.publication}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process/{{ person.object-id | capitalize }}/pub.png"></a>
+   <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.publication}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/pub.png"></a>
 </div>
 <div class="part">
       <br/>
       <h2 class="center hidden-lg">Organization/Archiving</h2>
-      <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.organizing_archiving}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process/{{ person.object-id | capitalize }}/orgarch.png"></a>
+      <a href="{{site.baseurl}}/process/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.organizing_archiving}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/orgarch.png"></a>
 </div>
 </div>
 </div>
