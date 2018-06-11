@@ -16,7 +16,7 @@ layout: default
         <h2>Notes</h2>
 <ul id="notes-container">
     {% for note in notes %}
-<li class="hidden-all {{note.tag | replace: ";"," "}}">{{note.poet}}: <a class="filter" href="#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}" title="{{note.quote}}">{{note.detail}}</a></li>
+<li class="hidden-all {{note.tag | replace: ";"," "}}">{{note.poet}}: <a class="filter" href="#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}" title="">{{note.detail}}</a><ul><li class="{{note.tag | replace: ";"," "}}">{{note.quote}}</li></ul></li>
    {% endfor %}
   </ul>
 <style>
