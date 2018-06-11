@@ -6,3 +6,5 @@ Ryan's approach to revision has evolved out of a need to say or capture somethin
 
 In terms of generative practice, Ryan keeps a journal (as well as collected pieces of folded paper) for jotting down raw material. He also relies on definitions and etymologies, often looking up every word in a given poem (either online or in a physical dictionary) before deeming it complete. As a rule, however, Ryan does not stop and pursue a passing idea at the time it comes to him. He immerses himself in one project at a time. With poetry, he will save the final drafts of each poem on the computer until he has enough to begin shaping a manuscript. From there, he will create a 'book folder' wherein he saves the final drafts of those poems he deems strong enough to include, then print out the poems and organize the manuscript manually. 
 
+Ryan maintains an extensive archiving practice, whereby he keeps all drafts in brown boxes that he eventually sends to the University of Virginia. His computer files are automatically backed-up, and he empoloys a technical person to maintain his and his family's computers.
+
