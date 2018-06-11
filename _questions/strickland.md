@@ -2,7 +2,7 @@
 object-id: strickland    
 first-name: Stephanie
 last-name: Strickland
-date-interviewed: March 27, 2014
+date-interviewed: May 20, 2014
 location: New York, NY
 options: 
 url: http://www.stephaniestrickland.com/

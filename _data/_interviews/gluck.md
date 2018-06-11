@@ -3,7 +3,7 @@ object-id: gluck
 first-name: Louise
 last-name: Glück
 date-interviewed: May 15, 2014
-location: Los Angeles, CA
+location: Cambridge, MA
 url: https://en.wikipedia.org/wiki/Louise_Gl%C3%BCck
 ---
 

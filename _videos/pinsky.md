@@ -3,7 +3,7 @@ object-id: pinsky
 transcript: transcript-pinsky
 first-name: Robert
 last-name: Pinsky
-date-interviewed: May 22, 2013
+date-interviewed: May 22, 2014
 location: Cambridge, MA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Robert_Pinsky
