@@ -322,17 +322,18 @@ padding:10px 0px;
 
 
 .process-viz{
-width:100%;
-padding:10px 0px; 
+width:33%;
+padding:5px; 
+float:right;
  @include media-query($on-palm) {
-      
+    width:100%;
         padding:0px; 
     }
-    .part{width:25%; float:left;display:inline;text-align: center;
+    .part{width:100%; float:left;display:inline;text-align: center;
          
     @include media-query($on-palm) {
-        width:100%;
-        margin-bottom:20px;
+        width:95%;
+        margin-bottom:25px;
        padding:7px ; 
     }
     img{max-height:100px;}
@@ -341,7 +342,13 @@ padding:10px 0px;
 
 
 .process-nar{
-    
+    width: 57%;
+    float: left;
+    margin: 1%;
+    @include media-query($on-palm) {
+        width: 95%;
+        padding: 10px;
+    }
     p{
     @include media-query($on-palm) {
         column-count:1;
