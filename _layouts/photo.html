@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<link type="text/css" rel="stylesheet" href="/dist/css/lightgallery.css" /> 
+
+ <header class="intro person-header">
+	<h1>{{ page.first-name }} {{ page.last-name }}</h1>
+	<h2>Photos taken on {{ page.date-interviewed }} in {{ page.location }}</h2>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="/dist/js/lightgallery.min.js"></script>
+
+    <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="/dist/js/lightgallery-all.js"></script>
+
+{% capture photonumber %}{{page.number_photos}}{% endcapture %}
+
+  <div class="person-contents" itemscope itemtype="http://schema.org/ImageGallery">
+	
+	<div id="animated-thumbnails" class="poet-feature">
+			{% for i in (1..photonumber) %}
+			<div style="width:200px;float:left;margin:5px;" data-src="https://ctrl-shift.org/images/{{page.object-id}}/jpg/{{page.object-id}}0{% unless i > 9 %}0{%endunless%}{{i}}.jpg">
+				<img src="https://ctrl-shift.org/images/{{page.object-id}}/thumbnails/{{page.object-id}}0{% unless i > 9 %}0{%endunless%}{{i}}.jpg" />
+			</div>
+			{% endfor %}
+		  </div>
+    
+
+
+
+  </div>
+
+  <script type="text/javascript">
+   $('#animated-thumbnails').lightGallery({
+    thumbnail:true
+}); 
+</script>

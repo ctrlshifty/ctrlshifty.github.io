@@ -28,6 +28,8 @@ collections:
       output: true
   videos:
       output: true
+  photos:
+      output: true
   respondents:
       output: true
       permalink: /analyses/:collection/:name
@@ -69,6 +71,10 @@ defaults:
       type: videos
     values:
       layout: video
+  - scope:
+      type: photos
+    values:
+      layout: photo
   - scope:
       type: textviz
     values:

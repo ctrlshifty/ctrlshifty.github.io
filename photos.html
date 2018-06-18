@@ -1,19 +1,21 @@
 ---
 layout: default
-title: Videos
-object-id: videos
-permalink: /videos/
+title: Photos
+object-id: photos
+permalink: /photos/
 ---
 
+
 <div class="poet-feature">
-    <h1 class="poet-name">Videos</h1>
+        <h1 class="poet-name">Photos</h1>
+ 
 
 
   <div class="people-body">
   <div class="listing">
-    {% assign people = site.videos | sort: 'random' %}
+    {% assign people = site.photos %}
     {% for person in people %}
-    <a href="{{site.baseurl}}/videos/{{ person.object-id }}.html">
+    <a href="{{site.baseurl}}/photos/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
       <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
     </a>
