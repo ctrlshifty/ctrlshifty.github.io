@@ -14,4 +14,4 @@ Illustrations, portraits, and process visualizations were created by Corey Ogles
 
 Funding for the project was generously provided by the [Center for Digital Inquiry and Learning](https://cdil.lib.uidaho.edu/) via a 2016 [Vandal Ideas Project](https://www.uidaho.edu/research/faculty/find-funding/internal-funding/vandal-ideas-project) grant. Funding for the travel and equipment needed to complete the initial interviews was provided via a 2013-2014 [University of Idaho Seed Grant](https://www.uidaho.edu/research/faculty/find-funding/internal-funding/seed-grant), provided by the [Office of Research and Economic Development](https://www.uidaho.edu/research/). 
 
-The [University of Idaho Library](https://www.lib.uidaho.edu/) provided the space and support for the completion of this project. The library also preserves the digital archive of materials related to this project. 
+The [University of Idaho Library](https://www.lib.uidaho.edu/) provided the space and support for the completion of this project. The library also preserves the digital archive of materials related to this project.
