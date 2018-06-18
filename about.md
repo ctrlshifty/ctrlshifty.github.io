@@ -28,7 +28,6 @@ Ultlimately, the challenge of structuring each poet’s process within a digital
 
 CTRL+Shift is a way of seeing—from various angles—how creative people work. 
 
-{% include about/collaboration.md %}
 
 {% include about/tech.md %}
 
