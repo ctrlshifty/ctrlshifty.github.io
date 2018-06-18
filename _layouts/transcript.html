@@ -14,7 +14,7 @@ layout: default
   <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
     <div class="genpoem-portrait">
     <img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
-<ul id="notes-container">
+<ul id="notes-container" style="display:none;">
     {% for note in notes %}
 <li class="hidden-all {{note.tag | replace: ";"," "}}"><a class="filter" href="#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}">{{note.detail}}</a></li>
    {% endfor %}
@@ -24,30 +24,14 @@ layout: default
     background-color: yellow;
   }
 </style>
-   <div class="sidenav" style="display:none;">
-     <h3> Limit: </h3>
-   <button class="io" id="between">between</button> <br/>
-<button class="io" id="early">early</button><br/>
-<button class="io" id="paper">paper</button><br/>
-<button class="io" id="files">files</button><br/>
-<button class="io" id="prindig">prindig</button><br/>
-<button class="io" id="change">change</button><br/>
-<button class="io" id="prompt">prompt</button><br/>
-<button class="io" id="revision">revision</button><br/>
-<button class="io" id="mss">mss</button><br/>
-<button class="io" id="career">career</button><br/>
-<button class="io" id="future">future</button><br/>
-<button class="io" id="highlight">highlight</button><br/>
-<br/><hr /><br/>
-<button class="reset" id="">reset</button>
-
-  </div>
+ 
 
 </div>
    <div class="transcript-content">
-        <h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
+       <header><h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
     <p>{{page.location}} on {{page.date-interviewed}} | Interviewer: Devin Becker</p>
-   
+  </header> 
+  <div class="filteroptions">
    <h2><select id="filters" title="Jump to a year" class="filteroptions" style="max-width: 100%;">
       <option value="#" selected="selected">On All Topics</option>
              {% assign filters = site.data.filters %}
@@ -63,6 +47,7 @@ layout: default
 <button class="reset" href="#" data-filter="" class="filter">Reset Filters</button>
    
 <h4><span class="info2"><span id="numberof">{{ items | size }}</span> of {{ items | size }} rows</span> (click a missing row to make it appear)</h4>
+</div>
           <table id="contents-container">
     {% for item in items %}
    <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}"><td class="line">{{ forloop.index }}</td><td class="words"><div id="spoken">{{item.speaker | remove: ":"}}: {{item.words}}</div></td><td class="timestamp">{%if item.timestamp%}
