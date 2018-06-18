@@ -1,3 +1,5 @@
+---
+---
 <h1>Who Done It?</h1>
 
 <strong>Devin Becker</strong> is the Director of the Center for Digital Inquiry and Learning (CDIL) and the Head of Data & Digital Services at the University of Idaho Library, where he directs and maintains the library's digital initiatives program. His library work has been awarded funding from the National Endowment for the Humanities (NEH), the Idaho Humanities Council (IHC), the United States Geological Survey (USGS), and the US Agricultural Information Network (USAIN). His first collection of poetry, Shame | Shame, was selected by David St. John as the winner of the thirteenth annual A. Poulin, Jr. Poetry Prize and was published by BOA Editions LTD in 2015.
