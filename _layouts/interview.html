@@ -1,10 +1,31 @@
 ---
 layout: default
 ---
+<!-- Remember to include jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
 <div id="{{ page.object-id }}" class="poet-feature {% cycle "odd", "even" %}" >
  <p class="backtotop" ><a href="#top">Back to Top</a></p>
- <h2 class="poet-name">{{ page.first-name }} {{ page.last-name }}</h2>
+ <h2 class="poet-name" style="width:70%;float:left;">{{ page.first-name }} {{ page.last-name }}</h2>
+ <!-- Link to open the modal -->
+<a href="#ex1" rel="modal:open" class="action-button download-button">Files and Data</a>
+ <!-- Modal HTML embedded directly into document -->
+<div id="ex1" class="modal">
+  <p class="center">
+  <a class="action-button" href="/data/mp3/{{page.object-id}}.pdf">MP3</a><br/>
+  <a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>
+  <a class="action-button" href="/data/csv/{{page.object-id}}.pdf">Transcript CSV</a><br/>
+  <a class="action-button" href="/data/txt/{{page.object-id}}.txt">Transcript TXT</a><br/>
+</p>
+  <hr /><br/>
+  <a  href="#" rel="modal:close">Close</a>
+</div>
+
+
  <div class="right-column column" >
      {% for item in site.data[page.object-id] %}
      <div class="variation" id="{{ page.object-id }}variation{{ forloop.index }}">

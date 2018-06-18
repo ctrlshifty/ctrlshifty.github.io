@@ -1,5 +1,3 @@
----
----
 ## Techical Specifics and Data
 
 This website was created using the static website generator Jekyll. Many of the visualizations and interfaces were created by using Jekyll's ability to query .csv, .yml, or .json files. For instance, the [filtering mechanism for the transcripts themselves](interviews/transcripts/strickland.html) was created by transforming the transcriptions into a csv file and then adding tags based on the major subjects of the study. This tool was created to support this and other CDIL projects such as two forthcoming online oral history projects documenting the [Idaho LGBTQ community](https://cdil.lib.uidaho.edu/#project-IdahoLGBTQ) and the [Gay Rodeo community] respectively. This tool will be released as a stand alone tool via GitHub for others to use in the analysis and publishing of their oral history projects. 

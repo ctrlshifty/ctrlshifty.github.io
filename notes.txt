@@ -34,3 +34,20 @@ answers:
   author-id: strickland
   text: 
 ---
+
+
+Poem generator notes: 
+
+Download .sbv file from Youtube CC page
+
+sbv to csv
+
+find: \n\n
+replace: \n
+
+find: (\n)(\D)
+replace: ,$2
+
+top line: start,end,line
+
+save as csv

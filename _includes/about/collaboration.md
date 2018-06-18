@@ -1,14 +1,4 @@
----
----
-<h1>Who Done It?</h1>
-
-<strong>Devin Becker</strong> is the Director of the Center for Digital Inquiry and Learning (CDIL) and the Head of Data & Digital Services at the University of Idaho Library, where he directs and maintains the library's digital initiatives program. His library work has been awarded funding from the National Endowment for the Humanities (NEH), the Idaho Humanities Council (IHC), the United States Geological Survey (USGS), and the US Agricultural Information Network (USAIN). His first collection of poetry, Shame | Shame, was selected by David St. John as the winner of the thirteenth annual A. Poulin, Jr. Poetry Prize and was published by BOA Editions LTD in 2015.
-
-<strong>Corey Oglesby</strong> is a poet, musician, and illustrator from the Washington, D.C., area. His work has recently appeared or is forthcoming in Barrow Street, DIAGRAM, Beloit Poetry Journal, Queen Mob’s Teahouse, and elsewhere. Currently the Editor-in-Chief of the literary journal Fugue, he earned his M.F.A. in Poetry at the University of Idaho, where he also helped run the Vandal Poem of the Day web project.
-
-<strong>Lauren Westerfield</strong> is an essayist and poet from the Northern California coast. Her work has appeared or is forthcoming in DIAGRAM, Sonora Review, [PANK], Hobart, The Baltimore Review, Phoebe, Permafrost, Noble/Gas Quarterly, and The Rumpus, where she has also served as an Assistant Essays Editor. Lauren received an MFA in Creative Nonfiction from the University of Idaho, where she was a Centrum Fellow, earned Honorable Mention for the Academy of American Poets Prize, and was nominated for Best New Poets 2018. Current projects include co-coordinating the POP-UP PROSE reading series in Moscow, Idaho, and serving as the Nonfiction Editor of Fugue. 
-
-<h1>Methodology and Collaboration</h1>
+## Methodology and Collaboration
 
 The 11 interviews themselves are the product of Devin Becker's 2013-2014 University of Idaho Seed Grant-funded project to interview prominent poets on their writing practices, with questions primarily focused on shifts in each poet’s physical (i.e. drafting) and creative (i.e. research and inspiration) processes in relation to the dawn of personal computing. 
 
