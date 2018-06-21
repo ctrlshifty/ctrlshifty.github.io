@@ -112,7 +112,17 @@ letter-spacing: -1px;
         select{ font-size:20px; text-align: center;}}
     
 }
-.home-int, .home-process{
+.about-section{
+    width:100%;
+    min-height:300px;
+    padding:30px 0px;
+    h3,h2,h4{width:85%; max-width:900px;margin:0% auto;}
+    p{width:85%; max-width:900px;margin:0% auto;margin-bottom:2rem;}
+    form{display: inline;
+        select{ font-size:20px; text-align: center;}}
+    
+}
+.home-int, .home-process, .about-process, .about-int{
 background:#5b616f;
 color:white !important;
     overflow: hidden;

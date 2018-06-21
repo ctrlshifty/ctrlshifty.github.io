@@ -1,3 +1,4 @@
+
 ## Methodology and Collaboration
 
 The 11 interviews themselves are the product of Devin Becker's 2013-2014 University of Idaho Seed Grant-funded project to interview prominent poets on their writing practices, with questions primarily focused on shifts in each poet’s physical (i.e. drafting) and creative (i.e. research and inspiration) processes in relation to the dawn of personal computing. 
