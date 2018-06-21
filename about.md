@@ -1,10 +1,11 @@
 ---
-layout: homepage
+layout: about
 title: About
 order: 1
 object-id: about
 ---
 <div class="about-section ">
+<div class="about-content">
 <h1>What is CTRL+SHIFT?</h1>
 <iframe src="https://www.google.com/maps/d/embed?mid=1g_5do2uHaVD7wxgKix-A6NEuy0M"  height="450" style="float:right;margin:0px 0px 10px 20px; width: 55%;" id="mymap"></iframe>
 
@@ -26,17 +27,18 @@ As poets themselves, Becker, Oglesby, and Westerfield were uniquely positioned t
 
 Ultlimately, the challenge of structuring each poet’s process within a digital venue became a repeated exercise in "breaking down to build back up"—that is, fragmenting and re-ordering interview data in the same way Beasley or Strickland might cull stray lines to start a new poem.
 </div>
+</div>
 <div class="about-section about-int">
-
+<div class="about-content">
 <h2>People</h2>
-<div class="listing">
+<div class="peeps">
 <p style="text-align:center;">
 <img src="https://vivo.nkn.uidaho.edu/vivo/file/n392840/thumbnail_becker_devin.jpg"  style="width:200px;margin:auto;"/>
 </p>
 <p>
 <a href="http://devinbecker.org">Devin Becker</a> is the director of the Center for Digital Inquiry and Learning (CDIL) and the Head of Data & Digital Services at the University of Idaho Library. In earlier research, Becker looked at the personal digital archiving practices of emerging writers in a <a href="https://doi.org/10.17723/aarc.75.2.t024180533382067">2012 American Archivist article</a>. His first collection of poetry, <a href="https://www.boaeditions.org/products/shame-shame">Shame | Shame</a>, was selected by David St. John as the winner of the thirteenth annual A. Poulin Jr. Poetry Prize and published by BOA Editions LTD in 2015.</p>
 </div>
-<div class="listing">
+<div class="peeps">
 <p style="text-align:center;">
 <img src="https://i0.wp.com/coreyoglesby.com/wp-content/uploads/2018/03/corey2.jpeg?resize=300%2C300" style="width:200px;margin:auto;" />
 </p>
@@ -44,7 +46,7 @@ Ultlimately, the challenge of structuring each poet’s process within a digital
 <a href="http://coreyoglesby.com">Corey Oglesby</a> is a poet, musician, and illustrator from the Washington, D.C., area. His work has recently appeared or is forthcoming in Barrow Street, DIAGRAM, Beloit Poetry Journal, Queen Mob’s Teahouse, and elsewhere. Currently the Editor-in-Chief of the literary journal Fugue, he earned his M.F.A. in Poetry at the University of Idaho, where he also helped run the Vandal Poem of the Day web project.
 </p>
 </div>
-<div class="listing">
+<div class="peeps">
 <p style="text-align:center;">
 <img src="https://static1.squarespace.com/static/52ae155ce4b042887e9eefd5/t/5a91e0c40d9297895c644b09/1519509967966/IMG_8324.jpg?format=300w" style="height:200px;margin:auto;" />
 </p>
@@ -53,16 +55,20 @@ Ultlimately, the challenge of structuring each poet’s process within a digital
 </p>
 </div>
 </div>
+</div>
 
-<div class="about-section about-process">
-
+<div class="about-section about-findings">
+<div class="about-content">
 {% capture collab %} {% include about/collaboration.md %}{%endcapture %}
 {{collab | markdownify}}
 </div>
+</div>
 
- <div class="about-section about-findings">
+ <div class="about-section about-process">
+ <div class="about-content">
 {% capture tech %} {% include about/tech.md %}{%endcapture %}
 {{tech | markdownify}}
+</div>
 </div>
 
 

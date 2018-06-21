@@ -116,13 +116,13 @@ letter-spacing: -1px;
     width:100%;
     min-height:300px;
     padding:30px 0px;
-    h3,h2,h4{width:85%; max-width:900px;margin:0% auto;}
-    p{width:85%; max-width:900px;margin:0% auto;margin-bottom:2rem;}
+ overflow:auto;
+   
     form{display: inline;
         select{ font-size:20px; text-align: center;}}
     
 }
-.home-int, .home-process, .about-process, .about-int{
+.home-int, .home-process,{
 background:#5b616f;
 color:white !important;
     overflow: hidden;
@@ -139,6 +139,18 @@ color:white !important;
 .action-button{    color: #ffcbcb !important;
     border: 1px #ffcbcb solid;}
 }
+.about-process, .about-int{
+    background:#5b616f;
+    color:white !important;
+    .action-button,{    color: #ffcbcb !important;
+        border: 1px #ffcbcb solid;}
+        a{    color: #ffcbcb !important;
+   }   }
+
+.peeps{width:32%; float:left;
+    @include media-query($on-palm) {
+        width:100%;
+        }}
 .portraits{width:23%;margin:0px;padding:0px;max-height:315px;float:left;    overflow: hidden;
 img{margin-bottom:-30px;}
 img:hover{ background:white;}
@@ -800,7 +812,7 @@ a:hover{background:none;}
 }
 
 
-    .about-content a{   color: #3e69a0 !important;}
+
     .about-people{float:right; width:25%; padding:12px;}
 #mymap{
    @include media-query($on-laptop) {
@@ -989,3 +1001,4 @@ list-style:disc;
         top: 0;
         left: 0;
     }
+    .about-content a{   color: #ffcbcb !important;}
