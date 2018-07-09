@@ -33,14 +33,14 @@ Ultlimately, the challenge of structuring each poet’s process within a digital
 <h2>People</h2>
 <div class="peeps">
 <p style="text-align:center;">
-<img src="https://vivo.nkn.uidaho.edu/vivo/file/n392840/thumbnail_becker_devin.jpg"  style="width:200px;margin:auto;"/>
+<img src="/images/portraits/devin.png"  style="width:200px;margin:auto;"/>
 </p>
 <p>
 <a href="http://devinbecker.org">Devin Becker</a> is the director of the Center for Digital Inquiry and Learning (CDIL) and the Head of Data & Digital Services at the University of Idaho Library. In earlier research, Becker looked at the personal digital archiving practices of emerging writers in a <a href="https://doi.org/10.17723/aarc.75.2.t024180533382067">2012 American Archivist article</a>. His first collection of poetry, <a href="https://www.boaeditions.org/products/shame-shame">Shame | Shame</a>, was selected by David St. John as the winner of the thirteenth annual A. Poulin Jr. Poetry Prize and published by BOA Editions LTD in 2015.</p>
 </div>
 <div class="peeps">
 <p style="text-align:center;">
-<img src="https://i0.wp.com/coreyoglesby.com/wp-content/uploads/2018/03/corey2.jpeg?resize=300%2C300" style="width:200px;margin:auto;" />
+<img src="/images/portraits/corey.png" style="width:200px;margin:auto;" />
 </p>
 <p>
 <a href="http://coreyoglesby.com">Corey Oglesby</a> is a poet, musician, and illustrator from the Washington, D.C., area. His work has recently appeared or is forthcoming in Barrow Street, DIAGRAM, Beloit Poetry Journal, Queen Mob’s Teahouse, and elsewhere. Currently the Editor-in-Chief of the literary journal Fugue, he earned his M.F.A. in Poetry at the University of Idaho, where he also helped run the Vandal Poem of the Day web project.
@@ -48,7 +48,7 @@ Ultlimately, the challenge of structuring each poet’s process within a digital
 </div>
 <div class="peeps">
 <p style="text-align:center;">
-<img src="https://static1.squarespace.com/static/52ae155ce4b042887e9eefd5/t/5a91e0c40d9297895c644b09/1519509967966/IMG_8324.jpg?format=300w" style="height:200px;margin:auto;" />
+<img src="/images/portraits/lauren.png" style="height:200px;margin:auto;" />
 </p>
 <p>
 <a href="http://www.laurenwesterfield.com/">Lauren Westerfield</a> is an essayist and poet from the Northern California coast. Her work has appeared or is forthcoming in DIAGRAM, Sonora Review, [PANK], Hobart, The Baltimore Review, Phoebe, Permafrost, Noble/Gas Quarterly, and The Rumpus, where she has also served as an Assistant Essays Editor. Lauren received an MFA in Creative Nonfiction from the University of Idaho, where she was a Centrum Fellow, earned Honorable Mention for the Academy of American Poets Prize, and was nominated for Best New Poets 2018.
