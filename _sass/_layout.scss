@@ -112,6 +112,16 @@ letter-spacing: -1px;
         select{ font-size:20px; text-align: center;}}
     
 }
+
+.findings-section{
+    width:100%;
+    min-height:300px;
+    padding:30px 0px;
+    p,h3,h2,h4{width:85%; max-width:900px;margin:0% auto 2rem;}
+    form{display: inline;
+        select{ font-size:20px; text-align: center;}}
+    
+}
 .about-section{
     width:100%;
     min-height:300px;
@@ -130,9 +140,11 @@ color:white !important;
     width:65%;
         overflow: hidden;
         margin:0% auto;
+        a:hover{text-decoration:none;}
     @include media-query($on-palm) {
     width:100%;
     }
+
 
 
 }
@@ -151,10 +163,14 @@ color:white !important;
     @include media-query($on-palm) {
         width:100%;
         }}
-.portraits{width:23%;margin:0px;padding:0px;max-height:315px;float:left;    overflow: hidden;
+.portraits{width:23%;margin:0px;padding:0px;max-height:360px;float:left;    overflow: hidden;
 img{margin-bottom:-30px;}
 img:hover{ background:white;}
+@include media-query($on-laptop) {
+    width:50%;
+    }
 }
+
 .name{font-size:20px; color:#d0cbcb; text-decoration: none !important; 
     &:hover{text-decoration: none !important; }
 }

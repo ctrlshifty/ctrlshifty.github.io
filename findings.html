@@ -4,32 +4,31 @@ title: Findings
 order: 5
 object-id: findings
 ---
-<div class="about-section" style="max-width: 1240px;">
-  <div class="about-content">
-    <div style="float:right;width:600px;margin:0px 0px 20px 20px">
-      <div id="ytplayer"></div>
+<div class="findings-section">
+    <p>Below are some preliminary observations we've gathered from the material (they might best be understood as notes towards some conclusions ...), as well as an introductory video. We intend to turn these and additional analyses into an article, which will be posted here as well.</p>
+     <div style="margin:15px auto;width:600px;"> <div id="ytplayer" ></div>
     </div>
-    <script>
-      // Load the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/player_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // Replace the 'ytplayer' element with an <iframe> and
-      // YouTube player after the API code downloads.
-      var player;
-      function onYouTubePlayerAPIReady() {
-        player = new YT.Player('ytplayer', {
-          height: '400',
-          width: '600',
-          cc_load_policy: 1,
-          videoId: 'HQXUDOt_vCM'
-        });
-      }
-    </script>
-    <p>Below are some preliminary observations we've gathered from the material. We intend to turn these and additional analysis
-      into an article, which will be posted here as well.</p>
+    
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '400',
+            width: '600',
+            cc_load_policy: 1,
+            videoId: 'HQXUDOt_vCM'
+          });
+        }
+      </script>
     {%include findings.html%}
   </div>
+
 </div>
