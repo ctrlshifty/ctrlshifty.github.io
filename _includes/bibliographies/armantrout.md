@@ -17,6 +17,8 @@ Books of Poetry
 Chapbooks
 - writing the plot about sets (Chax), 1998
 - Currency (Yale Union), 2016
+
+
 Books of Prose
 - True (Atelos), 1998
 - The Grand Piano: An Experiment in Collective Autobiography (Mode A/This Press), 2007

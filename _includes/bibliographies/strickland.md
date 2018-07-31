@@ -7,6 +7,7 @@ Books of Poetry
 - Zone : Zero (Ahsahta Press), 2008
 - Dragon Logic (Ahsahta Press), 2013
 - V: WaveTercets/Losing L'una (SpringGun Press), 2014
+
 Electronic and Digital Literature
 - [True North - hypertext](http://www.eastgate.com/catalog/TrueNorth.html) (Eastgate Systems), 1997
 - [To Be Here as Stone Is](http://califia.us/SI/stone1.htm) 1999

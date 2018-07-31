@@ -7,6 +7,7 @@ Books of Poetry
 - Pacific Walkers (University of Washington Press), 2013
 - Book of No Ledge (Pleiades Press), 2016
 - Our Foreigner (Pacific Coast Poetry Series), 2016
+
 Books of Prose
 - Limited Lifetime Warranty (University of Missouri Press), 1994
 - Quake (University of Missouri Press), 1997

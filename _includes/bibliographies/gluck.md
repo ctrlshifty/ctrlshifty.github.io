@@ -14,10 +14,16 @@ Books of Poetry
 - A Village Life (Farrar, Straus, Giroux), 2009
 - Poems: 1962-2012 (Farrar, Straus, Giroux), 2012
 - Faithful and Virtuous Night (Farrar, Straus, Giroux), 2014
+
+
 Chapbooks
 - October (Sarabande Books), 2004
+
+
 Books of Prose
 - Proofs and Theories: Essays on Poetry (Ecco Press), 1994
+
+
 Books Edited
 - The Best American Poetry 1993 (Collier), 1993
 
