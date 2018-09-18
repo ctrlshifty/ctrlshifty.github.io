@@ -1,35 +1,9 @@
 ---
 layout: default
-title: Emails
+title: |
 order: 8
 object-id: emails
 ---
-<link rel="stylesheet" href="{{site.baseurl}}/css/wenk.css">
-<div class="poet-menu" id="top"> 
-    <div class="graph wrapper">
-        <div class="process-viz" >
-            <div class="graph-row">
-    <div class="row-name">
-      <h2 class="center">Poet</h2>
-
-</div>
-    <div class="part">
-      <h2 class="center">Creation/Generation</h2>
-
-</div>
-<div class="part">
-      <h2 class="center">Composition</h2>
-
-</div>
-<div class="part">
-      <h2 class="center">Publication</h2>
-</div>
-<div class="part">
-      <h2 class="center">Organization/Archiving</h2>
-</div>
-</div>
-
-
     {% assign people = site.interviews | sort: 'object-id' %}
     {% for person in people %}
     <div class="graph-row {% cycle 'odd', 'even' %}">
