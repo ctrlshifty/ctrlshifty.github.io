@@ -6,38 +6,40 @@ object-id: emails
 ---
     {% assign people = site.interviews | sort: 'object-id' %}
     {% for person in people %}
-    <div class="graph-row {% cycle 'odd', 'even' %}">
+    <div class="graph-row ">
           <div class="row-wrapper">
- <div class="row-name">
-     <br/>
-   <h2 class="center "><a href="{{site.baseurl}}/processes/{{ person.object-id }}.html">{{ person.first-name }} {{ person.last-name }}</a></h2>
-</div>
+ <div class="row-name" style="width:700px;margin:0% auto">
+     <p>Dear {{ person.first-name }},</p>
+     <p>It's been four years since you've last heard from me on this project, which is, I know, a LONG time. I hope you see that we've done something unique and interesting with the interview I conducted with you those many years ago.  </p>
 
- <div class="part">
-      <h2 class="center hidden-lg">Creation/Generation</h2>
-       Current:  <br/>  <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/curgen.png" title="current generation creation visualization"></a>
-       <br/>
-    Pre-CPU:  <br/>  <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.pre_creation_generation}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/pregen.png" title="pre_creation_generation visualization"></a>
-   
-</div>
-<div class="part">
-      <br/>  
-       <h2 class="center hidden-lg">Composition</h2>
-       <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--right" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.composition_revision}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/comprev.png" title="composition revision visualization"></a>
-</div>
-<div class="part">
-   <br/>  
-   <h2 class="center hidden-lg">Publication</h2>
-   <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.publication}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/pub.png" title="publication visualization"></a>
-</div>
-<div class="part">
-      <br/>
-      <h2 class="center hidden-lg">Organization/Archiving</h2>
-      <a href="{{site.baseurl}}/processes/{{ person.object-id }}.html" class="wenk--left" data-wenk-length="large" data-wenk="{% for item in site.data.processes %} {% if person.object-id == item.author-id %}{{item.organizing_archiving}}{%else%}{%endif%}{%endfor%}"><img  src="{{site.baseurl}}/images/process-icons/{{ person.object-id }}/orgarch.png" title="organization/archiving visualization"></a>
-</div>
-</div>
-</div>
-<div style="clear:both"></div>
+     <p>I'm writing to let you know that the website for my CTRL+Shift project is finally up. The site can be found here: <a href="https://www.ctrl-shift.org">https://www.ctrl-shift.org</a></p>
+
+     <p>I do apologize for how long its taken. I can give excuses, and I will: I published a book, had two kids (Agnes, 3, and Wallace, 5 months) and my job unfortunately was upgraded and became much more demanding. BUT, I know this is coming out of the blue and you may not even remember me or that I even visited. So I am sorry for that, but hopefully the extent of this work makes up in a small part for the delay.</p>
+
+     <p>You will find there are several features related to our individual interview:</p>
+           <ul>
+            <li><a href="https://ctrlshifty.github.io/interviews/transcripts/{{ person.object-id }}.html">Filtered Transcript</a>, according to the topics we thought  </li>
+            <li><a href="https://www.ctrl-shift.org//processes/{{ person.object-id }}.html">Index/Transcript + Audio Recording</a></li>
+            <li><a href="https://www.ctrl-shift.org/videos/{{ person.object-id }}.html">Video</a> (if you declined to be recorded, we created a YouTube video with just audio and a photo)</li>
+            <li><a href="https://www.ctrl-shift.org/photos/{{ person.object-id }}.html">Photo Gallery</a></li>
+            <li>and some additional interpretations/play, including:
+                  <ul><li> a <a href="https://www.ctrl-shift.org/flotsam/genpoems/{{ person.object-id }}.html">Poem Generator</a> with the audio transcript as translated automatically by YouTube</li>
+                  <li>some <a href="https://www.ctrl-shift.org/analyses/">overarching analyses</a> related to <a href="https://www.ctrl-shift.org/analyses/{{ person.object-id }}.html">common questions/answers</a> and common tools</li>
+                  <li> and <a href="https://www.ctrl-shift.org/processes/{{ person.object-id }}.html">process narratives and visualizations</a></li>
+            </ul> </li>
+           </ul> 
+
+     <p>I worked to complete this project with two recent MFA graduates from the University of Idaho, Corey Oglesby and Lauren Westerfield. Both are truly excellent poets/writers and human beings, and this would not have been possible without there work. More about them can be found on the <a href="https://www.ctrl-shift.org/about.html">about page</a>.  </p>
+      <p>I am happy to answer any questions about the site and its usage. We are presenting on it on campus this next week, and I will be giving a brief technical overview of how the site works at a digital libraries conference in October. We have no concrete plans about the site's marketing/promotion so we don't expect a deluge of visitors. We do hope to write up our <a href="https://www.ctrl-shift.org/about.html">findings</a> more formally in order to include them in a journal of some sort</p>
+
+      <p>And you might be thinking, correctly, isn't this a little bit of overkill for this project. You would be right, but we are using this project as a template for other tools and oral history collections going forward, so it became as much of an experimental production as anything. And we had a great deal of fun building everything, and reading/hearing all that you had to say</p>
+      <p>Most importantly, I want to thank you for being a part of this project. You took out time from your life and invited me into your home, and for that I am really grateful. I learned so much about writing, and the type of hard work, intellectual engagement, and dogged perseverance that it takes to construct such a productive and impressive career. I was also always so happy to hear back from my collaborators about how much they were learning from listening to the interviews. My hope is that others find the site and have similar experiences to theirs.</p>
+      <p>So again, please let me know if you have any questions or concerns. The site has only been up now for a day, and corrections are easily made.</p>
+      <p>Yrs, </p>
+      <p>Devin</p>
+<br/><br>
+<hr>
+<br/><br>
 {% endfor %}
 
 </div>
