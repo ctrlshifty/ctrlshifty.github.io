@@ -16,9 +16,9 @@ layout: default
  <!-- Modal HTML embedded directly into document -->
 <div id="ex1" class="modal">
   <p class="center">
-  <a class="action-button" href="/data/mp3/{{page.object-id}}.pdf">MP3</a><br/>
-  <a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>
-  <a class="action-button" href="/data/csv/{{page.object-id}}.pdf">Transcript CSV</a><br/>
+  <a class="action-button" href="/data/mp3/{{page.object-id}}.mp3">MP3</a><br/>
+  <!--<a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>-->
+  <a class="action-button" href="/data/csv/{{page.object-id}}.csv">Transcript CSV</a><br/>
   <a class="action-button" href="/data/txt/{{page.object-id}}.txt">Transcript TXT</a><br/>
 </p>
   <hr /><br/>
@@ -31,7 +31,7 @@ layout: default
      <div class="variation" id="{{ page.object-id }}variation{{ forloop.index }}">
   <p class="quote ">"{{item.excerpt}}"
  </p>
- <p class="attribution " >From <a href="http://devinbecker.org/ctrl/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview section {{ forloop.index }}, "{{item.section-title}}," at {{item.timestamp}}</a>
+ <p class="attribution " >From <a href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview section {{ forloop.index }}, "{{item.section-title}}," at {{item.timestamp}}</a>
  <br/> {{page.location}} | {{page.date-interviewed}}</p>
  </div>
    {% endfor %}
@@ -47,7 +47,7 @@ console.log(randomitem);
       
     
       <p class="center"><a class="action-button" href="{{site.baseurl}}/interviews/transcripts/{{ page.object-id }}.html" style="font-size:larger;">Interview Transcript w/ Filters</a></p>   
- <p class="center"><a class="action-button" href="http://devinbecker.org/ctrl/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full Audio Interview w/ Transcript</a></p>
+ <p class="center"><a class="action-button" href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full Audio Interview w/ Transcript</a></p>
 <p class="center"><a class="action-button" href="{{site.baseurl}}/videos/{{ page.object-id }}.html">Interview Video</a></p>
 
 <p class="center"><a class="action-button" href="{{site.baseurl}}/photos/{{ page.object-id }}.html">Interview Photos</a></p>
