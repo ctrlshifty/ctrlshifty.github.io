@@ -15,7 +15,7 @@ Funding for the project was generously provided by the [Center for Digital Inqui
 
 The [University of Idaho Library](https://www.lib.uidaho.edu/) provided the space and support for the completion of this project. The library also preserves the digital archive of materials related to this project.
 
-All photographs, videos, recordings, and other data materials on this site were created by Devin Becker save for one photograph of Stephanie Strickland that was taken by Star Black and is used under a CC-BY 3.0 license. All illustrations were created by Corey Oglesby. Writing included on this site was created by Devin Becker, Corey Oglesby and Lauren Westerfield. 
+All photographs, videos, recordings, and other data materials on this site were created by Devin Becker save for [one photograph of Stephanie Strickland that was taken by Star Black](https://commons.wikimedia.org/wiki/File:US_poet_Stephanie_Strickland.jpg#/media/File:US_poet_Stephanie_Strickland.jpg) and is used under a CC-BY 3.0 license. All illustrations were created by Corey Oglesby. Writing included on this site was created by Devin Becker, Corey Oglesby and Lauren Westerfield. 
 
 This study was approved by the University of Idaho's IRB office. Permission was given by the interview subjects for the use of the interviews and related materials. All materials are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>. 
 
