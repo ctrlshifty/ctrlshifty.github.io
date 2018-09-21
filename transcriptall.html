@@ -1,5 +1,6 @@
 ---
 layout: default
+title: All Transcripts Combined
 ---
 {% assign items = site.data.transcripts.all %}
 {% assign notes = site.data.notes.all | sort: "poet"%}
@@ -16,13 +17,17 @@ layout: default
         <h2>Notes</h2>
 <ul id="notes-container">
     {% for note in notes %}
-<li class="hidden-all {{note.tag | replace: ";"," "}}">{{note.poet}}: <a class="filter" href="#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}" title="">{{note.detail}}</a><ul><li class="{{note.tag | replace: ";"," "}}">{{note.quote}}</li></ul></li>
+<li class="hidden-all {{note.tag | replace: ";"," "}}">{{note.poet}}: <a class="filter" target="_blank" href="/interviews/transcripts/{{note.poet}}.html#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}" title="">{{note.detail}}</a><!--<ul><li class="{{note.tag | replace: ";"," "}}">{{note.quote}}</li></ul>--></li>
    {% endfor %}
   </ul>
 <style>
-  .hilite {
-    background-color: yellow;
-  }
+ .grey {
+    color: rgb(75, 71, 71);
+    height: 1px;
+    width: 80%;
+    line-height: 1px;
+    float: left;
+}
 </style>
   
 

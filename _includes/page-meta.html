@@ -1,0 +1,10 @@
+<meta name="keywords" content="{{ site.keywords }}" >
+
+<!-- Open Graph meta -->
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }} {% if page.collection-type %}{{ page.collection-type | escape }}{% else %}{% endif %}|{% else %}{% endif %} {{ site.title | escape }}" />
+<meta property="og:description" content="{% if page.title %}{{ page.title | escape }}{% if page.collection-type %}{{ page.collection-type | escape }} {% else %}{% endif %}, part of {% else %}{% endif %}{{ site.title | escape }} --> {{site.description | truncatewords: 20}}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:url" content="{{ page.url | prepend: "https://www.ctrl-shift.org" }}" />
+<meta property="og:locale" content="en_US" />
+<!-- schema.org JSON-LD -->
+<script type="application/ld+json">{ "@context":"http://schema.org", "@type":"WebPage", "headline": {% if page.title %}{{ page.title | jsonify }}{% else %}{{ site.title | jsonify }}{% endif %}, "url": {{ page.url | absolute_url | jsonify }} }</script> 

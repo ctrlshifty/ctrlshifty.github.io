@@ -1,5 +1,6 @@
 ---
 object-id: mohammad
+title: K. Silem Mohammad
 transcript: transcript-mohammad
 first-name: K. Silem
 last-name: Mohammad

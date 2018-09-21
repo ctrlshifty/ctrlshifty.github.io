@@ -1,5 +1,7 @@
 ---
 object-id: armantrout
+collection-type: Interview Transcripts, Recordings, Data, and Analyses 
+title: Rae Armantrout
 transcript: transcript-armantrout  
 first-name: Rae
 last-name: Armantrout

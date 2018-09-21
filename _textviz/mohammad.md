@@ -1,5 +1,7 @@
 ---
 object-id: mohammad
+collection-type: Textual Analysis and Visualizations 
+title: K. Silem Mohammad
 transcript: transcript-mohammad
 first-name: K. Silem
 last-name: Mohammad

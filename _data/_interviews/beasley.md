@@ -1,5 +1,6 @@
 ---
-object-id: beasley    
+object-id: beasley
+title: Bruce Beasley    
 first-name: Bruce
 last-name: Beasley
 date-interviewed: June 20, 2014

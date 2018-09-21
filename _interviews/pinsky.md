@@ -1,5 +1,7 @@
 ---
 object-id: pinsky
+collection-type: Interview Transcripts, Recordings, Data, and Analyses 
+title: Robert Pinsky
 transcript: transcript-pinsky
 first-name: Robert
 last-name: Pinsky

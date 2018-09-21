@@ -1,5 +1,7 @@
 ---
 object-id: wrigley
+collection-type: Generated YouTube Poem  
+title: Robert Wrigley
 transcript: transcript-wrigley    
 first-name: Robert
 last-name: Wrigley

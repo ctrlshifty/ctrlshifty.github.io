@@ -1,5 +1,7 @@
 ---
 object-id: beasley
+collection-type: Generated YouTube Poem  
+title: Bruce Beasley
 transcript: transcript-beasley
 first-name: Bruce
 last-name: Beasley

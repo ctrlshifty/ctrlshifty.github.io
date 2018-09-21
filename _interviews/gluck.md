@@ -1,5 +1,7 @@
 ---
-object-id: gluck    
+object-id: gluck
+collection-type: Interview Transcripts, Recordings, Data, and Analyses 
+title: Louise Glück    
 first-name: Louise
 last-name: Glück
 date-interviewed: May 15, 2014

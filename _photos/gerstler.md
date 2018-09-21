@@ -1,5 +1,7 @@
 ---
 object-id: gerstler
+collection-type: Interview Photographs 
+title: Amy Gerstler
 transcript: transcript-gerstler
 first-name: Amy
 last-name: Gerstler

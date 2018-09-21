@@ -1,5 +1,7 @@
 ---
 object-id: armantrout
+collection-type: Generated YouTube Poem  
+title: Rae Armantrout
 transcript: transcript-armantrout  
 first-name: Rae
 last-name: Armantrout

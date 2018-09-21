@@ -1,5 +1,6 @@
 ---
-object-id: armantrout    
+object-id: armantrout
+title: Rae Armantrout    
 first-name: Rae
 last-name: Armantrout
 date-interviewed: March 27, 2014

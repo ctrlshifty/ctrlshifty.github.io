@@ -1,5 +1,7 @@
 ---
 object-id: wrigley
+collection-type: Interview Video 
+title: Robert Wrigley
 transcript: transcript-wrigley    
 first-name: Robert
 last-name: Wrigley

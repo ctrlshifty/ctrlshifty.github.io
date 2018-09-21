@@ -1,5 +1,6 @@
 ---
 object-id: pinsky
+title: Robert Pinsky
 transcript: transcript-pinsky
 first-name: Robert
 last-name: Pinsky

@@ -1,5 +1,6 @@
 ---
-object-id: gerstler    
+object-id: gerstler
+title: Amy Gerstler    
 first-name: Amy
 last-name: Gerstler
 date-interviewed: March 20, 2014

@@ -1,5 +1,7 @@
 ---
 object-id: mohammad
+collection-type: Interview Transcripts, Recordings, Data, and Analyses 
+title: K. Silem Mohammad
 transcript: transcript-mohammad
 first-name: K. Silem
 last-name: Mohammad

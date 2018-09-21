@@ -1,5 +1,8 @@
 ---
-object-id: ryan 
+object-id: ryan
+title: Michael Ryan 
+collection-type: Interview Transcripts, Recordings, Data, and Analyses 
+title: Michael Ryan Interview Transcripts, Recordings, and Analyses
 transcript: transcript-ryan   
 first-name: Michael
 last-name: Ryan

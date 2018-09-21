@@ -1,5 +1,7 @@
 ---
-object-id: strickland    
+object-id: strickland
+collection-type: Textual Analysis and Visualizations 
+title: Stephanie Strickland    
 first-name: Stephanie
 last-name: Strickland
 date-interviewed: May 20, 2014

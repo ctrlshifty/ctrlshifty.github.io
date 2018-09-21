@@ -1,5 +1,6 @@
 ---
-object-id: ryan    
+object-id: ryan
+title: Michael Ryan    
 first-name: Michael
 last-name: Ryan
 date-interviewed: March 18, 2014

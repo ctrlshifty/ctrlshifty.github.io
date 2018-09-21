@@ -1,5 +1,6 @@
 ---
-object-id: vanwinckel    
+object-id: vanwinckel
+title: Nance Van Winckel    
 first-name: Nance
 last-name: Van Winckel
 date-interviewed: October 30, 2013

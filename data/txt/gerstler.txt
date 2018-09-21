@@ -1,5 +1,6 @@
 ---
 object-id: gerstler
+title: Amy Gerstler
 transcript: transcript-gerstler
 first-name: Amy
 last-name: Gerstler

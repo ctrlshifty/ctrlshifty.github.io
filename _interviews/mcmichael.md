@@ -1,5 +1,7 @@
 ---
-object-id: mcmichael    
+object-id: mcmichael
+collection-type: Interview Transcripts, Recordings, Data, and Analyses 
+title: James McMichael    
 transcript: transcript-mcmichael
 first-name: James
 last-name: McMichael

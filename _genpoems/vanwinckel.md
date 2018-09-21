@@ -1,5 +1,7 @@
 ---
-object-id: vanwinckel    
+object-id: vanwinckel
+collection-type: Generated YouTube Poem  
+title: Nance Van Winckel    
 transcript: transcript-vanwinckel  
 first-name: Nance
 last-name: Van Winckel

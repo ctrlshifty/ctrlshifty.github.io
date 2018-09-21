@@ -1,5 +1,6 @@
 ---
-object-id: wrigley    
+object-id: wrigley
+title: Robert Wrigley    
 first-name: Robert
 last-name: Wrigley
 date-interviewed: November 21, 2013

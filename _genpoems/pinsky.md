@@ -1,5 +1,7 @@
 ---
 object-id: pinsky
+collection-type: Generated YouTube Poem  
+title: Robert Pinsky
 transcript: transcript-pinsky
 first-name: Robert
 last-name: Pinsky

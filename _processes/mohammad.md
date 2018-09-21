@@ -1,5 +1,7 @@
 ---
 object-id: mohammad
+collection-type: Writing Process Narrative and Visualization 
+title: K. Silem Mohammad
 transcript: transcript-mohammad
 first-name: K. Silem
 last-name: Mohammad

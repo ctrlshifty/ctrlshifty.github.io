@@ -1,5 +1,7 @@
 ---
-object-id: mcmichael    
+object-id: mcmichael
+collection-type: Interview Photographs 
+title: James McMichael    
 transcript: transcript-mcmichael
 first-name: James
 last-name: McMichael

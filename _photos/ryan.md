@@ -1,5 +1,7 @@
 ---
-object-id: ryan 
+object-id: ryan
+collection-type: Interview Photographs 
+title: Michael Ryan 
 transcript: transcript-ryan   
 first-name: Michael
 last-name: Ryan

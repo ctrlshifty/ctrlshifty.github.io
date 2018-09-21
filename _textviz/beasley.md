@@ -1,5 +1,7 @@
 ---
 object-id: beasley
+collection-type: Textual Analysis and Visualizations 
+title: Bruce Beasley
 transcript: transcript-beasley
 first-name: Bruce
 last-name: Beasley

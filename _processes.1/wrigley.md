@@ -1,5 +1,6 @@
 ---
 object-id: wrigley
+title: Robert Wrigley
 transcript: transcript-wrigley    
 first-name: Robert
 last-name: Wrigley

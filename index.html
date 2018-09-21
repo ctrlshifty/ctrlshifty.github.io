@@ -1,5 +1,6 @@
 ---
 layout: homepage
+title: About the Project
 ---
 
 <div class="home" id="homeback" >
@@ -87,7 +88,7 @@ The project examines recent changes in writing practices that occurred due to th
             {% assign questions = site.questions  %}
             {% for question in questions %}
            {% if question.object-id contains "question" %}
-              <option value="analyses/questions/{{question.object-id}}">
+              <option value="analyses/questions/{{question.object-id}}.html">
                 {{ question.question }} 
                 </option>
               {% else %}
@@ -109,8 +110,8 @@ The project examines recent changes in writing practices that occurred due to th
       <p class="image-container" class="center">
         {% assign tools = site.tools  %}
             {% for tool in tools %}
-      <a href="{{site.baseurl}}/{{ tool.url}}.html">
-          <img src="{{site.baseurl}}/images/icons/{{ tool.icon-id}}.png">
+      <a href="{{ tool.url}}.html">
+          <img src="/images/icons/{{ tool.icon-id}}.png">
         </a>
       {% endfor %}</p><br/><br/>
       <p>

@@ -1,5 +1,6 @@
 ---
-object-id: pinsky    
+object-id: pinsky
+title: Robert Pinsky    
 first-name: Robert
 last-name: Pinsky
 date-interviewed: May 22, 2014

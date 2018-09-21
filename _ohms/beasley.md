@@ -1,5 +1,6 @@
 ---
 object-id: beasley
+title: Bruce Beasley
 transcript: transcript-beasley
 first-name: Bruce
 last-name: Beasley

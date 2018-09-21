@@ -1,5 +1,7 @@
 ---
 object-id: armantrout
+collection-type: Writing Process Narrative and Visualization 
+title: Rae Armantrout
 transcript: transcript-armantrout  
 first-name: Rae
 last-name: Armantrout

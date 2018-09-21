@@ -1,5 +1,6 @@
 ---
-object-id: ryan 
+object-id: ryan
+title: Michael Ryan 
 transcript: transcript-ryan   
 first-name: Michael
 last-name: Ryan

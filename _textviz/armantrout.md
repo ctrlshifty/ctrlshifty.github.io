@@ -1,5 +1,7 @@
 ---
 object-id: armantrout
+collection-type: Textual Analysis and Visualizations 
+title: Rae Armantrout
 transcript: transcript-armantrout  
 first-name: Rae
 last-name: Armantrout

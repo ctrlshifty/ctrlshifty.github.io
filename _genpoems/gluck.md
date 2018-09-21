@@ -1,5 +1,7 @@
 ---
-object-id: gluck    
+object-id: gluck
+collection-type: Generated YouTube Poem  
+title: Louise Glück    
 transcript: transcript-gluck 
 first-name: Louise
 last-name: Glück

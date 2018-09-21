@@ -6,13 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: CTRL+Shift
+title: "CTRL+Shift: Writing practice at the dawn of the digital era"
 email: dbecker@uidaho.edu
 description: > # this means to ignore newlines until "baseurl:"
- Writing practice at the dawn of the digital era.
-baseurl: # the subpath of your site, e.g. /blog
+ A series of interviews on how poets' writing practices changed with the advent of the personal computer and digital era. Interviews were conducted by Devin Becker with 11 prominent poets, including Amy Gerstler, Robert Pinsky, Michael Ryan, Stephanie Strickland, Robert Wrigley, Nance Van Winckel, K. Silem Mohammad, James McMichael, Louise Glück, Bruce Beasley, and Rae Armantrout. Interviews were analyzed, visualized and messed around with by Devin Becker, Corey Oglesby, and Lauren Westerfield.
+keywords: computers, paper, typewriters, revision, poetry, poets, writing, writing practice, oral history, interviews, poets, Amy Gerstler, Robert Pinsky, Michael Ryan, Stephanie Strickland, Robert Wrigley, Nance Van Winckel, K. Silem Mohammad, James McMichael, Louise Glück, Bruce Beasley, Rae Armantrout, digital era, personal computer
 github_username: ctrlshifty
 
+url: https://www.ctrl-shift.org
 
 collections:
   processes:

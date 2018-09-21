@@ -1,5 +1,6 @@
 ---
-object-id: strickland    
+object-id: strickland
+title: Stephanie Strickland    
 first-name: Stephanie
 last-name: Strickland
 date-interviewed: May 20, 2014

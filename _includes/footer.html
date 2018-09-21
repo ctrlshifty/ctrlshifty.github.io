@@ -9,7 +9,7 @@
         <h2 class="footer-heading pink-neon"><a href="{{ site.baseurl }}/" style="Color:white !important;font-size:23px;">{{ site.title }}</a></h2>
         <ul class="contact-list">
           
-          <li>{{ site.description }}</li>
+          <li>{{ site.description | truncatewords: 20, "" }}</li>
           <li>a <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning (CDIL)</a> production</li>
           <li>Questions: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
@@ -21,9 +21,11 @@
          
           <li>
             {% include icon-github.html  %}
-          </li>
+          </li>  <li style="margin:10px;">
+              
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
        
-         
+          </li>
         </ul>
       </div>
 

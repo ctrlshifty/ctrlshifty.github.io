@@ -1,5 +1,6 @@
 ---
-object-id: mcmichael    
+object-id: mcmichael
+title: James McMichael    
 first-name: James
 last-name: McMichael
 date-interviewed: March 17, 2014

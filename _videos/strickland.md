@@ -1,5 +1,7 @@
 ---
 object-id: strickland
+collection-type: Interview Video 
+title: Stephanie Strickland
 transcript: transcript-strickland     
 first-name: Stephanie
 last-name: Strickland

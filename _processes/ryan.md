@@ -1,5 +1,7 @@
 ---
-object-id: ryan 
+object-id: ryan
+collection-type: Writing Process Narrative and Visualization 
+title: Michael Ryan 
 transcript: transcript-ryan   
 first-name: Michael
 last-name: Ryan

@@ -1,5 +1,6 @@
 ---
-object-id: gluck    
+object-id: gluck
+title: Louise Glück    
 first-name: Louise
 last-name: Glück
 date-interviewed: May 15, 2014

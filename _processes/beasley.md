@@ -1,5 +1,7 @@
 ---
 object-id: beasley
+collection-type: Writing Process Narrative and Visualization 
+title: Bruce Beasley
 transcript: transcript-beasley
 first-name: Bruce
 last-name: Beasley
