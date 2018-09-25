@@ -5,18 +5,14 @@ order: 1
 object-id: about
 ---
 <div class="about-section ">
-<div class="about-content">
+<div class="about-content about-white-background">
 <h1>What is CTRL+SHIFT?</h1>
 <iframe src="https://www.google.com/maps/d/embed?mid=1g_5do2uHaVD7wxgKix-A6NEuy0M"  height="450" style="float:right;margin:0px 0px 10px 20px; width: 55%;" id="mymap"></iframe>
-
 <h2>The Short Answer</h2>
-
 <p>CTRL+Shift is an online collection of audio recordings, transcripts, process visualizations, and data analyses broken out from interviews conducted with 11 prominent contemporary American poets from across the United States. The project examines recent changes in writing practices that occurred due to the advent of the computer and the arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview studies. Devin Becker conducted the interviews in 2013 and 2014 as part of a University of Idaho Seed Grant award. Becker collaborated with Corey Oglesby and Lauren Westerfield (both MFA candidates at the University of Idaho in the summer of 2017) to analyze and publish the data and findings online at CTRL+Shift.org.</p>
-
 <img src="images/map.jpg" class="center" id="mappic">
 {% capture really %} {% include about/really.md %}{%endcapture %}
 {{really | markdownify}}
-
 </div>
 </div>
 <div class="about-section about-int">

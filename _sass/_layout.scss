@@ -132,6 +132,8 @@ letter-spacing: -1px;
         select{ font-size:20px; text-align: center;}}
     
 }
+
+
 .home-int, .home-process,{
 background:#5b616f;
 color:white !important;
@@ -885,25 +887,25 @@ a:hover{background:none;}
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
-@include media-query($on-laptop) {
+.footer-col-2 {
+    width: -webkit-calc(15% - (#{$spacing-unit} / 2));
+    width:         calc(15% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-regular) {
     .footer-col-1,
     .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
     }
 
     .footer-col-3 {
@@ -1018,3 +1020,6 @@ list-style:disc;
         left: 0;
     }
     .about-content a{   color: #ffcbcb !important;}
+    .about-white-background{
+        a{color:#fc74b3  !important;}
+    }
