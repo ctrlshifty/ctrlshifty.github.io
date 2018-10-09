@@ -1,6 +1,6 @@
 ---
 layout: default
-title: |
+title: 
 order: 8
 object-id: emails
 ---
@@ -10,33 +10,90 @@ object-id: emails
           <div class="row-wrapper">
  <div class="row-name" style="width:700px;margin:0% auto">
      <p>Dear {{ person.first-name }},</p>
-     <p>It's been four years since you've last heard from me on this project, which is, I know, a LONG time. I hope you see that we've done something unique and interesting with the interview I conducted with you those many years ago.  </p>
-
-     <p>I'm writing to let you know that the website for my CTRL+Shift project is finally up. The site can be found here: <a href="https://www.ctrl-shift.org">https://www.ctrl-shift.org</a></p>
-
-     <p>I do apologize for how long its taken. I can give excuses, and I will: I published a book, had two kids (Agnes, 3, and Wallace, 5 months) and my job unfortunately was upgraded and became much more demanding. BUT, I know this is coming out of the blue and you may not even remember me or that I even visited. So I am sorry for that, but hopefully the extent of this work makes up in a small part for the delay.</p>
-
-     <p>You will find there are several features related to our individual interview:</p>
+     <p>I am both terribly excited and terribly embarrassed to send this email.</p>
+  <p>It's been many years since you've last heard from me regarding the CTRL+Shift project, and even longer since our interview, which was on {{person.date-interviewed}}. The delay is the cause of my embarrassment, but I am excited, nevertheless, to let you know that the website for the project is finally up: <a href="https://www.ctrl-shift.org/">https://www.ctrl-shift.org</a>
+  </p>
+  <p> My hope is that you’ll see that we've done something unique and interesting
+      with the interviews I conducted with you and the other poets those many years ago and
+      forgive my long delay.
+  </p>
+  <p>
+      I say “we” because I ended up working with two MFA students (now recent graduates) at Idaho on
+      this project over the course of the last year and a half. Their names are
+      Corey Oglesby and Lauren Westerfield. Both are truly excellent
+      poets/writers and human beings, and this would not have been possible
+  without their work. (More about them can be found on the <a href="https://www.ctrl-shift.org/about.html">about page</a>.)
+  </p>
+  <p>
+      The actual site uses the interview recordings and transcripts to create a
+      variety of access points and interpretations. You will find there are
+      several features related to our individual interview across the CTRL +
+      Shift site. Here’s a list, with links directly to those pages featuring your interview:
+  </p>
            <ul>
-            <li><a href="https://ctrlshifty.github.io/interviews/transcripts/{{ person.object-id }}.html">Filtered Transcript</a>, according to the topics we thought  </li>
-            <li><a href="https://www.ctrl-shift.org//processes/{{ person.object-id }}.html">Index/Transcript + Audio Recording</a></li>
+            <li><a href="https://www.ctrl-shift.org/interviews/transcripts/{{ person.object-id }}.html">Filtered Transcript</a>, browseable based on thematic subjects throughout the interviews, and free-text searchable   </li>
+            <li><a href="https://www.ctrl-shift.org//processes/{{ person.object-id }}.html">Index/Transcript + Audio Recording</a>, using a tool called the Oral History Metadata Synchronizer ... 
+            </li>
             <li><a href="https://www.ctrl-shift.org/videos/{{ person.object-id }}.html">Video</a> (if you declined to be recorded, we created a YouTube video with just audio and a photo)</li>
             <li><a href="https://www.ctrl-shift.org/photos/{{ person.object-id }}.html">Photo Gallery</a></li>
             <li>and some additional interpretations/play, including:
-                  <ul><li> a <a href="https://www.ctrl-shift.org/flotsam/genpoems/{{ person.object-id }}.html">Poem Generator</a> with the audio transcript as translated automatically by YouTube</li>
-                  <li>some <a href="https://www.ctrl-shift.org/analyses/">overarching analyses</a> related to <a href="https://www.ctrl-shift.org/analyses/{{ person.object-id }}.html">common questions/answers</a> and common tools</li>
-                  <li> and <a href="https://www.ctrl-shift.org/processes/{{ person.object-id }}.html">process narratives and visualizations</a></li>
+                  <ul><li> a <a href="https://www.ctrl-shift.org/flotsam/genpoems/{{ person.object-id }}.html">Poem Generator</a> that randomizes lines taken from the audio transcript translated automatically by YouTube into a “poem”
+                  </li>
+                  <li>some <a href="https://www.ctrl-shift.org/analyses.html">overarching analyses</a> related to <a href="https://www.ctrl-shift.org/analyses/{{ person.object-id }}.html">common questions/answers</a> and common tools</li>
+                  <li> and <a href="https://www.ctrl-shift.org/processes/{{ person.object-id }}.html">process narratives and visualizations</a> that describe and visualize your practice based on information from the interview. 
+                  </li>
             </ul> </li>
            </ul> 
-
-     <p>I worked to complete this project with two recent MFA graduates from the University of Idaho, Corey Oglesby and Lauren Westerfield. Both are truly excellent poets/writers and human beings, and this would not have been possible without there work. More about them can be found on the <a href="https://www.ctrl-shift.org/about.html">about page</a>.  </p>
-      <p>I am happy to answer any questions about the site and its usage. We are presenting on it on campus this next week, and I will be giving a brief technical overview of how the site works at a digital libraries conference in October. We have no concrete plans about the site's marketing/promotion so we don't expect a deluge of visitors. We do hope to write up our <a href="https://www.ctrl-shift.org/about.html">findings</a> more formally in order to include them in a journal of some sort</p>
-
-      <p>And you might be thinking, correctly, isn't this a little bit of overkill for this project. You would be right, but we are using this project as a template for other tools and oral history collections going forward, so it became as much of an experimental production as anything. And we had a great deal of fun building everything, and reading/hearing all that you had to say</p>
-      <p>Most importantly, I want to thank you for being a part of this project. You took out time from your life and invited me into your home, and for that I am really grateful. I learned so much about writing, and the type of hard work, intellectual engagement, and dogged perseverance that it takes to construct such a productive and impressive career. I was also always so happy to hear back from my collaborators about how much they were learning from listening to the interviews. My hope is that others find the site and have similar experiences to theirs.</p>
-      <p>So again, please let me know if you have any questions or concerns. The site has only been up now for a day, and corrections are easily made.</p>
-      <p>Yrs, </p>
-      <p>Devin</p>
+           <br>
+           <p>
+            I am happy to answer any questions you may have about the site and its
+            usage. I am also happy to take anything down or revise any portion of the
+            site that you’d like me too (within reason of course ...). I know that seeing
+            all this from such a long time ago may be a bit jarring, and I don’t want
+            to share anything through the site that makes you uncomfortable.
+        </p>
+        <p>
+            I do apologize for how long it has taken. I can give excuses, and I guess I
+            will: I published a book, had two kids (Agnes, 3, and Wallace, 5 months)
+            and my job was upgraded and became much more demanding. I
+            also have to say that this type of work takes a lot of effort and time,
+            which I didn’t fully realize when embarking on the interviews or the
+            web project.BUT, I know this is coming out of the blue and and I am sorry for that.
+            Hopefully the extent of this work makes up, in some small part, for the
+            delay.
+        </p>
+        <p>
+            Corey, Lauren, and I presented the project on campus this next week, and I will be
+            giving a brief technical overview of how the site works at a digital
+        libraries conference in October. We also hope to write up our    <a href="https://www.ctrl-shift.org/about.html">findings</a> more formally
+            in order to include them in a journal of some sort. That said, the site is
+            still not indexed by Google, nor easily discoverable any other way, so any
+            changes that might be needed can be in effect before any of this is being
+            routinely accessed by people other than me and my collaborators.
+        </p>
+        <p>
+            Most importantly, I want to thank you for being a part of this project. You
+            took out time from your life and invited me into your home, and for that I
+            am really grateful. I learned so much about writing, and the type of hard
+            work, intellectual engagement, and dogged perseverance that it takes to
+            construct such a productive and impressive career.
+        </p>
+        <p>
+            I also want to mention how much my collaborators learned as graduate
+            students from working with/listening to the interviews. The project taught all of
+            us a great deal about writing and what it takes to maintain a practice. My
+            hope is that others will find the site and enjoy a similar experience.
+        </p>
+        <p>
+            So again, please let me know if you have any questions or concerns. The
+            site has only been up now for a day, and corrections are easily made.
+        </p>
+        <p>
+            Yrs,
+        </p>
+        <p>
+            Devin
+        </p>
 <br/><br>
 <hr>
 <br/><br>
