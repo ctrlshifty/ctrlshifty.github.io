@@ -288,12 +288,12 @@ img:hover{ background:white;}
     .site-title {
         font-size: 19px;
     line-height: 25px;}
-    .site-nav {
+    .site-nav-ctrl {
  
     line-height: 15px;
     margin-top: 0px;
 }
-    .site-nav .page-link {
+    .site-nav-ctrl .page-link-ctrl {
 
     line-height: 1;
     padding: 5px;
@@ -463,7 +463,7 @@ width:100%;
     }
 }
 
-.site-nav {
+.site-nav-ctrl {
     float: right;
     margin-left:60px;
     line-height: 65px;
@@ -474,7 +474,7 @@ width:100%;
         display: none;
     }
 
-    .page-link {
+    .page-link-ctrl {
         color: $text-color;
         line-height: $base-line-height;
             padding:6px 12px;
@@ -525,7 +525,7 @@ width:100%;
             padding-bottom: 5px;
         }
 
-        .page-link {
+        .page-link-ctrl {
             display: block;
             padding: 5px 10px;
 
@@ -536,7 +536,7 @@ width:100%;
         }
     }
 }
- .home    .page-link {
+ .home    .page-link-ctrl {
         color: white !important;
             @include media-query($on-palm) {
             color: $text-color !important;}
@@ -734,7 +734,7 @@ a:hover{background:none;}
 
 /*
 
-.site-nav ul {
+.site-nav-ctrl ul {
   text-align: left;
   display: inline;
   margin: 0;
@@ -742,7 +742,7 @@ a:hover{background:none;}
   list-style: none;
  
 }
-.site-nav ul li {
+.site-nav-ctrl ul li {
   font: normal 14px/20px helvetica;
   display: inline-block;
   margin-right: -4px;
@@ -757,11 +757,11 @@ a:hover{background:none;}
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-.site-nav ul li:hover, .site-nav ul li:hover{
+.site-nav-ctrl ul li:hover, .site-nav-ctrl ul li:hover{
   
   color: #fff !important;
 }
-.site-nav ul li ul {
+.site-nav-ctrl ul li ul {
   padding: 0;
   position: absolute;
   top: 48px;
@@ -779,13 +779,13 @@ a:hover{background:none;}
   -o-transition: opacity 0.2s;
   -transition: opacity 0.2s;
 }
-.site-nav ul li ul li { 
+.site-nav-ctrl ul li ul li { 
   background: #555; 
   display: block; 
   color: #fff !important;
 }
-.site-nav ul li ul li:hover { background: #666; }
-.site-nav ul li:hover ul {
+.site-nav-ctrl ul li ul li:hover { background: #666; }
+.site-nav-ctrl ul li:hover ul {
   display: block;
   opacity: 1;
   visibility: visible;
