@@ -29,8 +29,10 @@ collections:
       output: true
   videos:
       output: true
+      permalink: /flotsam/:collection/:name
   photos:
       output: true
+      permalink: /flotsam/:collection/:name
   respondents:
       output: true
       permalink: /analyses/:collection/:name

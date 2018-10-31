@@ -2,7 +2,7 @@
 layout: default
 title: Interview Videos by Poet
 object-id: videos
-permalink: /videos/
+permalink: /flotsam/videos/
 ---
 
 <div class="poet-feature">
@@ -13,7 +13,7 @@ permalink: /videos/
   <div class="listing">
     {% assign people = site.videos | sort: 'random' %}
     {% for person in people %}
-    <a href="{{site.baseurl}}/videos/{{ person.object-id }}.html">
+    <a href="{{site.baseurl}}/flotsam/videos/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
       <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
     </a>

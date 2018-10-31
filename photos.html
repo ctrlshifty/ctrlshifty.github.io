@@ -2,7 +2,7 @@
 layout: default
 title: Interview Photos by Poet
 object-id: photos
-permalink: /photos/
+permalink: /flotsam/photos/
 ---
 
 
@@ -15,7 +15,7 @@ permalink: /photos/
   <div class="listing">
     {% assign people = site.photos %}
     {% for person in people %}
-    <a href="{{site.baseurl}}/photos/{{ person.object-id }}.html">
+    <a href="{{site.baseurl}}/flotsam/photos/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
       <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
     </a>

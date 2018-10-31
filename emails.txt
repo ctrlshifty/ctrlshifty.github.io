@@ -1,9 +1,7 @@
----
 layout: default
 title: 
 order: 8
 object-id: emails
----
     {% assign people = site.interviews | sort: 'object-id' %}
     {% for person in people %}
     <div class="graph-row ">

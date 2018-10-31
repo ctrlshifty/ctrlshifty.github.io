@@ -1,0 +1,26 @@
+---
+layout: default
+title: Tools Used for Writing
+object-id: tools
+permalink: /analyses/tools/
+---
+
+<div class="poet-feature">
+    <h1 class="poet-name">Tools Used for Writing</h1>
+
+
+  <div class="people-body">
+  <div class="listing">
+    {% assign tools = site.tools  %}
+    {% for tool in tools %}
+       <a href="{{ tool.url}}.html">
+        <img src="{{site.baseurl}}/images/icons/{{ tool.icon-id}}.png">
+         <br/>
+         <h2 class="center">{{tool.title }}</h2>
+       </a>
+    {% endfor %}
+
+</div>
+
+</div>
+
