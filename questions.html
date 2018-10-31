@@ -1,0 +1,29 @@
+---
+layout: default
+title: Poets' Responses to Common Questions
+object-id: respondents
+permalink: /analyses/questions
+---
+
+<div class="poet-feature">
+    <h1 class="poet-name">Respondents</h1>
+
+
+  <div class="people-body">
+  <div class="listing">
+    {% assign questions = site.questions  %}
+ {% for question in questions %}
+{% if question.object-id contains "question" %}
+    
+    <a href="{{site.baseurl}}/analyses/questions/{{ question.object-id }}.html">
+      <h2>{{ question.question }} </h2>
+      
+    </a>
+   {% else %}
+{% endif %}
+ {% endfor %}
+
+</div>
+
+</div>
+

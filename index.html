@@ -180,6 +180,28 @@ The project examines recent changes in writing practices that occurred due to th
                       <br/>
                       <a class="action-button" href="flotsam.html">Here are some examples, aka our 'flotsam'</a>
               <br/> <br/>
+              <h3><a href="/flotsam/subjectviz/">Examples of Our Subject Visualization</a></h3>
+              <br/>
+              <style>
+                {% for n in site.data.filters %}
+                .{{ n.shortfilter }} { fill:{% cycle '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000' %}; }
+                {% endfor %}
+                .black{fill:black;}
+                </style>
+                <div style="width:80%; margin:0% auto;">
+              {% for transcript in site.data.transcripts limit:2%}{%assign transcript-name = transcript[0] %}
+              
+              <svg class="chart" width="100%" height="100px" style="overflow: visible">
+                      {% for item in transcript[1] %}
+                      {% assign my_integer = forloop.length %}
+      {% assign my_float = my_integer | times: 1.0 %}
+      {% assign rect-width = 100 | divided_by: my_float  %}
+                  {%if forloop.first%}<text x="0" y="0"><a href="/flotsam/subjectviz/">{{transcript-name | capitalize}}</a></text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
+                  {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/flotsam/subjectviz/#' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
+                              {%endif%}{%endfor%}</svg> 
+                              <br/>
+                              {%endfor%}
+              </div>
               <h1 class="center">
                 Or go to the source: <br/><em>CTRL+SHIFT, Please generate a poem for me by</em><br/>
                 <form id="genpoem"><select onchange="window.location.href=this.value">

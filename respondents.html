@@ -1,0 +1,25 @@
+---
+layout: default
+title: Poets' Responses to Common Questions
+object-id: respondents
+permalink: /analyses/respondents
+---
+
+<div class="poet-feature">
+    <h1 class="poet-name">Respondents</h1>
+
+
+  <div class="people-body">
+  <div class="listing">
+    {% assign people = site.videos | sort: 'random' %}
+    {% for person in people %}
+    <a href="{{site.baseurl}}/analyses/respondents/{{ person.object-id }}.html">
+      <h2>{{ person.first-name }} {{ person.last-name }}</h2>
+      <img src="{{site.baseurl}}/images/portraits/{{person.object-id}}.png"/>
+    </a>
+    {% endfor %}
+
+</div>
+
+</div>
+

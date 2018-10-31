@@ -9,7 +9,7 @@ date-interviewed: October 30, 2013
 location: Liberty Lake, WA
 options: video genpoem
 url: http://www.nancevanwinckel.com/
-youtube: nYnm_gDVa1I
+youtube: ZrfbQwnG3tk
 number_photos: 47
 ---
 

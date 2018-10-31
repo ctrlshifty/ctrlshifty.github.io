@@ -1,9 +1,18 @@
 ---
 layout: default
 ---
-<!--<a class="interview-button" href="{{site.baseurl}}/interviews/{{ page.object-id }}.html">Oral History</a>-->
-<a class="newpoem-button green-neon" style="cursor:pointer;" onClick="window.location.reload()">New Poem</a>
-  	
+<div class="download-button">
+<a class="action-button " style="cursor:pointer;" onClick="window.location.reload()">New Poem</a>
+<br/>
+<select onchange="window.location.href=this.value">
+  <option value="">New Poet</option>
+  {% assign poets = site.interviews | sort: 'last-name' %}
+  {% for poet in poets %}
+  <option value="{{poet.object-id}}.html">{{poet.first-name}} {{poet.last-name}}</option>
+  {%endfor%}
+</select>
+</div>
+  
     <div class="genpoem-portrait">
 	<img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
   </div>

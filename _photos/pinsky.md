@@ -9,7 +9,7 @@ date-interviewed: May 22, 2014
 location: Cambridge, MA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Robert_Pinsky
-youtube: jR_pfiTnlv8
+youtube: tPC1MKl1VdA
 number_photos: 33
 ---
 

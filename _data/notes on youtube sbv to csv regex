@@ -1,0 +1,9 @@
+Go to YouTube studio. Download automatic transcript in .sbv format. Put in data directory. Find and replace:
+find: \n([A-Z])
+replace: ,$1
+
+Add top line of:
+start,end,line
+
+leave as is to generate poems with no stanzas, or delete some or all of the blank lines to make more stanzas in the genrated 
+
