@@ -7,7 +7,7 @@ answers:
   text: I have a bunch of these (notes) filling up my shelves. Right now, I have way too many. A couple of times, I've sold or donated my papers to archives including Stanford and also at UC-San Diego. And when I do, I also include these.
 - author: Bruce Beasley
   author-id: beasley
-  text: I take long walks and scribble in a notebook like this one. Just usually individual lines&mdash;let's see if I can find some examples. And then often I will transcribe them onto note cards. ... I have over here in my file cabinet a file called 'Poems - Feedback from Readers,' where I keep all the physical copies of all the poems that have come back from the people I've shown them to, which I use a lot in revising.
+  text: ... I keep all the physical copies of all the poems that have come back from the people I've shown them to, which I use a lot in revising. 
 - author: Amy Gerstler
   author-id: gerstler
   text: I'm not precious about that sort of stuff. People yell at me every once in a while, like, "What? You don't keep your draft?" or, "You don't keep copies?" or, "You don't-?" And I'm like, "My office is this big. I get rid of things so that I have, you know-two writers live in this house, and books are coming in like every moment. It's just a constant battle with the rising swell of, you know, paper avalanches. So, no, I don't keep a lot of the stuff like that, because I'd have room for (new work).

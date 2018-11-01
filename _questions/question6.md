@@ -7,7 +7,7 @@ answers:
   text: I just name it&mdash;I mean&mdash;whatever the title of the poem. ... I number them. Sometimes, I'll have, you know, "such-and-such a title one," "such-and-such a title two,"... But when it gets too confusing, sometimes I'll just erase the old ones. ... I do have a back up on a zip drive, but I haven't backed-up for several months. So, I'm careless.
 - author: Bruce Beasley
   author-id: beasley
-  text: I have Carbonite on this computer. ... So, you can call up these files there easily, but not vice versa. Things that I put in my office computer, I have to email to myself if I want to work on them here.
+  text: I know where, what's what, and I started organizing them by year on my computer. So under "My Documents," I have a file called "Poems." Within it I'll have—I don't know if you can see this—"2011," "2012," "2013," drafts of my book manuscript, All Soul Parts Returned, various other things. Within "2013," I have "Early summer 2013," "Ecclesiastes," "January 2013," "Late Summer 2013," things like that.
 - author: Amy Gerstler
   author-id: gerstler
   text: The (file) names change, because I was so happy when I realized that you could change the names. ... I have Carbonite. ... I've gone through all different kinds of back-up things. I've had all different kinds of viruses and crashes and-you know. ... I got religious about backing up.
