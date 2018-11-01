@@ -17,5 +17,8 @@ Electronic and Digital Literature
 - [slippingglimpse](http://slippingglimpse.org/) 2007
 - [Sea and Spar Between](http://www.saic.edu/webspaces/portal/degrees_resources/departments/writing/DNSP11_SeaandSparBetween/index.html) 2010
 - [Duels-Duets](http://duels-duets.newbinarypress.com//) 2014
-- [Hours of Trust](http://thevolta.org/ewc44-sstrickland-ihatcher-p1.html) 2014
+- [House of Trust](http://thevolta.org/ewc44-sstrickland-ihatcher-p1.html) 2014
+- [Vniverse iPad app](http://search.itunes.apple.com/WebObjects/MZContentLink.woa/wa/link?path=apps%2fvniverse) 2015
 - [Hours Of The Night](http://www.hoursofthenight.com/) 2016
+- How the Universe Is Made: Poems New & Selected (Ahsahta Press) 2019
+- Ringing the Changes (Counterpath Press), 2019
