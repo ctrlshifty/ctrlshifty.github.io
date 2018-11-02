@@ -1,6 +1,6 @@
 ---
 object-id: question9 
-question: What role, if any, does corresondence play in your writing? 
+question: What role, if any, do other people play in your writing?  
 answers:
 - author: Rae Armantrout
   author-id: armantrout
