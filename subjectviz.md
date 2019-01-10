@@ -3,6 +3,7 @@ layout: subjectviz
 title: Visualization of Transcripts by Subject
 object-id: subjectviz
 permalink: /flotsam/subjectviz/
+bootstrap: on
 ---
 ## Visualize by subject
 

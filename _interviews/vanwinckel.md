@@ -10,7 +10,9 @@ location: Liberty Lake, WA
 options: video genpoem
 url: http://www.nancevanwinckel.com/
 youtube: ZrfbQwnG3tk
+bootstrap: on 
 ---
+
 
 Nance Van Winckel, originally from Roanoke, Virginia, has lived in Spokane, Washington since 1990. She graduated from Columbus High School in Wisconsin and from the U. of Wisconsin--Milwaukee. She received her M.A. in Creative Writing from the University of Denver.
 

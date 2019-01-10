@@ -1,4 +1,4 @@
-<h2 id="physicalanddigitalwritingpractices">Physical and Digital Writing Practices</h2>
+<!--<h2 id="physicalanddigitalwritingpractices">Physical and Digital Writing Practices</h2>
 
 <h3 id="ontheroleofpaper">On the role of paper</h3>
 
@@ -47,4 +47,161 @@
 
 <h3 id="onfuturearchivesofthework">On future archives of the work</h3>
 
-<p>While many of the poets, when asked whether they felt ‘dear’ towards any of their digital files responded negatively, all had some means and took some care for saving the physical versions of their work. In fact, most were especially aware of the value, both scholarly and monetarily, of paper records of their progress towards a finished piece/book. Some of their archival processes (Armantrout, for instance) began after learning about or considering the possibility of selling their papers. Most were also aware that some of their idiosyncratic practices would lead to difficulties in the interpretation of their processes for archivists and scholars. We hope that this project, at the least, might give future scholars of the individual writers some insight into how each is writing, organizing, and archiving their work. </p>
+<p>While many of the poets, when asked whether they felt ‘dear’ towards any of their digital files responded negatively, all had some means and took some care for saving the physical versions of their work. In fact, most were especially aware of the value, both scholarly and monetarily, of paper records of their progress towards a finished piece/book. Some of their archival processes (Armantrout, for instance) began after learning about or considering the possibility of selling their papers. Most were also aware that some of their idiosyncratic practices would lead to difficulties in the interpretation of their processes for archivists and scholars. We hope that this project, at the least, might give future scholars of the individual writers some insight into how each is writing, organizing, and archiving their work. </p>-->
+
+
+{% assign notes = site.data.notes.all | sort: "poet"%}
+
+<style>
+  .grey {
+       display:none;
+   }
+   .td-topic,.td-poet{width:15%;}
+   </style>
+<div class="row">
+  <div class="col-md-3">
+    <p>Filter by poet:</p>
+    <h2><select id="filters" title="topic filter" class="filteroptions" style="max-width: 100%;">
+        <option value="#" selected="selected">All Poets</option>
+        {% assign people = site.interviews %}
+        {% for person in people %}
+        <option value="{{ person.object-id }}">{{ person.first-name }} {{ person.last-name }}</option>
+        {% endfor %}
+      </select></h2>
+  </div>
+  <div class="col-md-9">
+    <p>Filter by topic:</p>
+    <h2><select id="filters" title="topic filter" class="filteroptions" style="max-width: 100%;">
+        <option value="#" selected="selected">On All Topics</option>
+        {% assign filters = site.data.filters %}
+        {% for filter in filters %}
+        <option value="{{ filter.shortfilter }}">On {{filter.text}}</option>
+        {% endfor %}
+        <br />
+        <hr /><br />
+        <option value="highlight">Interview Highlights</option>
+      </select></h2>
+  </div>
+</div>
+<h3 class="text-center">
+  <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput">
+  <input class="searchinput btn btn-success" title="Search" type="submit" value="Go" alt="Search" id="goButton" onclick="filterItems()">
+  <button class="reset btn btn-sm" href="#" data-filter="" class="filter">Reset Filters</button></h3>
+
+<table >
+  <tr>
+    <th class="td-poet">Poet</th>
+    <th class="td-topic">Topic</th>
+    <th>Note</th>
+  </tr>
+  <div id="contents-container">
+  {% for note in notes %}
+  <tr id="{{ forloop.index }}" class="{{note.tag | replace: ";"," "}} {{note.poet}}">
+    <div>
+    <td class="td-poet"><small><a class="filter" data-filter="{{note.poet}}" href="#{{note.poet}}">{{note.poet}}</a></small></td>
+    <td class="td-topic"><small><a class="filter" data-filter="{{note.tag}}" href="#{{note.tag}}">{{note.tag}}</a></small></td>
+    <td class="words text-left">
+      <h5 id="spoken"><a target="_blank" href="/interviews/transcripts/{{note.poet}}.html#{{note.quote | truncatewords: 5,""}}"
+          target="_blank" data-toggle="tooltip" data-placement="top" title="{{note.quote}}">{{note.detail}}</a></h5>
+    </td>
+  </div>
+  </tr>
+  {% endfor %}
+</div>
+</table>
+<script type="text/javascript">
+  $("select#filters").on('change', function () {
+    var myClass = this.value;
+    $("tr").removeClass("featured");
+
+    $("tr").addClass("grey");
+    $("li").addClass("hidden-all");
+    $('tr.' + myClass).removeClass("grey").addClass("featured");
+    $('li.' + myClass).removeClass("hidden-all");
+    console.log("filter");
+    $("input#quicksearch").val("");
+    var numberofint = $('tr.featured').length;
+    $("#numberof").html(numberofint);
+  });
+  $("button.reset").click(function () {
+    $("tr").removeClass("grey");
+    $("li").addClass("hidden-all");
+    $("tr").removeClass("featured");
+    $("input#quicksearch").val("");
+    $("#filters").val($("#filters option:first").val());
+    var numberofint = $('tr').length;
+    $("#numberof").html(numberofint);
+  });
+</script>
+<script>
+   function filterItems() {
+     var input, filter, table, tr, td, i;
+     input = document.getElementById("quicksearch");
+     filter = input.value.toUpperCase();
+     itemcontainer = document.getElementById("contents-container");
+     item = itemcontainer.getElementsByTagName("tr");
+     alert ("filter items");
+     for (i = 0; i < item.length; i++) {
+       itemcontents = item[i].getElementsByTagName("div")[0];
+       if (itemcontents) {
+         if (itemcontents.innerHTML.toUpperCase().indexOf(filter) > -1) {
+           item[i].classList.add("featured");
+           item[i].classList.remove("grey");
+
+         } else {
+           item[i].classList.remove("featured");
+           item[i].classList.add("grey");
+         }
+       }       
+     }
+   }
+
+</script>
+<script>
+  // fiter items by entering value of button or link pushed into quicksearch box
+  var filterit = function () {
+    $('#quicksearch').val('');
+    var filterValue = $(this).attr('data-filter');
+    var filterClass = $(this).attr('data-filter').replace(" ", "-").replace(" ", "-");
+    $('#quicksearch').val($('#quicksearch').val() + filterValue);
+    $('#goButton').click();
+    window.location.hash = filterValue;
+    var filterValueclass = "." + filterClass;
+    $(filterValueclass).addClass('active');
+  };
+  // run filterit function when link/button with class filter clicked
+  $('a.filter').click(filterit);
+
+  // click goButton to search if return pressed in search box
+  $('#quicksearch').keypress(function (e) {
+    if (e.which == 13) {//Enter key pressed
+      $('#goButton').click();
+      //Trigger search button click event
+    }
+  });
+  // get hash from url
+  var hashfilter = location.hash.substr(1).replace(/%20/g, " ");
+  var hashfilterclass = "." + location.hash.substr(1).replace("%20", "-").replace("%20", "-").replace("%20", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-");
+
+  $(document).ready(function () {
+    $("#quicksearch").focus();
+    if (window.location.hash) {
+      // code to be executed if a hash is contained in the url
+      $('#quicksearch').val($('#quicksearch').val() + hashfilter);
+      $('#goButton').click();
+      $(hashfilterclass).addClass('active');
+    }
+    else {
+    }
+  });
+
+  function highlight(text) {
+    var inputText = document.getElementById("spoken");
+    var innerHTML = inputText.innerHTML;
+    var index = innerHTML.indexOf(text);
+    if (index >= 0) {
+      innerHTML = innerHTML.substring(0, index) + "<span class='hilite'>" + innerHTML.substring(index, index + text.length) + "</span>" + innerHTML.substring(index + text.length);
+      inputText.innerHTML = innerHTML;
+    }
+  }
+</script>

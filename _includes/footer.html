@@ -51,4 +51,8 @@
 
   gtag('config', 'UA-126106997-1');
 </script>
-
+{%if page.bootstrap%}
+<!-- Optional JS for Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+<!-- load other js -->{% include js/visualization-js.html %}
+{%endif%}

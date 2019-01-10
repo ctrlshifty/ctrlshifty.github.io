@@ -6,8 +6,11 @@
   <title>{% if page.title %}{{ page.title | escape }} {% if page.collection-type %}{{ page.collection-type | escape }} {% else %}{% endif %} | {% else %}{% endif %}{{ site.title | escape }}</title>
 
   <meta name="description" content="{% if page.title %}{{ page.title | escape }}{% if page.collection-type %}{{ page.collection-type | escape }} {% else %}{% endif %}, part of {% else %}{% endif %}{{ site.title | escape }} --> {{site.description}}">
-
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  {%if page.bootstrap%}
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | absolute_url }}" type="text/css">
+  <script src="{{ '/assets/js/jquery-3.3.1.min.js' | relative_url }}"></script>
+  {%endif%}
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="https://www.ctrl-shift.org/{{ page.url | replace:'index.html','' }}">
  {%include page-meta.html%}
 
