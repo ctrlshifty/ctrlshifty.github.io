@@ -10,7 +10,8 @@ location: Liberty Lake, WA
 options: video genpoem
 url: http://www.nancevanwinckel.com/
 youtube: ZrfbQwnG3tk
-bootstrap: on 
+bootstrap: on
+duration: "(01:35:51)"
 ---
 
 

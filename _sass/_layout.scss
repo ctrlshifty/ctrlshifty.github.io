@@ -87,7 +87,7 @@ letter-spacing: -1px;
     background-size: auto auto;
     color: inherit;
     display: inline-block;
-    font-family: "Montserrat",sans-serif;
+
     font-size: 16px;
     height: auto;
     letter-spacing: 0.03em;
@@ -169,6 +169,10 @@ color:white !important;
         a{    color: #ffcbcb !important;
    }   }
 
+   .action-button-color-only{    
+    color: #ffcbcb !important;
+    border: 1px #ffcbcb solid;
+    background: #4c525f;}
 
 .portraits{width:23%;margin:0px;padding:0px;max-height:360px;float:left;    overflow: hidden;
 img{margin-bottom:-30px;}
@@ -252,7 +256,7 @@ img:hover{ background:white;}
     background-size: auto auto;
     color: inherit;
     display: inline-block;
-    font-family: "Montserrat",sans-serif;
+
     height: auto;
     letter-spacing: 0.03em;
     line-height: 1;
@@ -364,7 +368,7 @@ padding:10px 0px;
 .variation{display:none;}
 
 
-.attribution{text-align:right; font-size:12px;}
+.attribution{text-align:right; font-size:14px;}
 
 
 
@@ -731,7 +735,7 @@ max-width:700px;
 .question-pic{float:left; width:15%; margin-right:15px;}
 .center{text-align:Center;}
 
-.attribution{text-align:right; max-width: 400px;}
+.attribution{text-align:right;}
 a{ color: black !important;}
 a:hover{background:none;}
 

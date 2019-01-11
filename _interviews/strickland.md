@@ -10,7 +10,8 @@ options:
 url: http://www.stephaniestrickland.com/
 youtube: VlqyVNoAi2o
 photos: no
-bootstrap: on 
+bootstrap: on
+duration: "(01:36:41)"
 ---
 
 

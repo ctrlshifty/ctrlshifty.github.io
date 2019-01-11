@@ -104,6 +104,7 @@
     <td class="words text-left">
       <h5 id="spoken"><a target="_blank" href="/interviews/transcripts/{{note.poet}}.html#{{note.quote | truncatewords: 5,""}}"
           target="_blank" data-toggle="tooltip" data-placement="top" title="{{note.quote}}">{{note.detail}}</a></h5>
+          <span style="display:none;">{{note.detail}} {{note.quote}} {{note.tag}} {{note.poet}}</span>
     </td>
   </div>
   </tr>
@@ -114,24 +115,16 @@
   $("select#filters").on('change', function () {
     var myClass = this.value;
     $("tr").removeClass("featured");
-
     $("tr").addClass("grey");
-    $("li").addClass("hidden-all");
     $('tr.' + myClass).removeClass("grey").addClass("featured");
-    $('li.' + myClass).removeClass("hidden-all");
     console.log("filter");
     $("input#quicksearch").val("");
-    var numberofint = $('tr.featured').length;
-    $("#numberof").html(numberofint);
   });
   $("button.reset").click(function () {
     $("tr").removeClass("grey");
-    $("li").addClass("hidden-all");
     $("tr").removeClass("featured");
     $("input#quicksearch").val("");
     $("#filters").val($("#filters option:first").val());
-    var numberofint = $('tr').length;
-    $("#numberof").html(numberofint);
   });
 </script>
 <script>
@@ -141,9 +134,8 @@
      filter = input.value.toUpperCase();
      itemcontainer = document.getElementById("contents-container");
      item = itemcontainer.getElementsByTagName("tr");
-     alert ("filter items");
      for (i = 0; i < item.length; i++) {
-       itemcontents = item[i].getElementsByTagName("div")[0];
+       itemcontents = item[i].getElementsByTagName("span")[0];
        if (itemcontents) {
          if (itemcontents.innerHTML.toUpperCase().indexOf(filter) > -1) {
            item[i].classList.add("featured");

@@ -11,7 +11,8 @@ location: Los Angeles, CA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Amy_Gerstler
 youtube: 2yQnYpQIbNI
-bootstrap: on 
+bootstrap: on
+duration: "(01:40:26)"
 ---
 
 

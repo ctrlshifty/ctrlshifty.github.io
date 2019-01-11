@@ -11,6 +11,7 @@ options: video genpoem
 url: https://en.wikipedia.org/wiki/James_L._McMichael
 youtube: VpCEAVJOFYc
 bootstrap: on 
+duration: "(01:14:46)"
 ---
 
 

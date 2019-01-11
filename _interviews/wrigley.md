@@ -10,7 +10,8 @@ location: Moscow, ID
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Robert_Wrigley
 youtube: 2_gk14ZSjcI
-bootstrap: on 
+bootstrap: on
+duration: "(01:42:58)"
 ---
 
 
