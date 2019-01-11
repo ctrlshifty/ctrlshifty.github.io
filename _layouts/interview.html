@@ -24,10 +24,12 @@ layout: default
               </button>
             </div>
             <div class="modal-body">
-              <p class="center">
-                  <p> Interview with {{ page.first-name }} {{ page.last-name }} </p>
-                    <p>Location: {{page.location}} | Date: {{page.date-interviewed}}</p>
-                    <p>Duration: {{page.duration}} | Interviewer: Devin Becker </p> 
+              <p >Citation (MLA): <br/>
+                 <small> {{ page.last-name }}, {{ page.first-name }}. Interview with Devin Becker. CTRL+Shift, https://ctrl-shift.org/interviews/{{page.object-id}}.html.</small></p>
+                  <p class="text-center">
+                  Location: {{page.location}} <br/> Date: {{page.date-interviewed}} <br/>
+                    Duration: {{page.duration}} </p> 
+                    <p class="text-center">
                 <a class="action-button" href="/data/mp3/{{page.object-id}}.mp3">MP3</a><br />
                 <!--<a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>-->
                 <a class="action-button" href="/data/csv/{{page.object-id}}.csv">Transcript CSV</a><br />
@@ -85,7 +87,7 @@ layout: default
       <div class="col-md-6">
       <p>Location: {{page.location}} | Date: {{page.date-interviewed}}</p>
       {% for item in site.data[page.object-id] %}
-      <div class="variation" id="{{ page.object-id }}variation{{ forloop.index }}">
+      <div class="variation p-3" id="{{ page.object-id }}variation{{ forloop.index }}">
         <h2 class="quote ">"{{item.excerpt}}"
         </h2>
         <p class="attribution ">From <a href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview
@@ -101,8 +103,6 @@ layout: default
            
           <p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/videos/{{ page.object-id }}.html">Interview
             Video</a></p>
-            <hr class="my-1" style="color:black"/>
-            <br/>
       {% unless page.object-id == "strickland" or page.object-id == "mohammad" %}<p class="center"><a class="action-button"
           href="{{site.baseurl}}/flotsam/photos/{{ page.object-id }}.html">Interview Photos</a></p>{%endunless%}
 
@@ -114,7 +114,7 @@ layout: default
      <div class="col-md-6">
         <img class="img-fluid" src="/images/{{page.object-id}}.jpg">
         <br/>
-        <p class="bio">{{page.content | truncatewords: 40}} </p>
+        <p class="bio">{{page.content | truncatewords: 30}} </p>
         <p class="attribution "><a data-toggle="modal" data-target="#bioBib" href="#" >Full Bio and Bibliography</a></p>
         </div>  
 </div>

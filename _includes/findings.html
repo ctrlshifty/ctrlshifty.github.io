@@ -90,15 +90,15 @@
   <button class="reset btn btn-sm" href="#" data-filter="" class="filter">Reset Filters</button></h3>
 
 <table class="text-left" >
-  <tr>
-    <th class="td-poet ">Poet</th>
-    <th class="td-topic hide-palm">Topic</th>
+  <thead>
+    <th>Poet</th>
+    <th class="hide-palm">Topic</th>
     <th>Note</th>
-  </tr>
+  </thead>
   <div id="contents-container">
   {% for note in notes %}
   <tr id="{{ forloop.index }}" class="{{note.tag | replace: ";"," "}} {{note.poet}}">
-    <div>
+
     <td class="td-poet"><small><a class="filter" data-filter="{{note.poet}}" href="#{{note.poet}}">{{note.poet}}</a></small></td>
     <td class="td-topic hide-palm"><small><a class="filter" data-filter="{{note.tag}}" href="#{{note.tag}}">{{note.tag | replace: ";",", "}}</a></small></td>
     <td class="words text-left">
@@ -106,7 +106,7 @@
           target="_blank" data-toggle="tooltip" data-placement="top" title="{{note.quote}}">{{note.detail}}</a></h5>
           <span style="display:none;">{{note.detail}} {{note.quote}} {{note.tag}} {{note.poet}}</span>
     </td>
-  </div>
+ 
   </tr>
   {% endfor %}
 </div>
