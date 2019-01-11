@@ -1,98 +1,177 @@
 ---
 layout: default
 ---
-<!-- Remember to include jQuery :) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="poet-name">{{ page.first-name }} {{ page.last-name }} </h2>
+     
+    </div>
+    <div class="col-md-2">
+      <!-- Button trigger modal -->
+      <button type="button" data-toggle="modal" data-target="#filesData" class="action-button download-button">Files
+        and Data
+      </button>
 
-<!-- jQuery Modal -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      <!-- Modal -->
+      <div class="modal fade" id="filesData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Files and Data</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="center">
+                <a class="action-button" href="/data/mp3/{{page.object-id}}.mp3">MP3</a><br />
+                <!--<a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>-->
+                <a class="action-button" href="/data/csv/{{page.object-id}}.csv">Transcript CSV</a><br />
+                <a class="action-button" href="/data/txt/{{page.object-id}}.txt">Transcript TXT</a><br />
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-<div id="{{ page.object-id }}" class="poet-feature {% cycle "odd", "even" %}" >
- <p class="backtotop" ><a href="#top">Back to Top</a></p>
- <h2 class="poet-name" style="width:70%;float:left;">{{ page.first-name }} {{ page.last-name }}</h2>
- <!-- Link to open the modal -->
-<a href="#ex1" rel="modal:open" class="action-button download-button">Files and Data</a>
- <!-- Modal HTML embedded directly into document -->
-<div id="ex1" class="modal">
-  <p class="center">
-  <a class="action-button" href="/data/mp3/{{page.object-id}}.mp3">MP3</a><br/>
-  <!--<a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>-->
-  <a class="action-button" href="/data/csv/{{page.object-id}}.csv">Transcript CSV</a><br/>
-  <a class="action-button" href="/data/txt/{{page.object-id}}.txt">Transcript TXT</a><br/>
-</p>
-  <hr /><br/>
-  <a  href="#" rel="modal:close">Close</a>
-</div>
-
-
- <div class="right-column column" >
-     {% for item in site.data[page.object-id] %}
-     <div class="variation" id="{{ page.object-id }}variation{{ forloop.index }}">
-  <p class="quote ">"{{item.excerpt}}"
- </p>
- <p class="attribution " >From <a href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview section {{ forloop.index }}, "{{item.section-title}}," at {{item.timestamp}}</a>
- <br/> {{page.location}} | {{page.date-interviewed}}</p>
- </div>
-   {% endfor %}
-<script>
-    function random_item(items)
-{return items[Math.floor(Math.random()*items.length)]; }
-var items = [{% for item in site.data[page.object-id] %}'{{ page.object-id }}variation{{ forloop.index }}',{% endfor %}'{{ page.object-id }}variation5'];
-var randomitem = (random_item(items)); 
-document.getElementById(randomitem).style.display = 'block';
-console.log(randomitem);
-    </script>
-
-      
-    
-      <p class="center"><a class="action-button" href="{{site.baseurl}}/interviews/transcripts/{{ page.object-id }}.html" style="font-size:larger;">Interview Transcript w/ Filters</a></p>   
- <p class="center"><a class="action-button" href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full Audio Interview w/ Transcript</a></p>
-<p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/videos/{{ page.object-id }}.html">Interview Video</a></p>
-
-{% unless page.object-id == "strickland" or page.object-id == "mohammad"  %}<p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/photos/{{ page.object-id }}.html">Interview Photos</a></p>{%endunless%}
-
-  <p class="center"><a class="action-button" href="{{site.baseurl}}/analyses/respondents/{{ page.object-id }}.html">Answers to Common Questions</a></p>
- 
- 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-2">
+       <!-- Button trigger modal -->
+       <button type="button" data-toggle="modal" data-target="#bioBib" class="action-button download-button">Bio and Bibliography
+        </button>
   
-<!--<p class="center"><a class="action-button" href="{{site.baseurl}}/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
-
- <h2>Analyses and Visualizations</h2>
- {% capture narrative  %}{% include narratives/{{ page.object-id }}.md  %}{% endcapture %}
- <p >"{{ narrative |  truncatewords: 45 }}"</p>
-<p class="center"><a class="action-button" href="{{site.baseurl}}/processes/{{ page.object-id }}.html">Full Process Narrative and Visualization</a></p> 
-
-{%if page.youtube %}<p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/genpoems/{{ page.object-id }}.html">Generative Poem</a></p> {% else %} {% endif %}
-
-
-         
-
-
-
-
-</div>
-
-    <div class="left-column column" >
-                
-                <h3>Interviewed in {{page.location}} on {{page.date-interviewed}}</h3>
- <img src="{{site.baseurl}}/images/{{page.object-id}}.jpg"/>
-  <p class="bio">{{page.content}}</p>
-  {% for item in site.data.bios %}
-  {% if item.poet-id == page.object-id %}
-  <p><a class="action-button" href="{{item.url}}">More on {{ page.first-name }} {{ page.last-name }}</a></p>
-  {%else%}
-    {% endif %}
-      {% endfor %}
+        <!-- Modal -->
+        <div class="modal fade" id="bioBib" tabindex="-1" role="dialog" aria-labelledby="BioBibliography"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Biography and Bibliography</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <p class="bio">{{page.content}}</p>
+                  {% for item in site.data.bios %}
+                  {% if item.poet-id == page.object-id %}
+                  <p><a href="{{item.url}}">More on {{ page.first-name }} {{ page.last-name }}</a></p>
+                  {%else%}
+                  {% endif %}
+                  {% endfor %}
+            
+                  {% capture bibliography %}{% include bibliographies/{{ page.object-id }}.md %}{% endcapture %}
+                  {{ bibliography | markdownify }}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
   
- {% capture bibliography  %}{% include bibliographies/{{ page.object-id }}.md %}{% endcapture %}
-{{ bibliography | markdownify }}
-</div>
-    
-    
+              </div>
+            </div>
+          </div>
+        </div>
 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-offset-md-2">
+        {% for item in site.data[page.object-id] %}
+        <div class="variation" id="{{ page.object-id }}variation{{ forloop.index }}">
+          <h3 class="quote ">"{{item.excerpt}}"
+          </h3>
+          <p class="attribution ">From <a href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview
+              section {{ forloop.index }}, "{{item.section-title}}," at {{item.timestamp}}</a>
+            <br /> {{page.location}} | {{page.date-interviewed}}</p>
+        </div>
+        {% endfor %}
+        <br/>
+      <img class="img-fluid" src="{{site.baseurl}}/images/{{page.object-id}}.jpg" />
+     
+     
+      <script>
+        function random_item(items) { return items[Math.floor(Math.random() * items.length)]; }
+        var items = [{% for item in site.data[page.object-id] %}'{{ page.object-id }}variation{{ forloop.index }}', {% endfor %}'{{ page.object-id }}variation5'];
+        var randomitem = (random_item(items));
+        document.getElementById(randomitem).style.display = 'block';
+        console.log(randomitem);
+      </script>
+    </div>
+    
+    <div class="col-md-6">
+
+        
+
+     
+
+
+
+      <p class="center"><a class="action-button" href="{{site.baseurl}}/interviews/transcripts/{{ page.object-id }}.html"
+          style="font-size:larger;">Interview Transcript w/ Filters</a></p>
+      <p class="center"><a class="action-button" href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full
+          Audio Interview w/ Transcript</a></p>
+      <p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/videos/{{ page.object-id }}.html">Interview
+          Video</a></p>
+
+      {% unless page.object-id == "strickland" or page.object-id == "mohammad" %}<p class="center"><a class="action-button"
+          href="{{site.baseurl}}/flotsam/photos/{{ page.object-id }}.html">Interview Photos</a></p>{%endunless%}
+
+      <p class="center"><a class="action-button" href="{{site.baseurl}}/analyses/respondents/{{ page.object-id }}.html">Answers
+          to Common Questions</a></p>
+
+
+
+      <!--<p class="center"><a class="action-button" href="{{site.baseurl}}/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Analyses and Visualizations</h2>
+      {% capture narrative %}{% include narratives/{{ page.object-id }}.md %}{% endcapture %}
+      <p>"{{ narrative | truncatewords: 45 }}"</p>
+      <p class="center"><a class="action-button" href="{{site.baseurl}}/processes/{{ page.object-id }}.html">Full
+          Process Narrative and Visualization</a></p>
+
+      <p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/genpoems/{{ page.object-id }}.html">Generative
+          Poem</a></p>
+
+      {%include visualization-style.html %}
+
+      {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
+      {%if transcript-name == page.object-id %}
+      <svg class="chart" width="100%" height="100px" style="overflow: visible">
+        {% for item in transcript[1] %}
+        {% assign my_integer = forloop.length %}
+        {% assign my_float = my_integer | times: 1.0 %}
+        {% assign rect-width = 100 | divided_by: my_float %}
+        {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text>
+        <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top"
+          class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
+        {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+          <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip"
+            data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
+        </a>
+        {%endif%}{%endfor%}
+      </svg>
+      <br />
+      {%endif%}
+      {%endfor%}
+      <br />
+      <p> Click below to filter the visualization by subject.</p>
+      <br />
+
+      {%include visualization-filter-legend.html %}
+
+
+
+    </div>
 
 
   </div>
-  <div class="clear:both"></div>
-	
+</div>
+<div class="clear:both"></div>

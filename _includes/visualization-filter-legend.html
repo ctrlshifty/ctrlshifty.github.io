@@ -1,0 +1,9 @@
+<div class="row">
+        {%for n in site.data.filters %}
+        <div class="col-md-2 col-4 ">
+        <svg class="legend" width="100%" height="25px" data-id="{{n.shortfilter}}" style="cursor:pointer;"  data-toggle="tooltip" data-placement="left" title="On {{ n.text | escape }}">
+                <rect x="0" y="0" width="20" height="20" class="{{n.shortfilter}}"></rect><text x="22" y="15">{{n.shortfilter}}</text>  </svg>
+        </div>
+        {%endfor%}
+            
+    </div>

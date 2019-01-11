@@ -50,13 +50,14 @@
 <p>While many of the poets, when asked whether they felt ‘dear’ towards any of their digital files responded negatively, all had some means and took some care for saving the physical versions of their work. In fact, most were especially aware of the value, both scholarly and monetarily, of paper records of their progress towards a finished piece/book. Some of their archival processes (Armantrout, for instance) began after learning about or considering the possibility of selling their papers. Most were also aware that some of their idiosyncratic practices would lead to difficulties in the interpretation of their processes for archivists and scholars. We hope that this project, at the least, might give future scholars of the individual writers some insight into how each is writing, organizing, and archiving their work. </p>-->
 
 
-{% assign notes = site.data.notes.all | sort: "poet"%}
+{% assign notes = site.data.notes.all | sort: "tag"%}
 
 <style>
   .grey {
        display:none;
    }
-   .td-topic,.td-poet{width:15%;}
+   .td-topic{width:100px !important; padding:15px 5px 0 0;}
+   .td-poet{width:100px !important; padding:15px 0 0 0;}
    </style>
 <div class="row">
   <div class="col-md-3">
@@ -88,10 +89,10 @@
   <input class="searchinput btn btn-success" title="Search" type="submit" value="Go" alt="Search" id="goButton" onclick="filterItems()">
   <button class="reset btn btn-sm" href="#" data-filter="" class="filter">Reset Filters</button></h3>
 
-<table >
+<table class="text-left" >
   <tr>
-    <th class="td-poet">Poet</th>
-    <th class="td-topic">Topic</th>
+    <th class="td-poet ">Poet</th>
+    <th class="td-topic hide-palm">Topic</th>
     <th>Note</th>
   </tr>
   <div id="contents-container">
@@ -99,7 +100,7 @@
   <tr id="{{ forloop.index }}" class="{{note.tag | replace: ";"," "}} {{note.poet}}">
     <div>
     <td class="td-poet"><small><a class="filter" data-filter="{{note.poet}}" href="#{{note.poet}}">{{note.poet}}</a></small></td>
-    <td class="td-topic"><small><a class="filter" data-filter="{{note.tag}}" href="#{{note.tag}}">{{note.tag}}</a></small></td>
+    <td class="td-topic hide-palm"><small><a class="filter" data-filter="{{note.tag}}" href="#{{note.tag}}">{{note.tag | replace: ";",", "}}</a></small></td>
     <td class="words text-left">
       <h5 id="spoken"><a target="_blank" href="/interviews/transcripts/{{note.poet}}.html#{{note.quote | truncatewords: 5,""}}"
           target="_blank" data-toggle="tooltip" data-placement="top" title="{{note.quote}}">{{note.detail}}</a></h5>
