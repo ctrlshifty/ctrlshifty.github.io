@@ -22,7 +22,7 @@ Chapbooks
 
 Books of Prose
 - Proofs and Theories: Essays on Poetry (Ecco Press), 1994
-
+- American Originality: Essays on Poetry (Farrar, Straus, Giroux), 2017
 
 Books Edited
 - The Best American Poetry 1993 (Collier), 1993

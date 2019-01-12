@@ -148,13 +148,14 @@ layout: default
          Poem</a></p>
         </div>
     </div>
+    <br>
     <hr class="my-3" style="color:black"/>
 
-    <br><br>
+    
   <div class="row ">
     <br>
     <div class="col-md-12">
-    
+    <h2>Browse Interview by Subject <small>(<a href="/flotsam/subjectviz/">View All Subject Visualizations</a>)</small></h2>
 
       {%include visualization-style.html %}
 
@@ -165,7 +166,7 @@ layout: default
         {% assign my_integer = forloop.length %}
         {% assign my_float = my_integer | times: 1.0 %}
         {% assign rect-width = 100 | divided_by: my_float %}
-        {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text>
+        {%if forloop.first%}<text x="0" y="8" style="font-size:15px;">Hover over section to read content. Click to find content within interview.</text>
         <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top"
           class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
         {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
