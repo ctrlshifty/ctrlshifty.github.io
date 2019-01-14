@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: default-transcript
 ---
 {% assign items = site.data.transcripts[page.object-id] %}
-{% assign notes = site.data.notes[page.object-id] %}
 
 {%- comment -%} find all words used in the subject metadata {%- endcomment -%}
 {%- assign min-count = 1 -%}
@@ -14,17 +13,7 @@ layout: default
   <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
     <div class="genpoem-portrait">
     <img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
-<ul id="notes-container" style="display:none;">
-    {% for note in notes %}
-<li class="hidden-all {{note.tag | replace: ";"," "}}"><a class="filter" href="#{{note.quote | truncatewords: 5,""}}" onclick="highlight('{{note.quote}}')" data-filter="{{note.quote | truncatewords: 5,""}}">{{note.detail}}</a></li>
-   {% endfor %}
-  </ul>
-<style>
-  .hilite {
-    background-color: yellow;
-  }
-</style>
- 
+
 
 </div>
    <div class="transcript-content">
@@ -54,14 +43,13 @@ layout: default
       <a target="_blank" href="https://youtu.be/{{ page.youtube }}?t={{item.timelink}}&cc_load_policy=1">{{item.timestamp}}</a>{% endif %}</td></tr>
 {% endfor %}
 </table>
-
+{% include backtotop.html %}
 <script type="text/javascript">
   $("select#filters").on('change', function() {
   var myClass = this.value;
    $("tr").removeClass("featured"); 
 
   $("tr").addClass("grey"); 
-  $("li").addClass("hidden-all"); 
     $('tr.'+myClass).removeClass("grey").addClass("featured"); 
     $('li.'+myClass).removeClass("hidden-all").addClass("featured"); 
     console.log("filter");
@@ -71,7 +59,6 @@ layout: default
  });
    $("button.reset").click(function() {
   $("tr").removeClass("grey"); 
-  $("li").addClass("hidden-all"); 
     $("tr").removeClass("featured"); 
     $("input#quicksearch").val(""); 
     $("#filters").val($("#filters option:first").val());

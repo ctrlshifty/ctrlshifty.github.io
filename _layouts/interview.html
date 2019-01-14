@@ -25,7 +25,7 @@ layout: default
             </div>
             <div class="modal-body">
               <p >Citation (MLA): <br/>
-                 <small> {{ page.last-name }}, {{ page.first-name }}. Interview with Devin Becker. CTRL+Shift, https://ctrl-shift.org/interviews/{{page.object-id}}.html.</small></p>
+                 <small> {{ page.last-name }}, {{ page.first-name }}. Interview with Devin Becker. <em>CTRL+Shift: Writing Practice at the Dawn of the Digital Era</em>, https://ctrl-shift.org/interviews/{{page.object-id}}.html.</small></p>
                   <p class="text-center">
                   Location: {{page.location}} <br/> Date: {{page.date-interviewed}} <br/>
                     Duration: {{page.duration}} </p> 
@@ -138,6 +138,7 @@ layout: default
       </div>
       </div>
       {% capture narrative %}{% include narratives/{{ page.object-id }}.md %}{% endcapture %}
+      <h4>Process Narrative Excerpt:</h4>
       <p>"{{ narrative | truncatewords: 45 }}"</p>
          
         <p class="center"><a class="action-button" href="{{site.baseurl}}/processes/{{ page.object-id }}.html">Full

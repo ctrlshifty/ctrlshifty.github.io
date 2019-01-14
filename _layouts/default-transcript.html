@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body style="overflow-x:visible;">
+
+    {% include header.html %}
+    {%include breadcrumbs.html%}
+    <div class="page-content"  >
+      <div class="wrapper" id="page">
+        {{ content }}
+      </div>
+    </div>
+    
+    {% include footer.html %}
+
+  </body>
+
+</html>

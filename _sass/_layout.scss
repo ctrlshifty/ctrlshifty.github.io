@@ -1043,3 +1043,20 @@ list-style:disc;
                     width:100%;
                     padding:10px;
                     }}
+
+.back_to_top {
+    position: fixed;
+    top: 90%;
+    right: 0px;
+    width: 40px;
+    margin: -20px;
+    border-radius: 20px;
+    background: #fc74b3;
+    color: white;
+    height: 26px;
+    padding: 10px;
+    z-index: 10; }
+    
+    .back_to_top a {
+    color: white !important; }
+                      

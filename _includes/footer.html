@@ -10,23 +10,23 @@
         {% assign pages = site.pages | sort:"order"  %}
         {% for this_page in pages %}
   {% if this_page.order %}
-  <small><a class="page-link-ctrl mr-2" href="{{this_page.url | prepend: site.baseurl }}" >
+  <small><a class="page-link-ctrl" href="{{this_page.url | prepend: site.baseurl }}" style="margin-right:2em;" >
     {{ this_page.title | Capitalize | truncatewords: 1, "" }} </a></small>
      {% endif %}
       {% endfor %}</p>
-        <ul class="contact-list">
-          <li>{{ site.description | truncatewords: 20, "" }}</li>
-          <li>A <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning (CDIL)</a> production</li>
-          <li>Questions: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+        <p style="max-width: 650px;margin-bottom: 10px;" >11 Contemporary Poets on writing through the advent of the personal computer and into the arrival of the digital age. </p>
+          <p>A <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning (CDIL)</a> production.</p>
+          <p>Questions: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+       
       </div>
 
 
       <div class="footer-col footer-col-3 ">
             <br class="hide-palm;" /> 
-        <p>Created by: <a href="http://devinbecker.org/">Devin Becker</a>, <a href="http://coreyoglesby.com">Corey Oglesby</a>, and <a href="http://www.laurenwesterfield.com/">Lauren Westerfield</a><br/>
-        with generous funding from the University of Idaho's<br/>
-      <a href="https://www.uidaho.edu/research/faculty/find-funding/internal-funding/seed-grant">Seed Grant</a> and <a href="https://www.uidaho.edu/research/faculty/find-funding/internal-funding/vandal-ideas-project">Vandal Ideas Project</a> programs</p>
+        <p>Created by: <a href="http://devinbecker.org/">Devin Becker</a>, <a href="http://coreyoglesby.com">Corey Oglesby</a>, and <a href="http://www.laurenwesterfield.com/">Lauren Westerfield</a> 
+        </p>
+        <p>Support provided by the <a href="https://lib.uidaho.edu">University of Idaho Library</a> and the University of Idaho's 
+      <a href="https://www.uidaho.edu/research/faculty/find-funding/internal-funding/seed-grant">Seed Grant</a> and <a href="https://www.uidaho.edu/research/faculty/find-funding/internal-funding/vandal-ideas-project">Vandal Ideas Project</a> programs.</p>
       <ul class="social-media-list">
          
           <li>

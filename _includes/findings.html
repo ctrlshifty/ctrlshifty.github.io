@@ -63,7 +63,7 @@
   <div class="col-md-3">
     <p>Filter by poet:</p>
     <h2><select id="filters" title="topic filter" class="filteroptions" style="max-width: 100%;">
-        <option value="#" selected="selected">All Poets</option>
+        <option value="reset" selected="selected">All Poets</option>
         {% assign people = site.interviews %}
         {% for person in people %}
         <option value="{{ person.object-id }}">{{ person.first-name }} {{ person.last-name }}</option>
@@ -73,7 +73,7 @@
   <div class="col-md-9">
     <p>Filter by topic:</p>
     <h2><select id="filters" title="topic filter" class="filteroptions" style="max-width: 100%;">
-        <option value="#" selected="selected">On All Topics</option>
+        <option value="reset" selected="selected" onclick="$('button.reset').click();" >On All Topics</option>
         {% assign filters = site.data.filters %}
         {% for filter in filters %}
         <option value="{{ filter.shortfilter }}">On {{filter.text}}</option>
@@ -90,11 +90,11 @@
   <button class="reset btn btn-sm" href="#" data-filter="" class="filter">Reset Filters</button></h3>
 
 <table class="text-left" id="contents-container">
-  <thead>
-    <th>Poet</th>
-    <th class="hide-palm">Topic</th>
-    <th>Note</th>
-  </thead>
+  <tr class="theader">
+    <th class="td-poet">Poet</th>
+    <th class="td-topic hide-palm">Topic</th>
+    <th style="padding-top:15px;">Note</th>
+  </tr>
   
   {% for note in notes %}
   <tr id="{{ forloop.index }}" class="{{note.tag | replace: ";"," "}} {{note.poet}}">
@@ -113,12 +113,20 @@
 </table>
 <script type="text/javascript">
   $("select#filters").on('change', function () {
+    if (this.value == 'reset') {
+      $("tr").removeClass("grey");
+    $("tr").removeClass("featured");
+    $("input#quicksearch").val("");
+    }
+    else{
     var myClass = this.value;
     $("tr").removeClass("featured");
     $("tr").addClass("grey");
     $('tr.' + myClass).removeClass("grey").addClass("featured");
+    $('tr.theader').removeClass("grey").addClass("featured");
     console.log("filter");
     $("input#quicksearch").val("");
+    }
   });
   $("button.reset").click(function () {
     $("tr").removeClass("grey");
