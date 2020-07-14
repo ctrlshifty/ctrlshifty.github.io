@@ -41,7 +41,7 @@ The project examines recent changes in writing practices that occurred due to th
 <br/>
   </div>
   <div class="divider" id="divider1"  ></div>
-  <div class="home-section home-int">
+  <div class="home-section text-dark">
 <h1 class="center">The Interviews </h1>
 <h4  class="center" >We have interview material in a variety of formats for your listening/viewing/reading pleasure</h4>
 
@@ -82,8 +82,29 @@ The project examines recent changes in writing practices that occurred due to th
   <div class="divider" id="divider2"  ></div>
   <div class="home-section home-anal">
       <h1 class="center">We've also broken the interviews down</h1>
+      <h2  class="center" >by Subject <br/> 
+
+      <style>
+        {% for n in site.data.filters %}
+        .{{ n.tag }} { fill:{% cycle '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000' %}; }
+        {% endfor %}
+        .black{fill:black;}
+        </style>
+        <div style="width:80%; margin:0% auto;">
+      {% for transcript in site.data.transcripts limit:2%}{%assign transcript-name = transcript[0] %}
+      
+      <svg class="chart" width="100%" height="100px" style="overflow: visible">
+              {% for item in transcript[1] %}
+              {% assign my_integer = forloop.length %}
+{% assign my_float = my_integer | times: 1.0 %}
+{% assign rect-width = 100 | divided_by: my_float  %}
+          {%if forloop.first%}<text x="0" y="0"><a href="/flotsam/subjectviz/">{{transcript-name | capitalize}}</a></text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
+          {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/flotsam/subjectviz/#' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
+                      {%endif%}{%endfor%}</svg> 
+                      <br/>
+                      {%endfor%}
       <h2  class="center" >by Question <br/> 
-        <form id="question" class="center"><select class="center" onchange="window.location.href=this.value">
+        <form id="question" class="center"><select class="center p-2" onchange="window.location.href=this.value">
             <option>Select a Question</option>
             {% assign questions = site.questions  %}
             {% for question in questions %}
@@ -97,7 +118,7 @@ The project examines recent changes in writing practices that occurred due to th
         </select></form>
         <br/><br />
         by Respondent <br /> 
-        <form id="format"><select class="center" onchange="window.location.href=this.value">
+        <form id="format"><select class="center p-2" onchange="window.location.href=this.value">
           <option>Select a Poet</option>
           {% assign poets = site.interviews | sort: 'last-name' %}
           {% for poet in poets %}
@@ -171,40 +192,13 @@ The project examines recent changes in writing practices that occurred due to th
 <div class="home-section home-flotsam">
                 
                 <br/> <br/>
-              <h2 >We also practice and encourage  
-                   messing around with all our data, 
-                   which is available on <a href="https://github.com/ctrlshifty.github.io">GitHub</a>! 
+              <h2 >All our data and the code for this website is available on <a href="https://github.com/ctrlshifty.github.io">GitHub</a>, and via this site. 
                   
                   </h2> <br/> <br/>
-                  <H2 class="center">We've been messing around ourselves:
-                      <br/>
-                      <a class="action-button" href="/flotsam/">Here are some examples, aka our 'flotsam'</a>
-              <br/> <br/>
-              <h3><a href="/flotsam/subjectviz/">Examples of Our Subject Visualization</a></h3>
-              <br/>
-              <style>
-                {% for n in site.data.filters %}
-                .{{ n.shortfilter }} { fill:{% cycle '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000' %}; }
-                {% endfor %}
-                .black{fill:black;}
-                </style>
-                <div style="width:80%; margin:0% auto;">
-              {% for transcript in site.data.transcripts limit:2%}{%assign transcript-name = transcript[0] %}
-              
-              <svg class="chart" width="100%" height="100px" style="overflow: visible">
-                      {% for item in transcript[1] %}
-                      {% assign my_integer = forloop.length %}
-      {% assign my_float = my_integer | times: 1.0 %}
-      {% assign rect-width = 100 | divided_by: my_float  %}
-                  {%if forloop.first%}<text x="0" y="0"><a href="/flotsam/subjectviz/">{{transcript-name | capitalize}}</a></text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
-                  {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/flotsam/subjectviz/#' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
-                              {%endif%}{%endfor%}</svg> 
-                              <br/>
-                              {%endfor%}
-              </div>
+                  
               <h1 class="center">
-                Or go to the source: <br/><em>CTRL+SHIFT, Please generate a poem for me by</em><br/>
-                <form id="genpoem"><select onchange="window.location.href=this.value">
+                And don't leave without letting us generate a poem for you<br/>
+                <form id="genpoem"><select class="p-2" onchange="window.location.href=this.value">
                   <option >Select a Poet</option>
                     {% assign poets = site.interviews | sort: 'last-name' %}
                     {% for poet in poets %}
@@ -216,18 +210,7 @@ The project examines recent changes in writing practices that occurred due to th
                 
                   </div>
                   <div class="divider" id="divider6"  ></div>
-                  <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
-    <script>
-    $("body").on("scroll", function () {
-    //set scroll position in session storage
-    sessionStorage.scrollPos = $("body").scrollTop();
-});
-var init = function () {
-    //get scroll position in session storage
-    $("body").scrollTop(sessionStorage.scrollPos || 0)
-};
-window.onload = init;
-        </script>
+ 
                   <script>
     function random_item(items)
 {return items[Math.floor(Math.random()*items.length)]; }

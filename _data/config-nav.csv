@@ -1,0 +1,15 @@
+display_name,stub,dropdown_parent
+About,/about/,
+Interviews,/interviews/,
+Subjects,/subjectviz/,
+Analyses,,
+Questions,/analyses/questions/,Analyses
+Respondents,/analyses/respondents/,Analyses
+Tools,/analyses/tools/,Analyses
+Processes,/processes/,
+Findings,/findings/,
+Flotsam,,
+Generated Poems,/flotsam/genpoems/,Flotsam
+Notes,/flotsam/notes/,Flotsam
+Photos,/flotsam/photos/,Flotsam
+Videos,/flotsam/videos,Flotsam

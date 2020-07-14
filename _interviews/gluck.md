@@ -9,7 +9,9 @@ location: Cambridge, MA
 options: 
 url: https://en.wikipedia.org/wiki/Louise_Gl%C3%BCck
 youtube: kx0Q_SAaT1E
-bootstrap: on
+av_source: youtube
+audiovideo-id: kx0Q_SAaT1E
+
 duration: "(01:52:39)"
 ---
 

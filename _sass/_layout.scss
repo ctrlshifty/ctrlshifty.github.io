@@ -77,6 +77,11 @@ letter-spacing: -1px;
 
 .main-heading{font-size: 50px;}
 
+
+
+/**
+ * Custom Buttons
+ */
 .action-button {
         background-attachment: scroll;
     background-clip: border-box;
@@ -123,7 +128,7 @@ letter-spacing: -1px;
     
 }
 .about-section{
-    width:95%;
+    width:100%;
     min-height:300px;
     padding:30px 5%;
     
@@ -247,21 +252,7 @@ img:hover{ background:white;}
 
 
 .selected {
-        background-attachment: scroll;
-    background-clip: border-box;
-    background-image: none;
-    background-origin: padding-box;
-    background-position: 0 0;
-    background-repeat: repeat;
-    background-size: auto auto;
-    color: inherit;
-    display: inline-block;
-
-    height: auto;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    padding: 10px 20px;
-    text-transform: uppercase;
+      
     border: 1px black solid;
 }
 
@@ -952,6 +943,8 @@ a:hover{background:none;}
     float:left;
     margin-bottom:0px !important;
 }
+.anchored-highlight{background:aquamarine;}
+
   .featured{display:block;float:none; clear:both;}
  .line{display: block; font-size:8px; float:left;}
  .grey .words, .grey .timestamp, .grey .speaker, .grey .line {
@@ -1060,3 +1053,18 @@ list-style:disc;
     .back_to_top a {
     color: white !important; }
                       
+
+    
+#scroll-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 15%; /* Place the button at the bottom of the page */
+    right: -10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 5px 23px 5px 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    }

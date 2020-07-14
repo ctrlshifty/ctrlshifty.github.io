@@ -10,7 +10,9 @@ location: Long Beach, CA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/James_L._McMichael
 youtube: VpCEAVJOFYc
-bootstrap: on 
+av_source: youtube
+audiovideo-id: VpCEAVJOFYc
+ 
 duration: "(01:14:46)"
 ---
 

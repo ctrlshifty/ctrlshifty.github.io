@@ -11,8 +11,10 @@ options: video genpoem
 location: Ashland, OR
 url: https://en.wikipedia.org/wiki/K._Silem_Mohammad
 youtube: tgji2thf1og
+av_source: youtube
+audiovideo-id: tgji2thf1og
 photos: no
-bootstrap: on
+
 duration: "(00:57:44)"
 ---
 

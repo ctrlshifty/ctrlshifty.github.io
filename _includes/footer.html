@@ -45,17 +45,3 @@
 </footer>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126106997-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-126106997-1');
-</script>
-{%if page.bootstrap%}
-<!-- Optional JS for Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
-<!-- load other js -->{% include js/visualization-js.html %}
-{%endif%}

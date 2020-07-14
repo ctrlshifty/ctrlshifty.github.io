@@ -10,6 +10,8 @@ location: Cambridge, MA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Robert_Pinsky
 youtube: tPC1MKl1VdA
+av_source: youtube
+audiovideo-id: tPC1MKl1VdA
 number_photos: 11
 ---
 

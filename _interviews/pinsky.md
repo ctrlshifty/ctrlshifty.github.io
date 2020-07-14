@@ -10,7 +10,9 @@ location: Cambridge, MA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Robert_Pinsky
 youtube: tPC1MKl1VdA
-bootstrap: on
+av_source: youtube
+audiovideo-id: tPC1MKl1VdA
+
 duration: "(01:07:36)"
 ---
 

@@ -10,6 +10,8 @@ location: Bellingham, WA
 options: video genpoem
 url: https://chss.wwu.edu/english/english-faculty-bruce-beasley
 youtube: a5QwmVjCAEU
+av_source: youtube
+audiovideo-id: a5QwmVjCAEU
 number_photos: 36
 ---
 

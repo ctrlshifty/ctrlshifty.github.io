@@ -1,59 +1,39 @@
-
-
 <header class="site-header">
 
   <div class="wrapper" id="myHeader">
 
     <a class="site-title" href="{{ site.baseurl }}/">CTRL+SHIFT</a>
+    <nav class="navbar navbar-expand-lg justify-content-end navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#page-nav" aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <nav class="site-nav-ctrl">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-        {% assign pages = site.pages | sort:"order"  %}
-          {% for this_page in pages %}
-    {% if this_page.order %}
-    {% if page.url contains this_page.object-id %}
-       <a class="page-link-ctrl selected " href="{{this_page.url | prepend: site.baseurl }}">
-      {{ this_page.title | upcase | truncatewords: 1, "" }}</a>
-           {% else %}
-    <a class="page-link-ctrl" href="{{this_page.url | prepend: site.baseurl }}" >
-      {{ this_page.title | upcase | truncatewords: 1, "" }} </a>
+    <div class="collapse navbar-collapse justify-content-end" id="page-nav">
+      <ul class="nav">
+        {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nil' -%}
+        {% for nav in navItems %}
+        {% if nav.stub %}
+        <li class="nav-item {% if page.url == nav.stub %}active{% endif %}">
+          <a class="nav-link page-link-ctrl {% if page.url contains nav.stub %}selected{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
+        </li>
+        {%- else -%}
+        <li class="nav-item dropdown">
+          {% assign navChildren = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nav.display_name' %}
+          {%- assign childStubs = navChildren | map: 'stub' -%}
+          <a class="nav-link page-link-ctrl  dropdown-toggle{% if childStubs contains page.url %} selected{% endif %}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ nav.display_name }}</a>
+          <div class="dropdown-menu">
+            {% for c in navChildren %}
+            <a class="dropdown-item {% if page.url contains c.stub %}active{% endif %}" href="{{ c.stub | relative_url }}">{{ c.display_name }}</a>
+            {% endfor %}
+          </div>
+        </li>
         {% endif %}
-       {% endif %}
-        {% endfor %}
-       <!--
-       <ul>
-   {% for page in site.pages %}
-    {% if page.title %}
-{% if page.title == "Poets" %}
-  <li>
-    <a class="page-link" href="{{page.url | prepend: site.baseurl }}">
-      {{ page.title}}</a>
-      <ul>
-         {% assign people = site.people | sort: 'last-name' %}
-    {% for person in people %}
-     <li><a href="{{site.baseurl}}/people/{{ person.object-id }}.html">
-     {{ person.first-name }} {{ person.last-name }}
-       </a></li>
-    {% endfor %}
-      </ul>
-  </li>
- {% else %} 
-   <li>
-    <a class="page-link" href="{{page.url | prepend: site.baseurl }}">
-      {{ page.title}}</a>
-  </li>
-        {% endif %} {% endif %} {% endfor %}
-        </ul>-->
-      </div>
-    </nav>
+        {%- endfor -%}
 
+
+    </div>
+  </nav>
   </div>
+
 
 </header>

@@ -10,6 +10,8 @@ location: Irvine, CA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Michael_Ryan_(poet)
 youtube: XlNHKWPm9cc
+av_source: youtube
+audiovideo-id: XlNHKWPm9cc
 number_photos: 20
 ---
 

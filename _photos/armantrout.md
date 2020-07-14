@@ -10,6 +10,8 @@ location: San Diego, CA
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Rae_Armantrout
 youtube: BX_bURONf78
+av_source: youtube
+audiovideo-id: BX_bURONf78
 number_photos: 9
 ---
 

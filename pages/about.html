@@ -1,8 +1,8 @@
 ---
 layout: about
 title: About
-order: 1
 object-id: about
+permalink: /about/
 ---
 <div class="about-section ">
 <div class="about-content about-white-background">
@@ -16,6 +16,26 @@ object-id: about
 </div>
 <div class="about-section about-int">
 <div class="about-content">
+    <div class="col-md-6 float-right col-10 mx-auto"> <div id="ytplayer" ></div>
+    </div>  
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '400',
+            width: '600',
+            cc_load_policy: 1,
+            videoId: 'HQXUDOt_vCM'
+          });
+        }
+      </script>
 {% capture really %} {% include about/really.md %}{%endcapture %}
 {{really | markdownify}}
 </div>

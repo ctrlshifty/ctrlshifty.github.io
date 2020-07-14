@@ -10,6 +10,8 @@ location: Moscow, ID
 options: video genpoem
 url: https://en.wikipedia.org/wiki/Robert_Wrigley
 youtube: 2_gk14ZSjcI
+av_source: youtube
+audiovideo-id: 2_gk14ZSjcI
 number_photos: 24
 ---
 

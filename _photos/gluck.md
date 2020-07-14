@@ -10,6 +10,8 @@ location: Cambridge, MA
 options: 
 url: https://en.wikipedia.org/wiki/Louise_Gl%C3%BCck
 youtube: kx0Q_SAaT1E
+av_source: youtube
+audiovideo-id: kx0Q_SAaT1E
 number_photos: 66
 ---
 

@@ -11,13 +11,15 @@ permalink: /interviews/transcripts/
 
   <div class="people-body">
   <div class="listing">
-    {% assign people = site.videos | sort: 'random' %}
+    {% assign people = site.interviews %}
     {% for person in people %}
+    {% unless person.object-id == 'all' %}
     <a href="{{site.baseurl}}/interviews/transcripts/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
       <p>Interview transcript</p>
       <img src="{{site.baseurl}}/images/portraits/{{person.object-id}}.png"/>
     </a>
+    {% endunless %}
     {% endfor %}
 
 </div>

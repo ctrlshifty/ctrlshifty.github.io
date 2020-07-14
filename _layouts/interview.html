@@ -8,9 +8,8 @@ layout: default
     </div>
     <div class="col-3 float-right">
       <!-- Button trigger modal -->
-     <p><small><a href="#" data-toggle="modal" data-target="#filesData" class="float-right ">Files
-        and Data</small></p>
-      </a>
+     <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#filesData" class="float-right ">Files  and Data  </a>
+     
 
       <!-- Modal -->
       <div class="modal fade" id="filesData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -90,7 +89,7 @@ layout: default
       <div class="variation p-3" id="{{ page.object-id }}variation{{ forloop.index }}">
         <h2 class="quote ">"{{item.excerpt}}"
         </h2>
-        <p class="attribution ">From <a href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml#segment{{item.seconds}}">interview
+        <p class="attribution ">From <a href="/interviews/transcripts/{{ page.object-id }}.html?q={{item.excerpt | truncatewords: 5, ''}}">interview
             section {{ forloop.index }}, "{{item.section-title}}"</a>
           <br /> {{item.timestamp}}</p>
       </div>

@@ -9,8 +9,10 @@ location: New York, NY
 options: 
 url: http://www.stephaniestrickland.com/
 youtube: VlqyVNoAi2o
+av_source: youtube
+audiovideo-id: VlqyVNoAi2o
 photos: no
-bootstrap: on
+
 duration: "(01:36:41)"
 ---
 

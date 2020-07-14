@@ -11,12 +11,16 @@ permalink: /flotsam/genpoems/
 
   <div class="people-body">
   <div class="listing">
-    {% assign people = site.genpoems | sort: 'random' %}
+    {% assign people = site.interviews | sort: 'random' %}
     {% for person in people %}
+    {% unless person.object-id == 'all' %}
+
     <a href="{{site.baseurl}}/flotsam/genpoems/{{ person.object-id }}.html">
       <h2>{{ person.first-name }} {{ person.last-name }}</h2>
       <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
     </a>
+    {% endunless %}
+
     {% endfor %}
 
 </div>

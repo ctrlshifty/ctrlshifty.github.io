@@ -455,6 +455,8 @@
         if (youtube) {
             return {
                 youtube: youtube
+av_source: youtube
+audiovideo-id: youtube
             };
         } else if (vimeo) {
             return {
