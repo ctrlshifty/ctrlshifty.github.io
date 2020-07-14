@@ -36,11 +36,11 @@ title:
 <h3>The poets interviewed include: Rae Armantrout, Bruce Beasley, Amy Gerstler, Louise Glück, James McMichael, K. Silem Mohammad, Robert Pinsky, Michael Ryan, Stephanie Strickland, Nance Van Winckel, and Robert Wrigley (below).</h3>
 <br/>
 <h3>
-The project examines recent changes in writing practices that occurred due to the advent of the computer and the arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview studies. <br/><br/><a class="action-button" href="about.html">More about the project ...</a>
+The project examines recent changes in writing practices that occurred due to the advent of the computer and the arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview studies. <br/><br/><a class="action-button float-right mb-4" href="/about/">More about the project ...</a>
 </h3>
 <br/>
   </div>
-  <div class="divider" id="divider1"  ></div>
+  <div class="divider my-4" id="divider1"  ></div>
   <div class="home-section text-dark">
 <h1 class="center">The Interviews </h1>
 <h4  class="center" >We have interview material in a variety of formats for your listening/viewing/reading pleasure</h4>
@@ -75,11 +75,11 @@ The project examines recent changes in writing practices that occurred due to th
   <div style="clear:both"></div>
   <br/><br/>
   <p>
-  <a class="action-button" href="interviews/">All Interviews</a></p>
+  <a class="action-button float-right mb-4" href="interviews/">All Interviews</a></p>
 </div>
 
   </div>
-  <div class="divider" id="divider2"  ></div>
+  <div class="divider my-4" id="divider2"  ></div>
   <div class="home-section home-anal">
       <h1 class="center">We've also broken the interviews down</h1>
       <h2  class="center" >by Subject <br/> 
@@ -90,7 +90,7 @@ The project examines recent changes in writing practices that occurred due to th
         {% endfor %}
         .black{fill:black;}
         </style>
-        <div style="width:80%; margin:0% auto;">
+        <div >
       {% for transcript in site.data.transcripts limit:2%}{%assign transcript-name = transcript[0] %}
       
       <svg class="chart" width="100%" height="100px" style="overflow: visible">
@@ -98,8 +98,8 @@ The project examines recent changes in writing practices that occurred due to th
               {% assign my_integer = forloop.length %}
 {% assign my_float = my_integer | times: 1.0 %}
 {% assign rect-width = 100 | divided_by: my_float  %}
-          {%if forloop.first%}<text x="0" y="0"><a href="/flotsam/subjectviz/">{{transcript-name | capitalize}}</a></text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
-          {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/flotsam/subjectviz/#' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
+          {%if forloop.first%}<text x="0" y="0"><a href="/subjectviz/">{{transcript-name | capitalize}}</a></text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
+          {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/subjectviz/#' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
                       {%endif%}{%endfor%}</svg> 
                       <br/>
                       {%endfor%}
@@ -136,24 +136,27 @@ The project examines recent changes in writing practices that occurred due to th
         </a>
       {% endfor %}</p><br/><br/>
       <p>
-      <a class="action-button" href="analyses/">More Analyses</a>
+      <a class="action-button float-right mb-4" href="analyses/">More Analyses</a>
       </p>
     
       </div>
-      <div class="divider" id="divider3"  ></div>
-<div class="home-section home-process">
+    </div>
+
+      <div class="divider my-4" id="divider3"  ></div>
+
+<div class="home-section">
         <br/>
 
 
 
   
-        <h1 class="center">
-          And pieced together  <br>
+        <p class="center h2">
+          And pieced together 
           Process Narratives <br/>
           &amp;  <br/>
           Visualizations<br/>
           from each poet's answers
-      </h1>
+        </p>
         <br>
         {% for poet in poets %}
            <div class="container-proc" id="{{poet.object-id}}-viz">
@@ -172,23 +175,23 @@ The project examines recent changes in writing practices that occurred due to th
   {% endfor%}
          
           
-        <p ><a class="action-button" href="processes/">More Processes</a></p>
+        <p ><a class="action-button float-right mb-4" href="processes/">More Processes</a></p>
 </div>
-<div class="divider" id="divider4"  ></div>
+<div class="divider my-4" id="divider4"  ></div>
  <div class="home-section home-findings">
-            <h1 class="center">So What Did We Find?</h1>
-            <h2 class="center">We have come up with some initial observations regarding some of the central areas we investigated. They can be found at our <a href="findings.html">Findings</a> page.  </h2><br/><br/>
-            <h2 class="center">Our primary intent with this material, however, 
-                was not to make some grand claim about what's changed, as we'd need a bigger and more representative study for that, but rather to open up the data  for you, <span class="pink-newon" style="font-size:25px;">random Internet citizen</span>,
+            <h2 class="px-5 h1">So What Did We Find?</h1>
+            <p class="px-5 h3">We have come up with some initial observations regarding some of the central areas we investigated. They can be found at our <a href="findings.html">Findings</a> page.  </p><br/><br/>
+            <p class="px-5 h3">Our primary intent with this material, however, 
+                was not to make some grand claim about what's changed, as we'd need a bigger and more representative study for that, but rather to open up the data  for you, <span class="text-primary">random Internet citizen</span>,
                 for your own investigations and discoveries
                 and in order for those interested 
-                to learn more about these wonderful writers</h2>
+                to learn more about these wonderful writers</p>
               
           <br/><br/>
           
-          <p><a class="action-button" href="findings.html">More on Findings</a></p>
+          <p><a class="action-button float-right mb-4" href="/findings/">More on Findings</a></p>
 </div>
-<div class="divider" id="divider5"  ></div>
+<div class="divider my-4" id="divider5"  ></div>
 <div class="home-section home-flotsam">
                 
                 <br/> <br/>
@@ -209,7 +212,7 @@ The project examines recent changes in writing practices that occurred due to th
               </h1>
                 
                   </div>
-                  <div class="divider" id="divider6"  ></div>
+                  <div class="divider my-4" id="divider6"  ></div>
  
                   <script>
     function random_item(items)

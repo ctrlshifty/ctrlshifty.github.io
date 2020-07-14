@@ -5,7 +5,7 @@
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <!-- load other js -->
 
-{%if page.url contains "subjectviz" %}{% include js/visualization-js.html %}{% endif %}
+{%if page.url contains "subjectviz" or page.layout == "interview" %}{% include js/visualization-js.html %}{% endif %}
 {%if page.url contains "interviews/transcripts" %}{% include js/transcript-js.html %}{% endif %}
 
 {%if page.url contains "notes" %}{% include js/notes-js.html %}{% endif %}

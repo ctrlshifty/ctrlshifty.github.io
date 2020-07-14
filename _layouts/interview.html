@@ -2,160 +2,87 @@
 layout: default
 ---
 <div class="container">
-  <div class="row">
-    <div class="col-9">
-      <h1 >{{ page.first-name }} {{ page.last-name }} </h1>
-    </div>
-    <div class="col-3 float-right">
-      <!-- Button trigger modal -->
-     <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#filesData" class="float-right ">Files  and Data  </a>
-     
-
-      <!-- Modal -->
-      <div class="modal fade" id="filesData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Files and Data</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p >Citation (MLA): <br/>
-                 <small> {{ page.last-name }}, {{ page.first-name }}. Interview with Devin Becker. <em>CTRL+Shift: Writing Practice at the Dawn of the Digital Era</em>, https://ctrl-shift.org/interviews/{{page.object-id}}.html.</small></p>
-                  <p class="text-center">
-                  Location: {{page.location}} <br/> Date: {{page.date-interviewed}} <br/>
-                    Duration: {{page.duration}} </p> 
-                    <p class="text-center">
-                <a class="action-button" href="/data/mp3/{{page.object-id}}.mp3">MP3</a><br />
-                <!--<a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>-->
-                <a class="action-button" href="/data/csv/{{page.object-id}}.csv">Transcript CSV</a><br />
-                <a class="action-button" href="/data/txt/{{page.object-id}}.txt">Transcript TXT</a><br />
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-  
-
-       <!-- Button trigger modal -->
-      
-  
-        <!-- Modal -->
-        <div class="modal fade" id="bioBib" tabindex="-1" role="dialog" aria-labelledby="BioBibliography"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Biography & Bibliography</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <h4>Biography</h4>
-                  <p class="bio">{{page.content }}</p>
-                  {% for item in site.data.bios %}
-                  {% if item.poet-id == page.object-id %}
-                  <p><a href="{{item.url}}" class="action-button">More on {{ page.first-name }} {{ page.last-name }}</a></p>
-                  {%else%}
-                  {% endif %}
-                  {% endfor %}
-                  <br/>
-                  <h4>Bibliography</h4>
-                  {% capture bibliography %}{% include bibliographies/{{ page.object-id }}.md %}{% endcapture %}
-                  {{ bibliography | markdownify }}
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-  
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
 
   <div class="row">
-      <div class="col-md-6">
+    <div class="col-md-7">
+      <h1>{{ page.first-name }} {{ page.last-name }} <small><a class="ml-4 btn btn-outline-ctrl" href="{{site.baseurl}}/interviews/transcripts/{{ page.object-id }}.html">Go to Transcript</a></small></h1>
       <p>Location: {{page.location}} | Date: {{page.date-interviewed}}</p>
+      <img class="img-fluid my-2  mx-auto" src="/images/{{page.object-id}}.jpg">
+      <br />
+      <p class="bio">{{page.content | truncatewords: 15}} <a class="btn btn-sm btn-outline-info  ml-3" data-toggle="modal" data-target="#bioBib" href="#">Full Bio and Bibliography</a></p>
+
+      
+
+      <!--<p class="center"><a class="action-button" href="{{site.baseurl}}/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
+   
+    </div>
+    <div class="col-md-5">
+
       {% for item in site.data[page.object-id] %}
-      <div class="variation p-3" id="{{ page.object-id }}variation{{ forloop.index }}">
-        <h2 class="quote ">"{{item.excerpt}}"
-        </h2>
-        <p class="attribution ">From <a href="/interviews/transcripts/{{ page.object-id }}.html?q={{item.excerpt | truncatewords: 5, ''}}">interview
+      <div class="variation py-3 px-5 mt-5" id="{{ page.object-id }}variation{{ forloop.index }}">
+        <p class="h4">"{{item.excerpt}}"
+        </p>
+        <p class="text-right">From <a href="/interviews/transcripts/{{ page.object-id }}.html?q={{item.excerpt | truncatewords: 5, ''}}">interview
             section {{ forloop.index }}, "{{item.section-title}}"</a>
           <br /> {{item.timestamp}}</p>
       </div>
-      {% endfor %} 
-          <p class="center"><a class="action-button" href="{{site.baseurl}}/interviews/transcripts/{{ page.object-id }}.html"
-            style="font-size:larger;">Interview Transcript w/ Filters</a></p>
+      {% endfor %}
+      <h4 class="my-3 px-5">Interview Materials</h4>
+      <div class="list-group px-5">
+        <a type="button" class="list-group-item list-group-item-action list-group-item-success" href="{{site.baseurl}}/interviews/transcripts/{{ page.object-id }}.html">Full Transcript and Video</a>
+        </button>
+        <a type="button" class="list-group-item list-group-item-action" href="{{site.baseurl}}/flotsam/videos/{{ page.object-id }}.html">Interview
+          Video</a>
+          <a type="button" class="list-group-item list-group-item-action" href="{{site.baseurl}}/flotsam/videos/{{ page.object-id }}.html">Interview Photos</a>    
+          <a type="button" class="list-group-item list-group-item-action" href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">Indexed Audio/Transcript (OHMS)</a>        
 
- <p class="center"><a class="action-button" href="/ohms-viewer/viewer.php?cachefile={{ page.object-id }}.xml">full
-          Audio Interview w/ Transcript</a></p>
-           
-          <p class="center"><a class="action-button" href="{{site.baseurl}}/flotsam/videos/{{ page.object-id }}.html">Interview
-            Video</a></p>
-      {% unless page.object-id == "strickland" or page.object-id == "mohammad" %}<p class="center"><a class="action-button"
-          href="{{site.baseurl}}/flotsam/photos/{{ page.object-id }}.html">Interview Photos</a></p>{%endunless%}
+          <a type="button" class="list-group-item list-group-item-action" href="{{site.baseurl}}/analyses/respondents/{{ page.object-id }}.html">Answers
+            to Common Questions</a>
+        <a type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#filesData" class="float-right ">Files and Data </a>
+      </div>
 
-      <p class="center"><a class="action-button" href="{{site.baseurl}}/analyses/respondents/{{ page.object-id }}.html">Answers
-          to Common Questions</a></p>
-      <!--<p class="center"><a class="action-button" href="{{site.baseurl}}/genpoems/{{ page.object-id }}.html">Clean PDF Transcript</a></p>-->
-     <br/><br/>
-     </div>
-     <div class="col-md-6">
-        <img class="img-fluid" src="/images/{{page.object-id}}.jpg">
-        <br/>
-        <p class="bio">{{page.content | truncatewords: 30}} </p>
-        <p class="attribution "><a data-toggle="modal" data-target="#bioBib" href="#" >Full Bio and Bibliography</a></p>
-        </div>  
-</div>
-<hr class="my-3" style="color:black"/>
+
+    </div>
+  </div>
+  <hr class="my-3 pt-5" style="color:black" />
   <div class="row">
-      <div class="col-md-8 offset-md-2"> <h2>Analyses and Visualizations</h2>
-     
+    <div class="col-md-12 ">
+      <h2>Writing Process Visualization <small>(<a href="/processes/">View All</a>)</small></h2>
 
-                <div class="row mb-4">
-       <div class="col-3"> <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html"><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/curgen.png" title="current generation creation visualization"></a>
-             <br/>
-      </div>
-      <div class="col-3">
-             <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html" ><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/comprev.png" title="composition revision visualization"></a>
-      </div>
-      <div class="col-3">
-         <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html" ><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/pub.png" title="publication visualization"></a>
-      </div>
-      <div class="col-3">
-            <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html"><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/orgarch.png" title="organization/archiving visualization"></a>
-      </div>
+
+      <div class="row mb-4">
+        <div class="col-3"> <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html"><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/curgen.png" title="current generation creation visualization"></a>
+          <br />
+        </div>
+        <div class="col-3">
+          <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html"><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/comprev.png" title="composition revision visualization"></a>
+        </div>
+        <div class="col-3">
+          <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html"><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/pub.png" title="publication visualization"></a>
+        </div>
+        <div class="col-3">
+          <a href="{{site.baseurl}}/processes/{{ page.object-id }}.html"><img class="img-fluid" src="{{site.baseurl}}/images/process-icons/{{ page.object-id }}/orgarch.png" title="organization/archiving visualization"></a>
+        </div>
       </div>
       {% capture narrative %}{% include narratives/{{ page.object-id }}.md %}{% endcapture %}
       <h4>Process Narrative Excerpt:</h4>
-      <p>"{{ narrative | truncatewords: 45 }}"</p>
-         
-        <p class="center"><a class="action-button" href="{{site.baseurl}}/processes/{{ page.object-id }}.html">Full
-         Process Narrative and Visualization</a>
-         <br/>
-         <br/>
-         <a class="action-button" href="{{site.baseurl}}/flotsam/genpoems/{{ page.object-id }}.html">Generate a YouTube Transcription
-         Poem</a></p>
-        </div>
-    </div>
-    <br>
-    <hr class="my-3" style="color:black"/>
+      <p class='w-75'>"{{ narrative | truncatewords: 45 }}"</p>
 
-    
+      <p ><a class="btn btn-lg btn-outline-info mb-3" href="{{site.baseurl}}/processes/{{ page.object-id }}.html">Full
+          Process Narrative and Visualization</a></p>
+       
+        <p><a class="btn btn-lg btn-outline-info mb-3" href="{{site.baseurl}}/flotsam/genpoems/{{ page.object-id }}.html">Generate a YouTube Transcription
+          Poem</a></p>
+    </div>
+  </div>
+  <br>
+  <hr class="my-3" style="color:black" />
+
+
   <div class="row ">
     <br>
     <div class="col-md-12">
-    <h2>Browse Interview by Subject <small>(<a href="/flotsam/subjectviz/">View All Subject Visualizations</a>)</small></h2>
+      <h2>Browse Interview by Subject <small>(<a href="/subjectviz/">View All</a>)</small></h2>
 
       {%include visualization-style.html %}
 
@@ -166,12 +93,10 @@ layout: default
         {% assign my_integer = forloop.length %}
         {% assign my_float = my_integer | times: 1.0 %}
         {% assign rect-width = 100 | divided_by: my_float %}
-        {%if forloop.first%}<text x="0" y="8" style="font-size:15px;">Hover over section to read content. Click to find content within interview.</text>
-        <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top"
-          class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-        {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
-          <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip"
-            data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
+        {% if forloop.first %}<text x="0" y="8" style="font-size:15px;">Hover over section to read content. Click to find content within interview.</text>
+        <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
+        {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+          <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
         </a>
         {%endif%}{%endfor%}
       </svg>
@@ -185,17 +110,82 @@ layout: default
       {%include visualization-filter-legend.html %}
 
 
-
     </div>
 
 
   </div>
 </div>
 <script>
-    function random_item(items) { return items[Math.floor(Math.random() * items.length)]; }
-    var items = [{% for item in site.data[page.object-id] %}'{{ page.object-id }}variation{{ forloop.index }}', {% endfor %}'{{ page.object-id }}variation5'];
-    var randomitem = (random_item(items));
-    document.getElementById(randomitem).style.display = 'block';
-    console.log(randomitem);
-  </script>
-<div class="clear:both"></div>
+  function random_item(items) { return items[Math.floor(Math.random() * items.length)]; }
+  var items = [{% for item in site.data[page.object - id] %}'{{ page.object-id }}variation{{ forloop.index }}', {% endfor %}'{{ page.object-id }}variation5'];
+  var randomitem = (random_item(items));
+  document.getElementById(randomitem).style.display = 'block';
+  console.log(randomitem);
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="filesData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Files and Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Citation (MLA): <br />
+          <small> {{ page.last-name }}, {{ page.first-name }}. Interview with Devin Becker. <em>CTRL+Shift: Writing Practice at the Dawn of the Digital Era</em>, https://ctrl-shift.org/interviews/{{page.object-id}}.html.</small></p>
+        <p class="text-center">
+          Location: {{page.location}} <br /> Date: {{page.date-interviewed}} <br />
+          Duration: {{page.duration}} </p>
+        <p class="text-center">
+          <a class="action-button" href="/data/mp3/{{page.object-id}}.mp3">MP3</a><br />
+          <!--<a class="action-button" href="/data/pdf/{{page.object-id}}.pdf">Transcript PDF</a><br/>-->
+          <a class="action-button" href="/data/csv/{{page.object-id}}.csv">Transcript CSV</a><br />
+          <a class="action-button" href="/data/txt/{{page.object-id}}.txt">Transcript TXT</a><br />
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="bioBib" tabindex="-1" role="dialog" aria-labelledby="BioBibliography" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Biography & Bibliography</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Biography</h4>
+        <p class="bio">{{page.content }}</p>
+        {% for item in site.data.bios %}
+        {% if item.poet-id == page.object-id %}
+        <p><a href="{{item.url}}" class="action-button">More on {{ page.first-name }} {{ page.last-name }}</a></p>
+        {%else%}
+        {% endif %}
+        {% endfor %}
+        <br />
+        <h4>Bibliography</h4>
+        {% capture bibliography %}{% include bibliographies/{{ page.object-id }}.md %}{% endcapture %}
+        {{ bibliography | markdownify }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>

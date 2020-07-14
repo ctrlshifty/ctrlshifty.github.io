@@ -8,6 +8,8 @@
   <meta name="description" content="{% if page.title %}{{ page.title | escape }}{% if page.collection-type %}{{ page.collection-type | escape }} {% else %}{% endif %}, part of {% else %}{% endif %}{{ site.title | escape }} --> {{site.description}}">
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | absolute_url }}" type="text/css">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    {% if page.url contains 'findings'%} <link rel="stylesheet" href="{{ "/css/tufte.css" | prepend: site.baseurl }}">{% endif %}
+
   <link rel="canonical" href="https://www.ctrl-shift.org/{{ page.url | replace:'index.html','' }}">
  {%include page-meta.html%}
 

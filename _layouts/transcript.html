@@ -20,11 +20,12 @@ layout: default-transcript
        <header><h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
     <p>{{page.location}} on {{page.date-interviewed}} | Interviewer: Devin Becker</p>
   </header> 
+  {% if page.av_source contains 'mp3' %}{% include player/mp3.html %}{% elsif page.av_source contains 'youtube' %}{% include player/youtube.html %}{% endif %}
   <div class="filteroptions mx-2 bg-light p-4 mb-4">
     <h3 class="text-center">
       <div class="form-inline my-2 my-lg-0 ">
-        <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput form-control mr-2 col-4">
-        <input class="searchinput mx-2 btn btn-lg btn-primary col-2" title="Search" value="Go" alt="Search" id="goButton" onclick="filterItems()">
+        <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput form-control mr-2 col-7 col-md-4">
+        <input class="searchinput mx-2 btn btn-lg btn-primary col-4 col-md-2" title="Search" value="Go" alt="Search" id="goButton" onclick="filterItems()">
         <button class="reset btn btn-secondary ml-2" href="#" data-filter="" class="filter">Reset Filters</button>
       </div>
       <h2><span class="h5">Filter by topic:</span> <select id="filters" title="Jump to a year" class="filteroptions" style="max-width: 100%;">
