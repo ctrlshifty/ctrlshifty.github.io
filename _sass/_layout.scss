@@ -798,7 +798,7 @@ a:hover{background:none;}
      }
 }
 
-.transcript-content{margin:0% 5%; float:left; max-width:600px;
+.transcript-content{margin:0% 5%; float:left; max-width:680px;
     h4{font-style: italic;}
     @include media-query($on-laptop) {
             margin: auto;
@@ -927,7 +927,7 @@ a:hover{background:none;}
           right: 10px;
           height: 200px;
           width: 370px;
-          @include media-query($on-palm) {
+          @include media-query($on-regular) {
             position:relative; 
           }
       }

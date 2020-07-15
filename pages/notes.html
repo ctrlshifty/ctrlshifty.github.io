@@ -3,14 +3,79 @@ layout: about
 title: Notes on Interviews
 order: 5
 object-id: findings-notes
-permalink: /flotsam/notes/
+permalink: /analyses/notes/
 ---
 {%include breadcrumbs.html%}
 <div class="container my-4">
-  <h2>Findings</h2>
-    <p>Below are some preliminary notes we've gathered from the interviews related to our coded subjects. We are currently using these notes to write an article about the project, and we believe exposing them here is consistent with one of the project's main aims, i.e. that the various modes of looking at this material and its interpretations will lead  users/readers to their own discoveries and new questions to explore. These notes can also be browsed with the transcripts <a href="/transcriptall.html">here</a>.  <p>
+  <h2>Notes</h2>
+    <p class="peeps">Below are some preliminary notes we've gathered from the interviews related to our coded subjects. We used these notes to write the <a href="{{'/findings/' | relative_url}}">Findings</a> section of the website, and we believe exposing them here is consistent with one of the project's main aims, i.e. that the various modes of looking at this material and its interpretations will lead users/readers to their own discoveries and new questions to explore. <p>
      
-    {%include notes.html%}
+  
+{% assign notes = site.data.notes.all | sort: "tag"%}
+
+<style>
+  .grey {
+       display:none;
+   }
+   .td-topic{width:100px !important; padding:15px 5px 0 0;}
+   .td-poet{width:100px !important; padding:15px 0 0 0;}
+   </style>
+<div class="row">
+  <div class="col-md-3">
+    <p>Filter by poet:</p>
+    <h2><select id="poets" title="topic filter" class="filteroptions" style="max-width: 100%;">
+        <option value="reset" selected="selected">All Poets</option>
+        {% assign people = site.interviews %}
+        {% for person in people %}
+        <option value="{{ person.object-id }}">{{ person.first-name }} {{ person.last-name }}</option>
+        {% endfor %}
+      </select></h2>
+  </div>
+  <div class="col-md-9">
+    <p>Filter by topic:</p>
+    <h2><select id="filters" title="topic filter" class="filteroptions" style="max-width: 100%;">
+        <option value="reset" selected="selected" onclick="$('button.reset').click();" >On All Topics</option>
+        {% assign filters = site.data.filters %}
+        {% for filter in filters %}
+        <option value="{{ filter.tag }}">On {{filter.description}}</option>
+        {% endfor %}
+        <br />
+        <hr /><br />
+        <option value="highlight">Interview Highlights</option>
+      </select></h2>
+  </div>
+</div>
+<h3 class="text-center">
+  <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput">
+  <input class="searchinput" title="Search" type="submit" value="Go" alt="Search" id="goButton" onclick="filterItems()">
+  <button class="reset btn btn-sm" href="#" data-filter="" class="filter">Reset Filters</button></h3>
+<div class="table-responsive">
+<table class="table table-bordered table-hover" id="contents-container">
+  <thead>
+    <tr>
+      <th scope="col">Poet</th>
+      <th scope="col">Topic</th>
+      <th scope="col">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  {% for note in notes %}
+  <tr id="{{ forloop.index }}" class="{{note.tag | replace: ";"," "}} {{note.poet}}">
+
+    <td ><small><a class="filter" data-filter="{{note.poet}}" href="?poet={{note.poet}}">{{note.poet}}</a></small></td>
+    <td>{% assign tags = note.tag | split: ';' %}{% for tag in tags%}<small><a class="filter mr-2" data-filter="{{tag}}" href="?filter={{tag | remove: ' '}}">{{tag}}</a></small>{% endfor %}</td>
+    <td ><div id="spoken">
+      <h5 id="spoken"><a target="_blank" href="/interviews/transcripts/{{note.poet}}.html?q={{note.quote | truncatewords: 5,"" }}"
+          target="_blank" data-toggle="tooltip" data-placement="top" title="{{note.quote}}">{{note.detail}}</a></h5>
+          <span style="display:none;">{{note.detail}} {{note.quote}} {{note.tag}} {{note.poet}}</span>
+        </div></td>
+ 
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
   </div>
 
 </div>

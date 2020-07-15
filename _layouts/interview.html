@@ -117,7 +117,7 @@ layout: default
 </div>
 <script>
   function random_item(items) { return items[Math.floor(Math.random() * items.length)]; }
-  var items = [{% for item in site.data[page.object - id] %}'{{ page.object-id }}variation{{ forloop.index }}', {% endfor %}'{{ page.object-id }}variation5'];
+  var items = [{% for item in site.data[page.object-id] %}'{{ page.object-id }}variation{{ forloop.index }}', {% endfor %}'{{ page.object-id }}variation5'];
   var randomitem = (random_item(items));
   document.getElementById(randomitem).style.display = 'block';
   console.log(randomitem);

@@ -2,15 +2,20 @@
 layout: default
 ---
 <div class="download-button">
-<a class="action-button " style="cursor:pointer;" onClick="window.location.reload()">New Poem</a>
+<a class="btn btn-secondary" style="cursor:pointer;" onClick="window.location.reload()">New Poem</a>
 <br/>
-<select onchange="window.location.href=this.value">
-  <option value="">New Poet</option>
-  {% assign poets = site.interviews | sort: 'last-name' %}
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle mt-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    New Poet
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    {% assign poets = site.interviews | sort: 'last-name' %}
   {% for poet in poets %}
-  <option value="{{poet.object-id}}.html">{{poet.first-name}} {{poet.last-name}}</option>
+  <a class="dropdown-item" href="{{poet.object-id}}.html">{{poet.first-name}} {{poet.last-name}}</a>
   {%endfor%}
-</select>
+  </div>
+</div>
+
 </div>
   
     <div class="genpoem-portrait">
