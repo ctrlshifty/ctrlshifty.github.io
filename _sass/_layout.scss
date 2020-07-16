@@ -180,7 +180,6 @@ color:white !important;
     background: #4c525f;}
 
 .portraits{width:23%;margin:0px;padding:0px;max-height:360px;float:left;    overflow: hidden;
-img{margin-bottom:-30px;}
 img:hover{ background:white;}
 @include media-query($on-laptop) {
     width:50%;
