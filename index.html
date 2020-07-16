@@ -81,8 +81,8 @@ The project examines recent changes in writing practices that occurred due to th
   </div>
   <div class="divider my-4" id="divider2"  ></div>
   <div class="home-section home-anal">
-      <h1 class="center">We've also broken the interviews down</h1>
-      <h2  class="center" >by Subject <br/> 
+      <h2 class="h1 center">We've also broken the interviews down</h2>
+      <p class="center h2 mb-3" >by Subject </p>
 
       <style>
         {% for n in site.data.filters %}
@@ -103,7 +103,7 @@ The project examines recent changes in writing practices that occurred due to th
                       {%endif%}{%endfor%}</svg> 
                       <br/>
                       {%endfor%}
-      <h2  class="center" >by Question <br/> 
+      <p  class="center h2 mb-3" >by Question <br/> 
         <form id="question" class="center"><select class="center p-2" onchange="window.location.href=this.value">
             <option>Select a Question</option>
             {% assign questions = site.questions  %}
@@ -127,7 +127,7 @@ The project examines recent changes in writing practices that occurred due to th
       </select></form>
       <br /> <br />
       and by Icon <br/>
-      <span style="font-size:smaller;">by which we mean medium/material/writing practice</span></h2>
+      <span style="font-size:smaller;">by which we mean medium/material/writing practice</span></p>
       <p class="image-container" class="center">
         {% assign tools = site.tools  %}
             {% for tool in tools %}
@@ -194,23 +194,28 @@ The project examines recent changes in writing practices that occurred due to th
 <div class="divider my-4" id="divider5"  ></div>
 <div class="home-section home-flotsam">
                 
-                <br/> <br/>
-              <h2 >All our data and the code for this website is available on <a href="https://github.com/ctrlshifty.github.io">GitHub</a>, and via this site. 
+                <h2 class="h1">Flotsam</h2>
+              <p class="h2 about-white-background my-3">All our data and the code for this website is available on <a href="https://github.com/ctrlshifty.github.io">GitHub</a>, and via this site. 
                   
-                  </h2> <br/> <br/>
+              </p> 
+
                   
-              <h1 class="center">
-                And don't leave without letting us generate a poem for you<br/>
-                <form id="genpoem"><select class="p-2" onchange="window.location.href=this.value">
-                  <option >Select a Poet</option>
+              <p class="center h3">
+                And don't leave without letting us generate a poem for you<br/>  </h1>
+                <div class="dropdown text-center">
+                  <button class="btn btn-secondary dropdown-toggle mt-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a Poet to Generate a Poem
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% assign poets = site.interviews | sort: 'last-name' %}
-                    {% for poet in poets %}
-                    {%if poet.youtube %}
-                    <option value="flotsam/genpoems/{{ poet.object-id }}.html">{{ poet.first-name }} {{poet.last-name}}</option>
-                    {% endif%} {% endfor%}
-                </select></form>
-              </h1>
-                
+                  {% for poet in poets %}
+                  <a class="dropdown-item" href="{{poet.object-id | prepend: '/flotsam/genpoems/' | relative_url}}.html">{{poet.first-name}} {{poet.last-name}}</a>
+                  {%endfor%}
+                  </div>
+                </div>
+            
+                <p><a class="action-button float-right mb-4" href="/flotsam/">All Our Flotsam</a></p>
+
                   </div>
                   <div class="divider my-4" id="divider6"  ></div>
  
