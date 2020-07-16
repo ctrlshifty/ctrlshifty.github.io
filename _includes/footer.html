@@ -9,7 +9,7 @@
         <h2 class="footer-heading pink-neon"><a href="{{ site.baseurl }}/" style="Color:white !important;font-size:23px;">{{ site.title }}</a></h2>
         {% assign pages = site.pages | sort:"order"  %}
         {% for this_page in pages %}
-  {% if this_page.order %}
+  {% if this_page.order and this_page.title != 'Home'%}
   <small><a class="page-link-ctrl" href="{{this_page.url | prepend: site.baseurl }}" style="margin-right:2em;" >
     {{ this_page.title | Capitalize | truncatewords: 1, "" }} </a></small>
      {% endif %}

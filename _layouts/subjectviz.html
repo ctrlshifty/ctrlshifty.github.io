@@ -2,51 +2,32 @@
 layout: default
 ---
 <!-- list of colors provided by https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/ -->
-<style>
-  {% for n in site.data.filters %}
-.{{ n.tag }} { fill: {% cycle '#e6194b','#3cb44b','#ffe119','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6','#bcf60c','#fabebe','#008080','#e6beff','#9a6324','#fffac8','#800000','#aaffc3','#808000','#ffd8b1','#000075','#808080','#ffffff','#000000'%};}
-{% endfor %}
-
-  .black {
-    fill: black;
-  }
-
-  tr.black,
-  .hidden {
-    display: none;
-  }
-</style>
+{% include visualization-style.html %}
 <div class="container">
   {{ content }}
 
-  <div class="row">
-    {%for n in site.data.filters %}
-    <div class="col-md-2 col-4 ">
-      <svg class="legend" width="100%" height="25px" data-id="{{n.tag}}" style="cursor:pointer;" data-toggle="tooltip" data-placement="left" title="On {{ n.description | escape }}">
-        <circle cx="25" cy="10" r="10"  class="{{n.tag}}"></circle><text x="38" y="15">{{n.tag}}</text>
-      </svg>
-    </div>
-    {%endfor%}
-
-  </div><br />
+  {% include visualization-filter-legend.html %}
+  <br />
   <br />
   <button id="reset" class="btn btn-lg btn-secondary float-right">Reset</button>
   <br />
   <br />
-  {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
+  {% for person in site.interviews %}
+  {% for transcript in site.data.transcripts %}
   <div class="vizdiv">
-    <h3 x="0" y="0" data-id="{{transcript-name}}" style="cursor:pointer;" class="mt-4 toggle_int {{transcript-name}}">{{transcript-name | capitalize}} <i class="fas fa-filter"></i> <small class="font-italic">(Click to filter)</small></h3>
-    <svg class="chart {{transcript-name}}" width="100%" height="100px" style="overflow: visible">
+    {% if person.object-id == transcript[0] %}{%assign transcript-name = transcript[0] %}
+    <h3 x="0" y="0" data-id="{{ person.object-id }}" style="cursor:pointer;" class="mt-4 toggle_int {{ person.object-id }}">{{ person.first-name }} {{ person.last-name }} <i class="fas fa-filter"></i> <small class="font-italic">(Click to filter)</small></h3>
+    <svg class="chart {{ person.object-id }}" width="100%" height="100px" style="overflow: visible">
       {% for item in transcript[1] %}
       {% assign my_integer = forloop.length %}
       {% assign my_float = my_integer | times: 1.0 %}
       {% assign rect-width = 100 | divided_by: my_float  %}
       {%if forloop.first%}<rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-      {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+      {%else %} <a href="{{ forloop.index | prepend: person.object-id | prepend: '.html#' | prepend: person.object-id | prepend: '/interviews/transcripts/' | relative_url }}">
         <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
       </a>
       {%endif%}{%endfor%}</svg>
-  </div>{%endfor%}
+  </div>{%endif%}{%endfor%}{%endfor%}
 
 </div>
 <br />
@@ -61,10 +42,10 @@ layout: default
   {% for item in transcript[1] %}
   {% if forloop.first %}
   <div class="contentsdiv">
-    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/transcripts/' | append: '.html' | relative_url }}">{{transcript-name | capitalize}}</a></h3>
-    <table id="contents-container" class="my-4 border {{transcript-name}} {%cycle 'bg-light','' %}">{%endif%}
+    <h3 class="my-4 {{ person.object-id }}"><a href="{{transcript-name | prepend: '/transcripts/' | append: '.html' | relative_url }}">{{ person.title }}</a></h3>
+    <table id="contents-container" class="my-4 border {{ person.object-id }} {%cycle 'bg-light','' %}">{%endif%}
       <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}">
-        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">{{transcript-name}}-{{ forloop.index }}</a></td>
+        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">{{ person.object-id }}-{{ forloop.index }}</a></td>
         <td class="words">
           <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
         </td>

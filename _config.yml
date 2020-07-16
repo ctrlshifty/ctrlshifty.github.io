@@ -89,11 +89,11 @@ defaults:
   - scope:
       type: tools
     values:
-      layout: question
+      layout: tool
   - scope:
       type: respondents
     values:
-      layout: question
+      layout: respondent
   - scope:
       type: transcripts
     values:

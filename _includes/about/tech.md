@@ -10,7 +10,3 @@ The site also incorporates tools and platforms such as the [Oral History Metadat
 The [poem generator]({{'/flotsam/poemgen/' | relative_url}}) was created by downloading YouTube transcription files (.sbv) of each interview and transforming them into .csv files that are then randomly arrayed in order to make specific poem shapes and outputs. 
 
 Finally, the [Findings]({{'/findings/ | relative_url }}) page was redesigned in 2020 to use the styles of [tufte.css](https://edwardtufte.github.io/tufte-css/).
-
-## Credits
-
-Illustrations, portraits, and process visualizations were created by Corey Oglesby. The about and findings page were written by Lauren Westerfield, Corey Oglesby, and Devin Becker. Photographs were taken by Devin Becker and Kristin Becker. Devin Becker designed and coded the website.

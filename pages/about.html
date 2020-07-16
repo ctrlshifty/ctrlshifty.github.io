@@ -1,22 +1,28 @@
 ---
 layout: about
 title: About
+order: 2
 object-id: about
 permalink: /about/
 ---
 <div class="about-section ">
 <div class="about-content about-white-background">
 <h1>What is CTRL+SHIFT?</h1>
-<iframe src="https://www.google.com/maps/d/embed?mid=1g_5do2uHaVD7wxgKix-A6NEuy0M"  height="450" style="float:right;margin:0px 0px 10px 20px; width: 55%;" id="mymap"></iframe>
+<div class="row">
+  <div class="col-md-6 col-12">
 <h2>The Short Answer</h2>
 <p>CTRL+Shift is an online collection of audio recordings, transcripts, process visualizations, and data analyses broken out from interviews conducted with 11 prominent contemporary American poets from across the United States. The project examines recent changes in writing practices that occurred due to the advent of the computer and the arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview studies. Devin Becker conducted the interviews in 2013 and 2014 as part of a University of Idaho Seed Grant award. Becker collaborated with Corey Oglesby and Lauren Westerfield (both MFA candidates at the University of Idaho in the summer of 2017) to analyze and publish the data and findings online at CTRL+Shift.org.</p>
-<img src="/images/map.jpg" class="center" id="mappic">
-
+  </div>
+  <div class="col-md-6">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1g_5do2uHaVD7wxgKix-A6NEuy0M"  height="450" width="450" class="d-none d-lg-block float-right ml-4 mb-4"></iframe>
+<img src="/images/map.jpg" class="center d-block d-lg-none" id="mappic">
+  </div>
+</div>
 </div>
 </div>
 <div class="about-section about-int">
 <div class="about-content">
-    <div class="col-md-6 float-right col-10 mx-auto p-4 d-none d-lg-block"> <div id="ytplayer" ></div>
+    <div class="w-50 float-right ml-5 mb-3 p-4 d-none d-lg-block"> <div id="ytplayer" ></div>
     </div>  
       <script>
         // Load the IFrame Player API code asynchronously.
@@ -29,8 +35,8 @@ permalink: /about/
         var player;
         function onYouTubePlayerAPIReady() {
           player = new YT.Player('ytplayer', {
-            height: '400',
-            width: '600',
+            height: '300',
+            width: '500',
             cc_load_policy: 1,
             videoId: 'HQXUDOt_vCM'
           });
@@ -67,6 +73,8 @@ permalink: /about/
 <br>
 <hr>
 <br>
+<h2>Credits</h2>
+<p>Illustrations, portraits, and process visualizations were created by Corey Oglesby. The about and findings page were written by Lauren Westerfield, Corey Oglesby, and Devin Becker. Photographs were taken by Devin Becker and Kristin Becker. Devin Becker designed and coded the website.</p> 
 </div>
 <div class="meth">
 {% capture collab %} {% include about/collaboration.md %}{%endcapture %}
@@ -76,6 +84,9 @@ permalink: /about/
 <br/><br/>
 {% capture tech %} {% include about/tech.md %}{%endcapture %}
 {{tech | markdownify}}
+<br/><br/>
+<hr />
+<br/><br/>
 </div>
 </div>
 </div>

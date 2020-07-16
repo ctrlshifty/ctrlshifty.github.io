@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="question-body">
+    <header class="intro question-header">
+      <h1>
+        <img src="{{site.baseurl}}/images/icons/{{ page.icon-id}}.png" style="float:left;height:30px;"> {{page.title}}
+      </h1>
+
+    </header>
+    <div class="row">
+
+      {% for item in site.data.icons %}
+      {% if item.icon == page.icon-id %}
+      <div class="col-md-6 col-12">
+        <div class="card m-3">
+          <div class="card-body">
+            <p class="card-text">
+              <a class="btn text-left h4 btn-light stretched-link"
+              href="{{site.baseurl}}/interviews/transcripts/{{ item.poet-id }}.html?q={{ item.excerpt | truncatewords: 4,"" | remove: '...'}}">{{item.excerpt}} </a></p>
+              <img src="{{site.baseurl}}/images/icons/{{ page.icon-id}}.png" alt="email icon" style="float:left;height:30px;"> 
+            <p class="text-right">- {{ item.poet }}</p>
+            
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>

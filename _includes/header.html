@@ -9,7 +9,7 @@
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="page-nav">
-      <ul class="nav">
+      <ul class="nav d-none d-lg-inline-flex">
         {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nil' -%}
         {% for nav in navItems %}
         {% if nav.stub %}
@@ -29,8 +29,16 @@
         </li>
         {% endif %}
         {%- endfor -%}
-
-
+      </ul>
+      <div class="d-block d-lg-none text-right">
+      {% assign pages = site.pages | sort:"order"  %}
+        {% for this_page in pages %}
+  {% if this_page.order %}
+  <small><a class="page-link-ctrl my-2" href="{{this_page.url | prepend: site.baseurl }}" style="margin-right:2em;" ><br/>
+    {{ this_page.title | Capitalize | truncatewords: 1, "" }} </a></small>
+     {% endif %}
+      {% endfor %}
+      </div>
     </div>
   </nav>
   </div>

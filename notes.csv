@@ -1,5 +1,3 @@
----
----
 poet,detail,tag,quote
 {%assign itemsgluck = site.data.notes.gluck %}{% for itemgluck in itemsgluck%}gluck,"{{itemgluck.detail | replace: '"','''}}",{{itemgluck.tag}},"{{itemgluck.quote | replace: '"','''}}"
 {%endfor%}

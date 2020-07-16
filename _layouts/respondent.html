@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="question-body">
+     <img src="{{site.baseurl}}/images/portraits/{{ page.object-id }}.png" style="height:200px;float:left;padding: 0 10px 10px 0;"/>
+<h1>{{page.first-name}} {{page.last-name}}</h1>
+<div class="question-people">
+{% assign questions = site.questions  %}
+{% for question in questions %}
+{% if question.object-id contains "question" %}
+ {% for answer in question.answers %}
+ {% if answer.author-id == page.object-id %}
+<div class="answer">
+  
+	<h2>{{ question.question }} </h2>
+   <p>
+  {{answer.text}}
+</p>
+ <a class="action-button" href="../questions/{{question.object-id}}.html" >All answers to this question</a>
+</div>
+  {% else %}
+ {% endif %}
+ {% endfor %}
+ {% else %}
+  
+{% endif %}
+{% endfor %}
+
+  </div>
+  </div>

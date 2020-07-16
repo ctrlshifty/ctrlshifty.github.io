@@ -1,70 +1,54 @@
 ---
 layout: default
 title: Analyses
-order: 3
+order: 5
 object-id: analyses
 permalink: /analyses/
 ---
-<h1 class="center page-title">Analyses</h1>
 
-<div  class="anal-div questions">
-      <h1 class="center">Questions</h1>
-      <!--<p class="center"><a href="#respondents">View by Respondent</a><p>-->
-       
-  <div class="anal-listing">
-   {% assign questions = site.questions  %}
- {% for question in questions %}
-{% if question.object-id contains "question" %}
-    
-    <a href="{{site.baseurl}}/analyses/questions/{{ question.object-id }}.html">
-      <h2>{{ question.question }} </h2>
-      
+<div class="poet-feature">
+  <h1 class="poet-name">Analyses</h1>
+
+  <div class="listing">
+
+    <a href="{{ '/analyses/notes/' | relative_url}}/">
+      <h2>Notes</h2>
+      <img src="{{site.baseurl}}/images/small/mcmichael.jpg" />
     </a>
-   {% else %}
-{% endif %}
- {% endfor %}
-  
-</div>
-</div>
 
 
+  </div>
 
-<div  class="anal-div respondents">
-  <h1 class="center" id="respondents">Respondents</h1>
- 
-        <div class="anal-listing">
-    {% assign poets = site.interviews | sort: 'last-name' %}
-   {% for poet in poets %}
-    <a href="{{site.baseurl}}/analyses/respondents/{{ poet.object-id }}.html">
-    <img src="{{site.baseurl}}/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
-      <h2>{{ poet.first-name }} {{poet.last-name}} </h2>
-      
+
+  <div class="listing">
+
+    <a href="{{ '/analyses/questions/' | relative_url}}/">
+      <h2>Questions</h2>
+      <img src="{{site.baseurl}}/images/small/gerstler.jpg" />
     </a>
-    {% endfor %}
+
+
+  </div>
+
+  <div class="listing">
+
+    <a href="{{ '/analyses/respondents/' | relative_url}}/">
+      <h2>Respondents</h2>
+      <img src="{{site.baseurl}}/images/small/pinsky.jpg" />
+    </a>
+
+
+  </div>
+
   
-</div>
-</div>
 
-<div  class="anal-div icons">
-  <h1 class="center" id="respondents">Tools</h1>
- 
-        <div class="anal-listing">
-            {% assign tools = site.tools  %}
-            {% for tool in tools %}
-               <a href="{{ tool.url}}.html">
-                <img src="{{site.baseurl}}/images/icons/{{ tool.icon-id}}.png">
-                 <br/>
-                 <h2 class="center">{{tool.title }}</h2>
-               </a>
-            {% endfor %}
-             
-  
-</div>
-</div>
+  <div class="listing">
+
+    <a href="{{ '/analyses/tools/' | relative_url}}/">
+      <h2>Tools</h2>
+      <img src="{{site.baseurl}}/images/icons/notebook.png" />
+    </a>
 
 
-
-
-
-
+  </div>
 </div>

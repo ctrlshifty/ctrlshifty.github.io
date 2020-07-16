@@ -1,52 +1,60 @@
 ---
 layout: homepage
-title: 
+title: Home
+order: 1
 ---
 
-<div class="home" id="homeback" >
-    
-   <!--<h1 class="main-heading pink-neon">CTRL-Shift</h1>-->
-        {% include header.html %}
-    <div class="headline-wrapper">
-      <div class="white-space"> </div>
-<h1 class="site-headline"> Writing Practice at the Dawn of the Digital Era </h1>
-<h3 class="site-subline">11 Contemporary Poets on writing through the advent of the personal computer and into the arrival of the digital age.
-  <br/>  <br/>
-  <!--<a class="action-button" href="interviews.html">View Interviews</a>-->
-</h3>
+<div class="home" id="homeback">
 
-    </div>
-  
+  <!--<h1 class="main-heading pink-neon">CTRL-Shift</h1>-->
+  {% include header.html %}
+  <div class="headline-wrapper">
+    <div class="white-space"> </div>
+    <h1 class="site-headline"> Writing Practice at the Dawn of the Digital Era </h1>
+    <h3 class="site-subline">11 Contemporary Poets on writing through the advent of the personal computer and into the
+      arrival of the digital age.
+      <br /> <br />
+      <!--<a class="action-button" href="interviews.html">View Interviews</a>-->
+    </h3>
+
   </div>
 
+</div>
 
 
-  <br/><br/>
+
+<br /><br />
 <div class="home-section home-about">
-    <h1 class="center">About the Project </h1>
-<h3 >
-  CTRL-Shift is an online collection of audio recordings, transcripts, process visualizations, and data analyses broken out from interviews conducted with 11 prominent contemporary American poets from across the United States. 
-</h3>
-<br/>
-<p class="center">
+  <h1 class="center">About the Project </h1>
+  <h3>
+    CTRL-Shift is an online collection of audio recordings, transcripts, process visualizations, and data analyses
+    broken out from interviews conducted with 11 prominent contemporary American poets from across the United States.
+  </h3>
+  <br />
+  <p class="center">
     <a href="about.html"><img src="{{site.baseurl}}/images/map.jpg" class="center"></a>
-    
-</p>
-<br/>
-<h3>The poets interviewed include: Rae Armantrout, Bruce Beasley, Amy Gerstler, Louise Glück, James McMichael, K. Silem Mohammad, Robert Pinsky, Michael Ryan, Stephanie Strickland, Nance Van Winckel, and Robert Wrigley (below).</h3>
-<br/>
-<h3>
-The project examines recent changes in writing practices that occurred due to the advent of the computer and the arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview studies. <br/><br/><a class="action-button float-right mb-4" href="/about/">More about the project ...</a>
-</h3>
-<br/>
-  </div>
-  <div class="divider my-4" id="divider1"  ></div>
-  <div class="home-section text-dark">
-<h1 class="center">The Interviews </h1>
-<h4  class="center" >We have interview material in a variety of formats for your listening/viewing/reading pleasure</h4>
 
-<br />
-<!--<h1 class="center" >I would like to 
+  </p>
+  <br />
+  <h3>The poets interviewed include: Rae Armantrout, Bruce Beasley, Amy Gerstler, Louise Glück, James McMichael, K.
+    Silem Mohammad, Robert Pinsky, Michael Ryan, Stephanie Strickland, Nance Van Winckel, and Robert Wrigley (below).
+  </h3>
+  <br />
+  <h3>
+    The project examines recent changes in writing practices that occurred due to the advent of the computer and the
+    arrival of the digital age and investigates new modes of working with and publishing data from qualitative interview
+    studies. <br /><br /><a class="action-button float-right mb-4" href="/about/">More about the project ...</a>
+  </h3>
+  <br />
+</div>
+<div class="divider my-4" id="divider1"></div>
+<div class="home-section text-dark">
+  <h1 class="center">The Interviews </h1>
+  <h4 class="center">We have interview material in a variety of formats for your listening/viewing/reading pleasure
+  </h4>
+
+  <br />
+  <!--<h1 class="center" >I would like to 
   <br/><form id="format"><select>
   <option value="interviews">read and listen to</option> 
   <option value="videos">view</option>
@@ -61,206 +69,213 @@ The project examines recent changes in writing practices that occurred due to th
 </select></form>
 </h1>-->
 
-<div  class="center" style="max-width: 1100px;margin:0 auto;">
+  <div class="center container" >
 
     {% for poet in poets %}
-   <div class="portraits center">
-  <a href="interviews/{{poet.object-id}}.html" >
-   
-<img src="images/portraits/{{poet.object-id}}.png">
- <span class="name">{{ poet.first-name }} {{poet.last-name}}</span>
-  </a></div>
+    <div class="portraits center">
+      <a href="interviews/{{poet.object-id}}.html">
 
-  {% endfor%}
-  <div style="clear:both"></div>
-  <br/><br/>
-  <p>
-  <a class="action-button float-right mb-4" href="interviews/">All Interviews</a></p>
+        <img src="images/portraits/{{poet.object-id}}.png">
+        <span class="text-dark bg-light h4">{{ poet.first-name }} {{poet.last-name}}</span>
+      </a></div>
+
+    {% endfor%}
+    <div style="clear:both"></div>
+    <br /><br />
+    <p>
+      <a class="action-button float-right mb-4" href="interviews/">All Interviews</a></p>
+  </div>
+
 </div>
+<div class="divider my-4" id="divider2"></div>
+<div class="home-section home-anal">
+  <h2 class="h1 center">We've also broken the interviews down</h2>
+  <p class="center h2 mb-3">by Subject </p>
+
+  {% include visualization-style.html %}
+
+  <div class="container">
+    {% for transcript in site.data.transcripts limit:2%}{%assign transcript-name = transcript[0] %}
+
+    <svg class="chart" width="100%" height="100px" style="overflow: visible">
+      {% for item in transcript[1] %}
+      {% assign my_integer = forloop.length %}
+      {% assign my_float = my_integer | times: 1.0 %}
+      {% assign rect-width = 100 | divided_by: my_float  %}
+      {%if forloop.first%}<text x="0" y="0"><a href="/subjectviz/">{{transcript-name | capitalize}}</a></text>
+      <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top"
+        class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
+      {%else %} <a
+        href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/subjectviz/#' | relative_url }}">
+        <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50"
+          data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"
+          title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
+      </a>
+      {%endif%}{%endfor%}
+    </svg>
+    <br />
+    {%endfor%}
+    <p class="center h2 mb-3">by Question
+    <p>
+    <form id="question" class="center justify-content-center"><select class="center p-2" onchange="window.location.href=this.value">
+        <option>Select a Question</option>
+        {% assign questions = site.questions  %}
+        {% for question in questions %}
+        {% if question.object-id contains "question" %}
+        <option value="analyses/questions/{{question.object-id}}.html">
+          {{ question.question }}
+        </option>
+        {% else %}
+        {% endif %}
+        {% endfor %}
+      </select></form>
+    <p class="center h2 my-3">by Respondent </p>
+    <form id="format" class="center justify-content-center"><select class="center p-2" onchange="window.location.href=this.value">
+        <option>Select a Poet</option>
+        {% assign poets = site.interviews | sort: 'last-name' %}
+        {% for poet in poets %}
+        <option value="analyses/respondents/{{ poet.object-id }}.html">{{ poet.first-name }} {{poet.last-name}}</option>
+        {% endfor%}
+      </select></form>
+      <p class="center h2 my-3">and by Icon<br />
+    <span style="font-size:smaller;">by which we mean medium/material/writing practice</span></p>
+    <p class="image-container" class="center">
+      {% assign tools = site.tools  %}
+      {% for tool in tools %}
+      <a href="{{ tool.url}}.html">
+        <img src="/images/icons/{{ tool.icon-id}}.png">
+      </a>
+      {% endfor %}</p><br /><br />
+    <p>
+      <a class="action-button float-right mb-4" href="analyses/">More Analyses</a>
+    </p>
 
   </div>
-  <div class="divider my-4" id="divider2"  ></div>
-  <div class="home-section home-anal">
-      <h2 class="h1 center">We've also broken the interviews down</h2>
-      <p class="center h2 mb-3" >by Subject </p>
+</div>
 
-      <style>
-        {% for n in site.data.filters %}
-        .{{ n.tag }} { fill:{% cycle '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000' %}; }
-        {% endfor %}
-        .black{fill:black;}
-        </style>
-        <div >
-      {% for transcript in site.data.transcripts limit:2%}{%assign transcript-name = transcript[0] %}
-      
-      <svg class="chart" width="100%" height="100px" style="overflow: visible">
-              {% for item in transcript[1] %}
-              {% assign my_integer = forloop.length %}
-{% assign my_float = my_integer | times: 1.0 %}
-{% assign rect-width = 100 | divided_by: my_float  %}
-          {%if forloop.first%}<text x="0" y="0"><a href="/subjectviz/">{{transcript-name | capitalize}}</a></text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
-          {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/subjectviz/#' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
-                      {%endif%}{%endfor%}</svg> 
-                      <br/>
-                      {%endfor%}
-      <p  class="center h2 mb-3" >by Question <br/> 
-        <form id="question" class="center"><select class="center p-2" onchange="window.location.href=this.value">
-            <option>Select a Question</option>
-            {% assign questions = site.questions  %}
-            {% for question in questions %}
-           {% if question.object-id contains "question" %}
-              <option value="analyses/questions/{{question.object-id}}.html">
-                {{ question.question }} 
-                </option>
-              {% else %}
-           {% endif %}
-            {% endfor %}
-        </select></form>
-        <br/><br />
-        by Respondent <br /> 
-        <form id="format"><select class="center p-2" onchange="window.location.href=this.value">
-          <option>Select a Poet</option>
-          {% assign poets = site.interviews | sort: 'last-name' %}
-          {% for poet in poets %}
-          <option value="analyses/respondents/{{ poet.object-id }}.html">{{ poet.first-name }} {{poet.last-name}}</option>
-      {% endfor%}
-      </select></form>
-      <br /> <br />
-      and by Icon <br/>
-      <span style="font-size:smaller;">by which we mean medium/material/writing practice</span></p>
-      <p class="image-container" class="center">
-        {% assign tools = site.tools  %}
-            {% for tool in tools %}
-      <a href="{{ tool.url}}.html">
-          <img src="/images/icons/{{ tool.icon-id}}.png">
-        </a>
-      {% endfor %}</p><br/><br/>
-      <p>
-      <a class="action-button float-right mb-4" href="analyses/">More Analyses</a>
-      </p>
-    
-      </div>
-    </div>
-
-      <div class="divider my-4" id="divider3"  ></div>
+<div class="divider my-4" id="divider3"></div>
 
 <div class="home-section">
-        <br/>
+  <br />
 
 
 
-  
-        <p class="center h2">
-          And pieced together 
-          Process Narratives <br/>
-          &amp;  <br/>
-          Visualizations<br/>
-          from each poet's answers
-        </p>
-        <br>
-        {% for poet in poets %}
-           <div class="container-proc" id="{{poet.object-id}}-viz">
-           
-   <img src="images/process-icons/{{poet.object-id}}/curgen.png" class="image">
-        <img src="images/process-icons/{{poet.object-id}}/comprev.png" class="image">
-        <img src="images/process-icons/{{poet.object-id}}/pub.png" class="image">
-        <img src="images/process-icons/{{poet.object-id}}/orgarch.png" class="image">
-  <div class="overlay">
-    <a href="processes/{{poet.object-id}}.html" class="text">{{poet.first-name}} {{poet.last-name}}
-     <!--{% capture narrative  %}{% include narratives/{{ poet.object-id }}.md  %}{% endcapture %}
+
+  <p class="center h2">
+    And pieced together
+    Process Narratives <br />
+    &amp; <br />
+    Visualizations<br />
+    from each poet's answers
+  </p>
+  <br>
+  {% for poet in poets %}
+  <div class="container-proc" id="{{poet.object-id}}-viz">
+
+    <img src="images/process-icons/{{poet.object-id}}/curgen.png" class="image">
+    <img src="images/process-icons/{{poet.object-id}}/comprev.png" class="image">
+    <img src="images/process-icons/{{poet.object-id}}/pub.png" class="image">
+    <img src="images/process-icons/{{poet.object-id}}/orgarch.png" class="image">
+    <div class="overlay">
+      <a href="processes/{{poet.object-id}}.html" class="text">{{poet.first-name}} {{poet.last-name}}
+        <!--{% capture narrative  %}{% include narratives/{{ poet.object-id }}.md  %}{% endcapture %}
           {{ narrative |  truncatewords: 20 }}--></a>
+    </div>
   </div>
-</div>
- <br>
+  <br>
   {% endfor%}
-         
-          
-        <p ><a class="action-button float-right mb-4" href="processes/">More Processes</a></p>
+
+
+  <p><a class="action-button float-right mb-4" href="processes/">More Processes</a></p>
 </div>
-<div class="divider my-4" id="divider4"  ></div>
- <div class="home-section home-findings">
-            <h2 class="px-5 h1">So What Did We Find?</h1>
-            <p class="px-5 h3">We have come up with some initial observations regarding some of the central areas we investigated. They can be found at our <a href="findings.html">Findings</a> page.  </p><br/><br/>
-            <p class="px-5 h3">Our primary intent with this material, however, 
-                was not to make some grand claim about what's changed, as we'd need a bigger and more representative study for that, but rather to open up the data  for you, <span class="text-primary">random Internet citizen</span>,
-                for your own investigations and discoveries
-                and in order for those interested 
-                to learn more about these wonderful writers</p>
-              
-          <br/><br/>
-          
-          <p><a class="action-button float-right mb-4" href="/findings/">More on Findings</a></p>
+<div class="divider my-4" id="divider4"></div>
+<div class="home-section home-findings">
+  <h2 class="px-5 h1">So What Did We Find?</h1>
+    <p class="px-5 h3">We have come up with some initial observations regarding some of the central areas we
+      investigated. They can be found at our <a href="findings.html">Findings</a> page. </p><br /><br />
+    <p class="px-5 h3">Our primary intent with this material, however,
+      was not to make some grand claim about what's changed, as we'd need a bigger and more representative study for
+      that, but rather to open up the data for you, <span class="text-primary">random Internet citizen</span>,
+      for your own investigations and discoveries
+      and in order for those interested
+      to learn more about these wonderful writers</p>
+
+    <br /><br />
+
+    <p><a class="action-button float-right mb-4" href="/findings/">More on Findings</a></p>
 </div>
-<div class="divider my-4" id="divider5"  ></div>
+<div class="divider my-4" id="divider5"></div>
 <div class="home-section home-flotsam">
-                
-                <h2 class="h1">Flotsam</h2>
-              <p class="h2 about-white-background my-3">All our data and the code for this website is available on <a href="https://github.com/ctrlshifty.github.io">GitHub</a>, and via this site. 
-                  
-              </p> 
 
-                  
-              <p class="center h3">
-                And don't leave without letting us generate a poem for you<br/>  </h1>
-                <div class="dropdown text-center">
-                  <button class="btn btn-secondary dropdown-toggle mt-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select a Poet to Generate a Poem
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% assign poets = site.interviews | sort: 'last-name' %}
-                  {% for poet in poets %}
-                  <a class="dropdown-item" href="{{poet.object-id | prepend: '/flotsam/genpoems/' | relative_url}}.html">{{poet.first-name}} {{poet.last-name}}</a>
-                  {%endfor%}
-                  </div>
-                </div>
-            
-                <p><a class="action-button float-right mb-4" href="/flotsam/">All Our Flotsam</a></p>
+  <h2 class="h1">Flotsam</h2>
+  <p class="h2 about-white-background my-3">All our data and the code for this website is available on <a
+      href="https://github.com/ctrlshifty.github.io">GitHub</a>, and via this site.
 
-                  </div>
-                  <div class="divider my-4" id="divider6"  ></div>
- 
-                  <script>
-    function random_item(items)
-{return items[Math.floor(Math.random()*items.length)]; }
-var arr = ['armantrout', 'beasley', 'gerstler', 'gluck', 'mcmichael', 'ryan', 'vanwinckel','wrigley'];
-var value = random_item(arr);
-document.getElementById('homeback').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-console.log(arr);
-var value = random_item(arr);
-document.getElementById('divider1').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-console.log(arr);
-var value = random_item(arr);
-document.getElementById('divider2').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-console.log(arr);
-var value = random_item(arr);
-document.getElementById('divider3').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-console.log(arr);
-var value = random_item(arr);
-document.getElementById('divider4').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-var value = random_item(arr);
-document.getElementById('divider5').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-var value = random_item(arr);
-document.getElementById('divider6').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-arr = arr.filter(function(item) { 
-    return item !== value
-})
-    </script>
+  </p>
 
+
+  <p class="center h3">
+    And don't leave without letting us generate a poem for you<br /> </h1>
+  <div class="dropdown center">
+    <button class="btn btn-lg btn-outline-dark dropdown-toggle mt-4" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Select a Poet to Generate a Poem
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      {% assign poets = site.interviews | sort: 'last-name' %}
+      {% for poet in poets %}
+      <a class="dropdown-item"
+        href="{{poet.object-id | prepend: '/flotsam/genpoems/' | relative_url}}.html">{{poet.first-name}}
+        {{poet.last-name}}</a>
+      {%endfor%}
+    </div>
+  </div>
+
+  <p><a class="action-button float-right mb-4" href="/flotsam/">All Our Flotsam</a></p>
+
+</div>
+<div class="divider my-4" id="divider6"></div>
+
+<script>
+  function random_item(items) { return items[Math.floor(Math.random() * items.length)]; }
+  var arr = ['armantrout', 'beasley', 'gerstler', 'gluck', 'mcmichael', 'ryan', 'vanwinckel', 'wrigley'];
+  var value = random_item(arr);
+  document.getElementById('homeback').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+  console.log(arr);
+  var value = random_item(arr);
+  document.getElementById('divider1').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+  console.log(arr);
+  var value = random_item(arr);
+  document.getElementById('divider2').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+  console.log(arr);
+  var value = random_item(arr);
+  document.getElementById('divider3').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+  console.log(arr);
+  var value = random_item(arr);
+  document.getElementById('divider4').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+  var value = random_item(arr);
+  document.getElementById('divider5').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+  var value = random_item(arr);
+  document.getElementById('divider6').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
+  arr = arr.filter(function (item) {
+    return item !== value
+  })
+</script>

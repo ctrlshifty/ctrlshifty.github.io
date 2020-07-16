@@ -22,7 +22,7 @@ layout: default
       <div class="variation py-3 px-5 mt-5" id="{{ page.object-id }}variation{{ forloop.index }}">
         <p class="h4">"{{item.excerpt}}"
         </p>
-        <p class="text-right">From <a href="/interviews/transcripts/{{ page.object-id }}.html?q={{item.excerpt | truncatewords: 5, ''}}">interview
+        <p class="text-right">From <a href="/interviews/transcripts/{{ page.object-id }}.html?q={{item.excerpt | truncatewords: 4, ''}}">interview
             section {{ forloop.index }}, "{{item.section-title}}"</a>
           <br /> {{item.timestamp}}</p>
       </div>

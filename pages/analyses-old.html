@@ -1,0 +1,64 @@
+
+<h1 class="center page-title">Analyses</h1>
+
+<div  class="anal-div questions">
+      <h1 class="center">Questions</h1>
+      <!--<p class="center"><a href="#respondents">View by Respondent</a><p>-->
+       
+  <div class="anal-listing">
+   {% assign questions = site.questions  %}
+ {% for question in questions %}
+{% if question.object-id contains "question" %}
+    
+    <a href="{{site.baseurl}}/analyses/questions/{{ question.object-id }}.html">
+      <h2>{{ question.question }} </h2>
+      
+    </a>
+   {% else %}
+{% endif %}
+ {% endfor %}
+  
+</div>
+</div>
+
+
+
+<div  class="anal-div respondents">
+  <h1 class="center" id="respondents">Respondents</h1>
+ 
+        <div class="anal-listing">
+    {% assign poets = site.interviews | sort: 'last-name' %}
+   {% for poet in poets %}
+    <a href="{{site.baseurl}}/analyses/respondents/{{ poet.object-id }}.html">
+    <img src="{{site.baseurl}}/images/portraits/{{ poet.object-id }}.png" class="question-pic" />
+      <h2>{{ poet.first-name }} {{poet.last-name}} </h2>
+      
+    </a>
+    {% endfor %}
+  
+</div>
+</div>
+
+<div  class="anal-div icons">
+  <h1 class="center" id="respondents">Tools</h1>
+ 
+        <div class="anal-listing">
+            {% assign tools = site.tools  %}
+            {% for tool in tools %}
+               <a href="{{ tool.url}}.html">
+                <img src="{{site.baseurl}}/images/icons/{{ tool.icon-id}}.png">
+                 <br/>
+                 <h2 class="center">{{tool.title }}</h2>
+               </a>
+            {% endfor %}
+             
+  
+</div>
+</div>
+
+
+
+
+
+
+</div>
