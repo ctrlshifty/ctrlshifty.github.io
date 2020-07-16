@@ -12,22 +12,21 @@ layout: default
   <button id="reset" class="btn btn-lg btn-secondary float-right">Reset</button>
   <br />
   <br />
-  {% for person in site.interviews %}
-  {% for transcript in site.data.transcripts %}
+  {% assign transcripts = site.data.transcripts | sort %}
+  {% for transcript in transcripts %}{%assign transcript-name = transcript[0] %}
   <div class="vizdiv">
-    {% if person.object-id == transcript[0] %}{%assign transcript-name = transcript[0] %}
-    <h3 x="0" y="0" data-id="{{ person.object-id }}" style="cursor:pointer;" class="mt-4 toggle_int {{ person.object-id }}">{{ person.first-name }} {{ person.last-name }} <i class="fas fa-filter"></i> <small class="font-italic">(Click to filter)</small></h3>
-    <svg class="chart {{ person.object-id }}" width="100%" height="100px" style="overflow: visible">
+    <h3 x="0" y="0" data-id="{{transcript-name}}" style="cursor:pointer;" class="mt-4 toggle_int {{transcript-name}}">{% for person in site.interviews %}{%if transcript-name == person.object-id %}{{person.first-name }} {{person.last-name }} {% endif %}{% endfor %}<i class="fas fa-filter"></i> <small class="font-italic">(Click to filter)</small></h3>
+    <svg class="chart {{transcript-name}}" width="100%" height="100px" style="overflow: visible">
       {% for item in transcript[1] %}
       {% assign my_integer = forloop.length %}
       {% assign my_float = my_integer | times: 1.0 %}
       {% assign rect-width = 100 | divided_by: my_float  %}
       {%if forloop.first%}<rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-      {%else %} <a href="{{ forloop.index | prepend: person.object-id | prepend: '.html#' | prepend: person.object-id | prepend: '/interviews/transcripts/' | relative_url }}">
+      {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
         <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
       </a>
       {%endif%}{%endfor%}</svg>
-  </div>{%endif%}{%endfor%}{%endfor%}
+  </div>{%endfor%}
 
 </div>
 <br />
@@ -36,16 +35,16 @@ layout: default
   <h2>Contents</h2>
 
 
-  {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
-  {%capture audiovideo-id %}{%for item in site.interviews%}{%if item.object-id == transcript-name %}{{item.audiovideo-id}}{%endif%}{%endfor%}{% endcapture %}
+  {% for transcript in transcripts %}{%assign transcript-name = transcript[0] %}
+  {%capture audiovideo-id %}{%for item in site.interviews%}{%if item.object-id == transcript-name %}{{person.audiovideo-id}}{%endif%}{%endfor%}{% endcapture %}
   {%capture avlink %}{%for item in site.interviews%}{%if item.object-id == transcript-name %}timestamp/{{item.av_source}}.html{%endif%}{%endfor%}{% endcapture %}
   {% for item in transcript[1] %}
   {% if forloop.first %}
   <div class="contentsdiv">
-    <h3 class="my-4 {{ person.object-id }}"><a href="{{transcript-name | prepend: '/transcripts/' | append: '.html' | relative_url }}">{{ person.title }}</a></h3>
-    <table id="contents-container" class="my-4 border {{ person.object-id }} {%cycle 'bg-light','' %}">{%endif%}
+    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/transcripts/' | append: '.html' | relative_url }}">{% for person in site.interviews %}{%if transcript-name == person.object-id %}{{person.first-name }} {{person.last-name }} {% endif %}{% endfor %}</a></h3>
+    <table id="contents-container" class="my-4 border {{transcript-name}} {%cycle 'bg-light','' %}">{%endif%}
       <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}">
-        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">{{ person.object-id }}-{{ forloop.index }}</a></td>
+        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">{{transcript-name}}-{{ forloop.index }}</a></td>
         <td class="words">
           <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
         </td>

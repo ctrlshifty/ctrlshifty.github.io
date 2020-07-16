@@ -2,24 +2,26 @@
 layout: default
 ---
 
-<div class="question-body">
-<header class="intro question-header">
-	<h1>{{ page.question }} </h1></header>
+<div class="container mt-5">
+  <header class="intro question-header">
+    <h1>{{ page.question }} </h1>
+  </header>
 
 
 
 
   <div class="question-answers">
-  {% for answer in page.answers %}
-<div class="answer">
- <img src="{{site.baseurl}}/images/portraits/{{answer.author-id}}.png" style="height:150px;float:left;padding: 0 10px 10px 0;">
-  <p>
-  {{answer.text}}
-</p>
- <a class="action-button" href="../respondents/{{answer.author-id}}.html" >More from {{answer.author}}</a>
-</div>
-  {% endfor %}
+    {% for answer in page.answers %}
+    <div class="answer">
+      <img src="{{site.baseurl}}/images/portraits/{{answer.author-id}}.png"
+        style="height:150px;float:left;padding: 0 10px 10px 0;">
+      <p>
+        {{answer.text}}
+      </p>
+      <a class="action-button" href="../respondents/{{answer.author-id}}.html">More from {{answer.author}}</a>
+    </div>
+    {% endfor %}
 
 
-</div>
+  </div>
 </div>

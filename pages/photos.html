@@ -5,25 +5,24 @@ object-id: photos
 permalink: /flotsam/photos/
 ---
 
+<div class="container">
+  <h1 class="poet-name">Photos</h1>
 
-<div class="poet-feature">
-        <h1 class="poet-name">Photos</h1>
- 
-
-
-  <div class="people-body">
-  <div class="listing">
+  <div class="row">
     {% assign people = site.interviews %}
     {% for person in people %}
     {% unless person.object-id == 'all' %}
-    <a href="{{site.baseurl}}/flotsam/photos/{{ person.object-id }}.html">
-      <h2>{{ person.first-name }} {{ person.last-name }}</h2>
-      <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
-    </a>
+    <div class="col-md-4 col-12">
+      <div class="card m-3 p-3">
+        <h2 class="card-title"><a class="stretched-link"
+            href="{{site.baseurl}}/flotsam/photos/{{ person.object-id }}.html">{{ person.first-name }}
+            {{ person.last-name }}</a></h2>
+            <div class="card-body">
+        <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"  />
+            </div>
+      </div>
+    </div>
     {% endunless %}
     {% endfor %}
-
+  </div>
 </div>
-
-</div>
-

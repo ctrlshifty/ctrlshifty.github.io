@@ -1,79 +1,82 @@
 ---
 layout: default
 ---
-<div class="download-button">
-<a class="btn btn-secondary text-white" style="cursor:pointer;" onClick="window.location.reload()">New Poem</a>
-<br/>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle mt-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    New Poet
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    {% assign poets = site.interviews | sort: 'last-name' %}
-  {% for poet in poets %}
-  <a class="dropdown-item" href="{{poet.object-id}}.html">{{poet.first-name}} {{poet.last-name}}</a>
-  {%endfor%}
-  </div>
-</div>
 
-</div>
-  
-    <div class="genpoem-portrait">
-	<img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
-  </div>
-   <div class="genpoem-content">
-    
+<div class="container">
 
-<header class="intro person-header">
-    <h1 id="title"></h1>
-	
- 
-  
-</header>
+  <div class="row my-5">
+    <div class="col-md-9 mt-3 pl-5">
 
-<div class="person-body">
-	
-	<div id="generated">
-        
- <p id="poem"></p>
-<br/>
-<h4 class="center">(generated from words spoken) by {{ page.first-name }} {{ page.last-name }} and Devin Becker<br/>
-  as transcribed by YouTube's automated captioning service 
-  <br/><br/>
-Click on a line to go to that point in the YouTube video.</h4>
+
+      <header class="intro person-header">
+        <h1 id="title"></h1>
+      </header>
+
+      <div class="person-body">
+
+        <div id="generated">
+
+          <p id="poem"></p>
+          <br />
+          <h4 class="center">(generated from words spoken) by {{ page.first-name }} {{ page.last-name }} and Devin
+            Becker<br />
+            as transcribed by YouTube's automated captioning service
+            <br /><br />
+            Click on a line to go to that point in the YouTube video.</h4>
 
         </div>
 
-</div>
-</div>
+      </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+      <div class="p-3 d-none d-md-block">
+        <img src="{{site.baseurl}}/images/portraits/{{ page.object-id}}.png">
+      </div>
+      <a class="btn btn-secondary text-white" style="cursor:pointer;" onClick="window.location.reload()">New Poem</a>
+      <br />
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle mt-4" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          New Poet
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          {% assign poets = site.interviews | sort: 'last-name' %}
+          {% for poet in poets %}
+          <a class="dropdown-item" href="{{poet.object-id}}.html">{{poet.first-name}} {{poet.last-name}}</a>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    
+  </div>
 
-<script>
-var genpoem = document.getElementById("poem");
-var allLines = [  {% for item in site.data[page.transcript] %}
-{% if item.line contains "0" %}
-{% else %}"<a target='_blank' href='https://youtu.be/{{ page.youtube }}?t={{item.start | replace_first: ':','h'| replace: ':', 'm'| truncate: 8, "s"}}&cc_load_policy=1'>{{ item.line }}</a>",{% endif %}{% endfor %},""];
 
-/* Fisher-Yates shuffle https://bost.ocks.org/mike/shuffle/ */
-function shuffle(array) {
-  var m = array.length, t, i;
-  while (m) {
-    i = Math.floor(Math.random() * m--);
-    t = array[m];
-    array[m] = array[i];
-    array[i] = t;
-  }
-  return array;
-};
-function makePoem(array) {
-shuffle(array);
-var poemLines = array.slice(0,14);
-genpoem.innerHTML = poemLines.join(" <br> ");
-var titlearray = array.slice(15,30).sort();
-var title = titlearray.slice(-2,-1);
-document.getElementById("title").innerHTML = title.join(" <br> ");
-document.getElementById("titlearray").innerHTML = titlearray.join(" <br> ");
-};
-makePoem(allLines);
+  <script>
+    var genpoem = document.getElementById("poem");
+    var allLines = [{% for item in site.data[page.transcript] %}
+    {% if item.line contains "0" %}
+    {% else %} "<a target='_blank' href='https://youtu.be/{{ page.youtube }}?t={{item.start | replace_first: ':','h'| replace: ':', 'm'| truncate: 8, "s"}}&cc_load_policy=1'>{{ item.line }}</a>", {% endif %}{% endfor %}, ""];
 
-</script> 
-	
+    /* Fisher-Yates shuffle https://bost.ocks.org/mike/shuffle/ */
+    function shuffle(array) {
+      var m = array.length, t, i;
+      while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+      return array;
+    };
+    function makePoem(array) {
+      shuffle(array);
+      var poemLines = array.slice(0, 14);
+      genpoem.innerHTML = poemLines.join(" <br> ");
+      var titlearray = array.slice(15, 30).sort();
+      var title = titlearray.slice(-2, -1);
+      document.getElementById("title").innerHTML = title.join(" <br> ");
+      document.getElementById("titlearray").innerHTML = titlearray.join(" <br> ");
+    };
+    makePoem(allLines);
+
+  </script>

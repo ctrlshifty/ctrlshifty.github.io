@@ -4,24 +4,24 @@ title: Interview Videos by Poet
 object-id: videos
 permalink: /flotsam/videos/
 ---
+<div class="container">
+  <h1 class="poet-name">Videos</h1>
 
-<div class="poet-feature">
-    <h1 class="poet-name">Videos</h1>
-
-
-  <div class="people-body">
-  <div class="listing">
+  <div class="row">
     {% assign people = site.interviews %}
     {% for person in people %}
     {% unless person.object-id == 'all' %}
-    <a href="{{site.baseurl}}/flotsam/videos/{{ person.object-id }}.html">
-      <h2>{{ person.first-name }} {{ person.last-name }}</h2>
-      <img src="{{site.baseurl}}/images/small/{{person.object-id}}.jpg"/>
-    </a>
+    <div class="col-md-4 col-12">
+      <div class="card m-3 p-3">
+        <h2 class="card-title"><a class="stretched-link"
+            href="{{site.baseurl}}/flotsam/videos/{{ person.object-id }}.html">{{ person.first-name }}
+            {{ person.last-name }}</a></h2>
+            <div class="card-body">
+        <img src="http://i3.ytimg.com/vi/{{person.audiovideo-id}}/hqdefault.jpg"  />
+            </div>
+      </div>
+    </div>
     {% endunless %}
     {% endfor %}
-
-</div>
-
-</div>
-
+  </div>
+</div

@@ -4,6 +4,8 @@
 <script src="{{ '/assets/js/jquery-3.5.1.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <!-- load other js -->
+{% include scrolltop.html %}
+
 
 {%if page.url contains "subjectviz" or page.layout == "interview" %}{% include js/visualization-js.html %}{% endif %}
 {%if page.url contains "interviews/transcripts" %}{% include js/transcript-js.html %}{% endif %}
