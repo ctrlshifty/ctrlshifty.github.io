@@ -14,7 +14,7 @@ permalink: /flotsam/genpoems/
   {% assign people = site.interviews | sort: 'random' %}
   {% for person in people %}
   {% unless person.object-id == 'all' %}
-  <a href="{{site.baseurl}}/flotsam/genpoem/{{ person.object-id }}.html">
+  <a href="{{site.baseurl}}/flotsam/genpoems/{{ person.object-id }}.html">
     <h2>{{ person.first-name }} {{ person.last-name }}</h2>
     <p>Responses to common questions</p>
     <img src="{{site.baseurl}}/images/portraits/{{person.object-id}}.png"/>

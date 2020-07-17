@@ -42,9 +42,6 @@ collections:
   genpoems:
       output: true
       permalink: /flotsam/:collection/:name
-  textviz:
-      output: true
-      permalink: /flotsam/:collection/:name
   transcripts:
       output: true
       permalink: /interviews/:collection/:name
