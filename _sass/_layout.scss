@@ -907,7 +907,10 @@ a:hover{background:none;}
       }
     
     }
-
+    #gobutton, .searchinput{
+        cursor: pointer;
+    }
+    
     .btn-ctrl {
         background-color: transparent;
         background-image: none;
