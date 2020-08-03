@@ -1,0 +1,1 @@
+<blockquote>{{ include.text |}}<footer>{{include.source}}</footer></blockquote>
