@@ -703,7 +703,7 @@ max-width:700px;
 .center{text-align:Center;}
 
 .attribution{text-align:right;}
-a{ color: black !important;}
+a{ color: black !important; padding-bottom: 3px;;}
 a:hover{background:none;}
 
 
@@ -924,7 +924,7 @@ a:hover{background:none;}
         &:hover{  border: 2px ridge #f0f;}
     }
     td{vertical-align: top;padding:15px;}
-    .iframe-wrapper{
+    .transcript-iframe-wrapper{
         position: fixed;
           right: 10px;
           height: 200px;

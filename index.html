@@ -4,7 +4,7 @@ title: Home
 order: 1
 ---
 
-<div class="home" id="homeback">
+<div class="home" id="homeback" style="background-image: url('images/splash/mcmichael.jpg');">
 
   <!--<h1 class="main-heading pink-neon">CTRL-Shift</h1>-->
   {% include header.html %}
@@ -47,7 +47,7 @@ order: 1
   </h3>
   <br />
 </div>
-<div class="divider my-4" id="divider1"></div>
+<div class="divider my-4" id="divider1" style='background-image: url("images/splash/beasley.jpg");'></div>
 <div class="home-section text-dark">
   <h1 class="center">The Interviews </h1>
   <h4 class="center">We have interview material in a variety of formats for your listening/viewing/reading pleasure
@@ -87,7 +87,7 @@ order: 1
   </div>
 
 </div>
-<div class="divider my-4" id="divider2"></div>
+<div class="divider my-4" id="divider2" style='background-image: url("images/splash/gerstler.jpg");'></div>
 <div class="home-section home-anal">
   <h2 class="h1 center">We've also broken the interviews down</h2>
   <p class="center h2 mb-3">by Subject </p>
@@ -106,7 +106,7 @@ order: 1
       <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top"
         class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
       {%else %} <a
-        href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '/subjectviz/#' | relative_url }}">
+        href="{{ '/subjectviz/' | relative_url }}">
         <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50"
           data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"
           title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
@@ -153,7 +153,7 @@ order: 1
   </div>
 </div>
 
-<div class="divider my-4" id="divider3"></div>
+<div class="divider my-4" id="divider3" style='background-image: url("images/splash/armantrout.jpg");'></div>
 
 <div class="home-section">
   <br />
@@ -188,7 +188,7 @@ order: 1
 
   <p><a class="action-button float-right mb-4" href="processes/">More Processes</a></p>
 </div>
-<div class="divider my-4" id="divider4"></div>
+<div class="divider my-4" id="divider4" style='background-image: url("images/splash/ryan.jpg");'></div>
 <div class="home-section home-findings">
   <h2 class="px-5 h1">So What Did We Find?</h1>
     <p class="px-5 h3 about-white-background">We have come up with some initial observations regarding some of the central areas we
@@ -204,7 +204,7 @@ order: 1
 
     <p><a class="action-button float-right mb-4" href="/findings/">More on Findings</a></p>
 </div>
-<div class="divider my-4" id="divider5"></div>
+<div class="divider my-4" id="divider5" style='background-image: url("images/splash/gluck.jpg");'></div>
 <div class="home-section home-flotsam">
 
   <h2 class="h1">Flotsam</h2>
@@ -234,48 +234,4 @@ order: 1
   <p><a class="action-button float-right mb-4" href="/flotsam/">All Our Flotsam</a></p>
 
 </div>
-<div class="divider my-4" id="divider6"></div>
-
-<script>
-  function random_item(items) { return items[Math.floor(Math.random() * items.length)]; }
-  var arr = ['armantrout', 'beasley', 'gerstler', 'gluck', 'mcmichael', 'ryan', 'vanwinckel', 'wrigley'];
-  var value = random_item(arr);
-  document.getElementById('homeback').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-  console.log(arr);
-  var value = random_item(arr);
-  document.getElementById('divider1').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-  console.log(arr);
-  var value = random_item(arr);
-  document.getElementById('divider2').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-  console.log(arr);
-  var value = random_item(arr);
-  document.getElementById('divider3').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-  console.log(arr);
-  var value = random_item(arr);
-  document.getElementById('divider4').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-  var value = random_item(arr);
-  document.getElementById('divider5').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-  var value = random_item(arr);
-  document.getElementById('divider6').style.backgroundImage = 'url(images/splash/' + (value) + '.jpg)';
-  arr = arr.filter(function (item) {
-    return item !== value
-  })
-</script>
+<div class="divider my-4" id="divider6" style='background-image: url("images/splash/vanwinckel.jpg");'></div>
