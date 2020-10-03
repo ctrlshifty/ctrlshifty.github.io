@@ -153,15 +153,4 @@ var hashfilter = decodeURIComponent(location.hash.substr(1));//.replace(/%20/g, 
  else{
  }});
  
-
-
-function highlight(text) {
- var inputText = document.getElementById("spoken");
- var innerHTML = inputText.innerHTML;
- var index = innerHTML.indexOf(text);
- if (index >= 0) { 
-  innerHTML = innerHTML.substring(0,index) + "<span class='hilite'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
-  inputText.innerHTML = innerHTML;
- }
-}
 </script>
