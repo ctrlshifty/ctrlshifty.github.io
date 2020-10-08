@@ -22,11 +22,17 @@ layout: default
   <div class="person-contents" itemscope itemtype="http://schema.org/ImageGallery">
 	
 	<div id="animated-thumbnails" class="poet-feature">
-			{% for i in (1..photonumber) %}
+			{%if page.object-id contains 'gluck'%}{% for i in (1..photonumber) offset: 1 %}
 			<div style="width:200px;float:left;margin:5px;" data-src="https://ctrl-shift.org/images/{{page.object-id}}/jpg/{{page.object-id}}0{% unless i > 9 %}0{%endunless%}{{i}}.jpg">
 				<img src="https://ctrl-shift.org/images/{{page.object-id}}/thumbnails/{{page.object-id}}0{% unless i > 9 %}0{%endunless%}{{i}}.jpg" />
 			</div>
-			{% endfor %}
+      {% endfor %}{%else%}
+      {% for i in (1..photonumber)  %}
+			<div style="width:200px;float:left;margin:5px;" data-src="https://ctrl-shift.org/images/{{page.object-id}}/jpg/{{page.object-id}}0{% unless i > 9 %}0{%endunless%}{{i}}.jpg">
+				<img src="https://ctrl-shift.org/images/{{page.object-id}}/thumbnails/{{page.object-id}}0{% unless i > 9 %}0{%endunless%}{{i}}.jpg" />
+			</div>
+      {% endfor %}
+      {% endif %}
 		  </div>
     
 
