@@ -64,7 +64,7 @@ layout: default-transcript
     <tr id="{{page.object-id}}{{ forloop.index }}" class="{{item.tags | replace: ';', ' '}}">
       <td class="line"><a href="{{ transcript-name | append: '.html'}}#{{transcript-name}}{{ forloop.index }}">{{transcript-name}}{{ forloop.index }}</a></td>
       <td class="words">
-        <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
+        <div id="spoken">{%if item.speaker %}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
       </td>
       <td class="timestamp">{%if item.timestamp%}
         <a  href="{% include {{avlink}} %}">{{item.timestamp}}</a>{% endif %}</td>
@@ -75,7 +75,7 @@ layout: default-transcript
     <tr id="{{page.object-id}}{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}">
       <td class="line"><a href="{{ page.object-id | append: '.html'}}#{{page.object-id}}{{ forloop.index }}">{{ forloop.index }}</a></td>
       <td class="words">
-        <div id="spoken">{{item.speaker | remove: ":"}}: {{item.words}}</div>
+        <div id="spoken">{%if item.speaker %}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
       </td>
       <td class="timestamp">{%if item.timestamp%}
 {% capture avlink %}timestamp/{{page.av_source}}.html{% endcapture %}
