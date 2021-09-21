@@ -7,6 +7,6 @@ The [subject visualization]({{'/subjectviz/ | relative_url}}) uses these same me
 
 The site also incorporates tools and platforms such as the [Oral History Metadata Synchronizer (OHMS)](http://www.oralhistoryonline.org/), [YouTube](http://www.youtube.com/), [Bootstrap](https://getbootstrap.com/) and [lightGallery](http://sachinchoolur.github.io/lightGallery/). 
 
-The [poem generator]({{'/flotsam/poemgen/' | relative_url}}) was created by downloading YouTube transcription files (.sbv) of each interview and transforming them into .csv files that are then randomly arrayed in order to make specific poem shapes and outputs. 
+The [poem generator]({{'/flotsam/genpoems/' | relative_url}}) was created by downloading YouTube transcription files (.sbv) of each interview and transforming them into .csv files that are then randomly arrayed in order to make specific poem shapes and outputs. 
 
 Finally, the [Findings]({{'/findings/ | relative_url }}) page was redesigned in 2020 to use the styles of [tufte.css](https://edwardtufte.github.io/tufte-css/).
